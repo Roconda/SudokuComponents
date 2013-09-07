@@ -3,12 +3,12 @@ package nl.avans.SudokuDatastructure;
 /**
  * Only class which is accessible from outside this package
  */
-public class App 
+public class DsArray 
 {
 	private int size;
 	private BoardDS ds;
 
-	public App(int size) {
+	public DsArray(int size) {
 		ds = new BoardDS(size, size);
 	}
 	
@@ -30,6 +30,14 @@ public class App
 		}
 		
 		return true;
+	}
+	
+	public int getValue(int x, int y) {
+		try{
+			return ds.getValue(x, y);
+		}catch(UnkownFieldException e){
+			return -1;
+		}
 	}
 
 }
