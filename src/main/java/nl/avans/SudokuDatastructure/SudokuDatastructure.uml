@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/4.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_uDh-oBupEeOCrObUnLJ8uA" name="SudokuDatastructure">
+    <eAnnotations xmi:id="_-47OcBupEeOCrObUnLJ8uA" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_-49qsBupEeOCrObUnLJ8uA" source="codegen">
+        <details xmi:id="_-49qsRupEeOCrObUnLJ8uA" key="codegenDirectory" value="/SudokuDatastructure/src/main/java"/>
+        <details xmi:id="__1EtoBupEeOCrObUnLJ8uA" key="AssociatedSourceCode" value="/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/BoardDS.java;1641360030/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/DsArray.java;4159204825/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/Field.java;477628564/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/GeneratedField.java;416151550/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/UnkownFieldException.java;3257818529/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/UserField.java;2480476611/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/EDifficulty.java;468087653/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/ISolver.java;2483551724/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/IGenerator.java;4067236277/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_-5dZ8BupEeOCrObUnLJ8uA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_-5fPIBupEeOCrObUnLJ8uA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_-5gdQBupEeOCrObUnLJ8uA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_-5iScBupEeOCrObUnLJ8uA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_-5i5gBupEeOCrObUnLJ8uA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_-5kusBupEeOCrObUnLJ8uA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_-5l80BupEeOCrObUnLJ8uA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_-5mj4BupEeOCrObUnLJ8uA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_-5vt0BupEeOCrObUnLJ8uA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_-1FQQBupEeOCrObUnLJ8uA" name="nl">
+      <packagedElement xmi:type="uml:Package" xmi:id="_-1F3UBupEeOCrObUnLJ8uA" name="avans">
+        <packagedElement xmi:type="uml:Package" xmi:id="_-1pQ8BupEeOCrObUnLJ8uA" name="SudokuDatastructure">
+          <packagedElement xmi:type="uml:Class" xmi:id="_-4voQBupEeOCrObUnLJ8uA" name="BoardDS" visibility="package">
+            <ownedAttribute xmi:id="__BAMYBupEeOCrObUnLJ8uA" name="board" visibility="private" type="_-77fIBupEeOCrObUnLJ8uA" association="__Cn9ABupEeOCrObUnLJ8uA">
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__BFr8BupEeOCrObUnLJ8uA" value="*"/>
+            </ownedAttribute>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__B6LUBupEeOCrObUnLJ8uA" name="BoardDS" specification="_-510cBupEeOCrObUnLJ8uA">
+              <ownedParameter xmi:id="__B6LURupEeOCrObUnLJ8uA" name="size">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__B6LUhupEeOCrObUnLJ8uA" type="_-4voQBupEeOCrObUnLJ8uA" direction="return"/>
+              <language>java</language>
+              <body>makeStructure(size);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__B91sBupEeOCrObUnLJ8uA" name="makeStructure" specification="_-6Ed8BupEeOCrObUnLJ8uA">
+              <ownedParameter xmi:id="__B91sRupEeOCrObUnLJ8uA" name="size">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>board = new Field[size][size];
+		// TODO call generator and ask for a new board. Load this into Field
+		// objects.
+		// TODO call solver with the generated board and load the solved values
+		// in the corresponding field objects.
+		// TODO generate using the size variable.
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__B_q4BupEeOCrObUnLJ8uA" name="setValue" specification="_-6O2ABupEeOCrObUnLJ8uA">
+              <ownedParameter xmi:id="__B_q4RupEeOCrObUnLJ8uA" name="x">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__B_q4hupEeOCrObUnLJ8uA" name="y">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__B_q4xupEeOCrObUnLJ8uA" name="value">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>try {
+			board[y][x].setCurrentValue(value);
+		} catch (IndexOutOfBoundsException e) {
+			throw new UnkownFieldException();
+		}
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__CBgEBupEeOCrObUnLJ8uA" name="getValue" specification="_-6eGkBupEeOCrObUnLJ8uA">
+              <ownedParameter xmi:id="__CBgERupEeOCrObUnLJ8uA" name="x">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__CBgEhupEeOCrObUnLJ8uA" name="y">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__CBgExupEeOCrObUnLJ8uA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>try {
+			Field f = board[y][x];
+			return f.getCurrentValue();
+		} catch (IndexOutOfBoundsException e) {
+			throw new UnkownFieldException();
+		}
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_-510cBupEeOCrObUnLJ8uA" name="BoardDS" method="__B6LUBupEeOCrObUnLJ8uA">
+              <eAnnotations xmi:id="_-6AMgBupEeOCrObUnLJ8uA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_-6AzkBupEeOCrObUnLJ8uA" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_-54QsBupEeOCrObUnLJ8uA" name="size">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_-6BaoBupEeOCrObUnLJ8uA" type="_-4voQBupEeOCrObUnLJ8uA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_-6Ed8BupEeOCrObUnLJ8uA" name="makeStructure" visibility="private" method="__B91sBupEeOCrObUnLJ8uA">
+              <ownedParameter xmi:id="_-6FsEBupEeOCrObUnLJ8uA" name="size">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_-6O2ABupEeOCrObUnLJ8uA" name="setValue" method="__B_q4BupEeOCrObUnLJ8uA" raisedException="_-9BrUBupEeOCrObUnLJ8uA">
+              <ownedParameter xmi:id="_-6PdEBupEeOCrObUnLJ8uA" name="x">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_-6QEIBupEeOCrObUnLJ8uA" name="y">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_-6SgYBupEeOCrObUnLJ8uA" name="value">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_-6eGkBupEeOCrObUnLJ8uA" name="getValue" method="__CBgEBupEeOCrObUnLJ8uA" raisedException="_-9BrUBupEeOCrObUnLJ8uA">
+              <ownedParameter xmi:id="_-6jmIBupEeOCrObUnLJ8uA" name="x">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_-6kNMBupEeOCrObUnLJ8uA" name="y">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_-6lbUBupEeOCrObUnLJ8uA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_-6910BupEeOCrObUnLJ8uA" name="DsArray">
+            <ownedComment xmi:id="__CZ6kBupEeOCrObUnLJ8uA">
+              <body>Only class which is accessible from outside this package</body>
+            </ownedComment>
+            <ownedAttribute xmi:id="__BRSIBupEeOCrObUnLJ8uA" name="size" isReadOnly="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="__BUVcBupEeOCrObUnLJ8uA" name="ds" visibility="private" type="_-4voQBupEeOCrObUnLJ8uA" association="__C2mgBupEeOCrObUnLJ8uA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__CEjYBupEeOCrObUnLJ8uA" name="DsArray" specification="_-7Hm0BupEeOCrObUnLJ8uA">
+              <ownedParameter xmi:id="__CEjYRupEeOCrObUnLJ8uA" name="size">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__CEjYhupEeOCrObUnLJ8uA" type="_-6910BupEeOCrObUnLJ8uA" direction="return"/>
+              <language>java</language>
+              <body>ds = new BoardDS(size);
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__CGYkBupEeOCrObUnLJ8uA" name="setValue" specification="_-7T0EBupEeOCrObUnLJ8uA">
+              <ownedParameter xmi:id="__CGYkRupEeOCrObUnLJ8uA" name="x">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__CGYkhupEeOCrObUnLJ8uA" name="y">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__CGYkxupEeOCrObUnLJ8uA" name="value">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__CGYlBupEeOCrObUnLJ8uA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>try {
+			ds.setValue(x, y, value);
+		} catch (UnkownFieldException e) {
+			return false;
+		}
+
+		return true;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__CINwBupEeOCrObUnLJ8uA" name="getValue" specification="_-7h2gBupEeOCrObUnLJ8uA">
+              <ownedParameter xmi:id="__CINwRupEeOCrObUnLJ8uA" name="x">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__CINwhupEeOCrObUnLJ8uA" name="y">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__CINwxupEeOCrObUnLJ8uA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>try {
+			return ds.getValue(x, y);
+		} catch (UnkownFieldException e) {
+			return -1;
+		}
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_-7Hm0BupEeOCrObUnLJ8uA" name="DsArray" method="__CEjYBupEeOCrObUnLJ8uA">
+              <eAnnotations xmi:id="_-7PioBupEeOCrObUnLJ8uA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_-7PioRupEeOCrObUnLJ8uA" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_-7KqIBupEeOCrObUnLJ8uA" name="size">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_-7QJsBupEeOCrObUnLJ8uA" type="_-6910BupEeOCrObUnLJ8uA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_-7T0EBupEeOCrObUnLJ8uA" name="setValue" method="__CGYkBupEeOCrObUnLJ8uA">
+              <ownedComment xmi:id="__CbIsBupEeOCrObUnLJ8uA">
+                <body>@return if a field exists on the grid or not</body>
+              </ownedComment>
+              <ownedParameter xmi:id="_-7XecBupEeOCrObUnLJ8uA" name="x">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_-7XecRupEeOCrObUnLJ8uA" name="y">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_-7YFgBupEeOCrObUnLJ8uA" name="value">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_-7ZToBupEeOCrObUnLJ8uA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:id="_-7h2gBupEeOCrObUnLJ8uA" name="getValue" method="__CINwBupEeOCrObUnLJ8uA">
+              <ownedParameter xmi:id="_-7idkBupEeOCrObUnLJ8uA" name="x">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_-7idkRupEeOCrObUnLJ8uA" name="y">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_-7lg4BupEeOCrObUnLJ8uA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_-77fIBupEeOCrObUnLJ8uA" name="Field" visibility="package" isAbstract="true">
+            <ownedComment xmi:id="__CbvwBupEeOCrObUnLJ8uA">
+              <body>The Class Field. This class is abstract and represents a field in the sudoku.
+Fields differ. Generated fields can not be changed by the user, for example.</body>
+            </ownedComment>
+            <ownedAttribute xmi:id="__BiX4BupEeOCrObUnLJ8uA" name="currentValue" isReadOnly="true">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="__BjmABupEeOCrObUnLJ8uA" value="-1"/>
+            </ownedAttribute>
+            <ownedAttribute xmi:id="__Bk0IBupEeOCrObUnLJ8uA" name="solutionValue" visibility="private">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              <defaultValue xmi:type="uml:LiteralString" xmi:id="__BmCQBupEeOCrObUnLJ8uA" value="-1"/>
+            </ownedAttribute>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__CL4IBupEeOCrObUnLJ8uA" name="Field" specification="_-8EpEBupEeOCrObUnLJ8uA">
+              <ownedParameter xmi:id="__CL4IRupEeOCrObUnLJ8uA" name="currentValue">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__CL4IhupEeOCrObUnLJ8uA" name="solutionValue">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__CL4IxupEeOCrObUnLJ8uA" type="_-77fIBupEeOCrObUnLJ8uA" direction="return"/>
+              <language>java</language>
+              <body>this.currentValue = currentValue;
+		this.solutionValue = solutionValue;
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__CNtUBupEeOCrObUnLJ8uA" name="setCurrentValue" specification="_-8OaEBupEeOCrObUnLJ8uA">
+              <ownedParameter xmi:id="__CNtURupEeOCrObUnLJ8uA" name="newValue">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__CNtUhupEeOCrObUnLJ8uA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>if (newValue >= 0 || newValue &lt; 10) { // FIXME use the given board size
+												// (and throw exception?)
+			currentValue = newValue;
+			return true;
+		} else
+			return false;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_-8EpEBupEeOCrObUnLJ8uA" name="Field" method="__CL4IBupEeOCrObUnLJ8uA">
+              <eAnnotations xmi:id="_-8KIoBupEeOCrObUnLJ8uA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_-8KIoRupEeOCrObUnLJ8uA" key="create"/>
+              </eAnnotations>
+              <ownedComment xmi:id="__Cc94BupEeOCrObUnLJ8uA">
+                <body>Instantiates a new field.
+	 * 
+	 * @param currentValue
+	 *            the current value
+	 * @param solutionValue
+	 *            the solution value</body>
+              </ownedComment>
+              <ownedParameter xmi:id="_-8I6gBupEeOCrObUnLJ8uA" name="currentValue">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_-8I6gRupEeOCrObUnLJ8uA" name="solutionValue">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_-8KIohupEeOCrObUnLJ8uA" type="_-77fIBupEeOCrObUnLJ8uA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_-8OaEBupEeOCrObUnLJ8uA" name="setCurrentValue" method="__CNtUBupEeOCrObUnLJ8uA">
+              <ownedComment xmi:id="__Cdk8BupEeOCrObUnLJ8uA">
+                <body>Sets the current value.
+	 * 
+	 * @param newValue
+	 *            the new value
+	 * @return true, if successful</body>
+              </ownedComment>
+              <ownedParameter xmi:id="_-8SEcBupEeOCrObUnLJ8uA" name="newValue">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_-8SrgBupEeOCrObUnLJ8uA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_-8ff0BupEeOCrObUnLJ8uA" name="GeneratedField" visibility="package">
+            <generalization xmi:id="__AAt4BupEeOCrObUnLJ8uA" general="_-77fIBupEeOCrObUnLJ8uA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__CQJkBupEeOCrObUnLJ8uA" name="GeneratedField" specification="_-8pQ0BupEeOCrObUnLJ8uA">
+              <ownedParameter xmi:id="__CQJkRupEeOCrObUnLJ8uA" name="currentValue">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__CQJkhupEeOCrObUnLJ8uA" name="solutionValue">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__CQJkxupEeOCrObUnLJ8uA" type="_-8ff0BupEeOCrObUnLJ8uA" direction="return"/>
+              <language>java</language>
+              <body>super(currentValue, solutionValue);
+		// TODO Auto-generated constructor stub
+	</body>
+            </ownedBehavior>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__CR-wBupEeOCrObUnLJ8uA" name="setCurrentValue" specification="_-82FIBupEeOCrObUnLJ8uA">
+              <ownedParameter xmi:id="__CR-wRupEeOCrObUnLJ8uA" name="newValue">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__CR-whupEeOCrObUnLJ8uA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+              <language>java</language>
+              <body>return false;
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_-8pQ0BupEeOCrObUnLJ8uA" name="GeneratedField" method="__CQJkBupEeOCrObUnLJ8uA">
+              <eAnnotations xmi:id="_-8uJUBupEeOCrObUnLJ8uA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_-8uwYBupEeOCrObUnLJ8uA" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_-8rtEBupEeOCrObUnLJ8uA" name="currentValue">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_-8sUIBupEeOCrObUnLJ8uA" name="solutionValue">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_-8xMoBupEeOCrObUnLJ8uA" type="_-8ff0BupEeOCrObUnLJ8uA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:id="_-82FIBupEeOCrObUnLJ8uA" name="setCurrentValue" method="__CR-wBupEeOCrObUnLJ8uA">
+              <ownedParameter xmi:id="_-82sMBupEeOCrObUnLJ8uA" name="newValue">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_-85vgBupEeOCrObUnLJ8uA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_-9BrUBupEeOCrObUnLJ8uA" name="UnkownFieldException" visibility="package">
+            <generalization xmi:id="__AwUwBupEeOCrObUnLJ8uA" general="__AoY8BupEeOCrObUnLJ8uA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Class" xmi:id="_-9JnIBupEeOCrObUnLJ8uA" name="UserField" visibility="package">
+            <ownedComment xmi:id="__CezEBupEeOCrObUnLJ8uA">
+              <body>The Class UserField. This is a concrete implementation of the Field class.</body>
+            </ownedComment>
+            <generalization xmi:id="__ALF8BupEeOCrObUnLJ8uA" general="_-77fIBupEeOCrObUnLJ8uA"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__CTz8BupEeOCrObUnLJ8uA" name="UserField" specification="_-9T_MBupEeOCrObUnLJ8uA">
+              <ownedParameter xmi:id="__CUbABupEeOCrObUnLJ8uA" name="currentValue">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__CUbARupEeOCrObUnLJ8uA" name="solutionValue">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="__CUbAhupEeOCrObUnLJ8uA" type="_-9JnIBupEeOCrObUnLJ8uA" direction="return"/>
+              <language>java</language>
+              <body>super(currentValue, solutionValue);
+		// TODO Auto-generated constructor stub
+	</body>
+            </ownedBehavior>
+            <ownedOperation xmi:id="_-9T_MBupEeOCrObUnLJ8uA" name="UserField" method="__CTz8BupEeOCrObUnLJ8uA">
+              <eAnnotations xmi:id="_-9aF0BupEeOCrObUnLJ8uA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+                <details xmi:id="_-9aF0RupEeOCrObUnLJ8uA" key="create"/>
+              </eAnnotations>
+              <ownedParameter xmi:id="_-9Y3sBupEeOCrObUnLJ8uA" name="currentValue">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_-9as4BupEeOCrObUnLJ8uA" type="_-9JnIBupEeOCrObUnLJ8uA" direction="return"/>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="__Cn9ABupEeOCrObUnLJ8uA" name="" memberEnd="__CokEBupEeOCrObUnLJ8uA __BAMYBupEeOCrObUnLJ8uA">
+            <ownedEnd xmi:id="__CokEBupEeOCrObUnLJ8uA" name="" type="_-4voQBupEeOCrObUnLJ8uA" association="__Cn9ABupEeOCrObUnLJ8uA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="__C2mgBupEeOCrObUnLJ8uA" name="" memberEnd="__C2mgRupEeOCrObUnLJ8uA __BUVcBupEeOCrObUnLJ8uA">
+            <ownedEnd xmi:id="__C2mgRupEeOCrObUnLJ8uA" name="" type="_-6910BupEeOCrObUnLJ8uA" association="__C2mgBupEeOCrObUnLJ8uA"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Enumeration" xmi:id="_yJWSkBurEeOCrObUnLJ8uA" name="EDifficulty">
+            <ownedLiteral xmi:id="_yJmxQBurEeOCrObUnLJ8uA" name="LEVEL_1"/>
+            <ownedLiteral xmi:id="_yJnYUBurEeOCrObUnLJ8uA" name="LEVEL_2"/>
+            <ownedLiteral xmi:id="_yJn_YBurEeOCrObUnLJ8uA" name="LEVEL_3"/>
+            <ownedLiteral xmi:id="_yJpNgBurEeOCrObUnLJ8uA" name="LEVEL_4"/>
+            <ownedLiteral xmi:id="_yJqboBurEeOCrObUnLJ8uA" name="LEVEL_5"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_zm85ABurEeOCrObUnLJ8uA" name="ISolver">
+            <ownedOperation xmi:id="_znJtUBurEeOCrObUnLJ8uA" name="solve">
+              <ownedParameter xmi:id="_znMwoBurEeOCrObUnLJ8uA" name="input">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_znXvwBurEeOCrObUnLJ8uA" value="*"/>
+              </ownedParameter>
+              <ownedParameter xmi:id="_znN-wBurEeOCrObUnLJ8uA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_znRCEBurEeOCrObUnLJ8uA" value="*"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_0b91cBurEeOCrObUnLJ8uA" name="IGenerator">
+            <ownedOperation xmi:id="_0cKpwBurEeOCrObUnLJ8uA" name="generate">
+              <ownedParameter xmi:id="_0cLQ0BurEeOCrObUnLJ8uA" name="difficulty" type="_yJWSkBurEeOCrObUnLJ8uA"/>
+              <ownedParameter xmi:id="_0cL34BurEeOCrObUnLJ8uA" direction="return">
+                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0cL34RurEeOCrObUnLJ8uA" value="*"/>
+              </ownedParameter>
+            </ownedOperation>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="__Aen8BupEeOCrObUnLJ8uA" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="__Anx4BupEeOCrObUnLJ8uA" name="lang">
+        <packagedElement xmi:type="uml:Class" xmi:id="__AoY8BupEeOCrObUnLJ8uA" name="Exception"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_-4xdcBupEeOCrObUnLJ8uA">
+      <eAnnotations xmi:id="_-4zSoBupEeOCrObUnLJ8uA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:Reference xmi:id="__AtRcBupEeOCrObUnLJ8uA" base_Element="__AoY8BupEeOCrObUnLJ8uA"/>
+  <UMLLabProfile:Array xmi:id="__BGTABupEeOCrObUnLJ8uA" dimensions="2" base_Element="__BAMYBupEeOCrObUnLJ8uA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="__BIvQBupEeOCrObUnLJ8uA" base_Element="__BAMYBupEeOCrObUnLJ8uA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="__BbDIBupEeOCrObUnLJ8uA" base_Element="__BUVcBupEeOCrObUnLJ8uA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="__BpFkBupEeOCrObUnLJ8uA" base_Element="__Bk0IBupEeOCrObUnLJ8uA"/>
+  <UMLLabProfile:Reference xmi:id="__C1_cBupEeOCrObUnLJ8uA" base_Element="__Cn9ABupEeOCrObUnLJ8uA"/>
+  <UMLLabProfile:Reference xmi:id="__C638BupEeOCrObUnLJ8uA" base_Element="__C2mgBupEeOCrObUnLJ8uA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_yJmKMBurEeOCrObUnLJ8uA" base_Element="_yJWSkBurEeOCrObUnLJ8uA"/>
+  <UMLLabProfile:Array xmi:id="_znS3QBurEeOCrObUnLJ8uA" dimensions="2" base_Element="_znJtUBurEeOCrObUnLJ8uA"/>
+  <UMLLabProfile:Array xmi:id="_znbaIBurEeOCrObUnLJ8uA" dimensions="2" base_Element="_znMwoBurEeOCrObUnLJ8uA"/>
+  <UMLLabProfile:Array xmi:id="_0cNGABurEeOCrObUnLJ8uA" dimensions="2" base_Element="_0cKpwBurEeOCrObUnLJ8uA"/>
+</xmi:XMI>

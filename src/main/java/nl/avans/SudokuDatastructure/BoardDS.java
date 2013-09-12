@@ -4,16 +4,17 @@ class BoardDS {
 
 	private Field[][] board;
 
-	public BoardDS(int x, int y) {
-		makeStructure(x, y);
+	public BoardDS(int size) {
+		makeStructure(size);
 	}
 
-	private void makeStructure(int x, int y) {
-		board = new Field[y][x];
+	private void makeStructure(int size) {
+		board = new Field[size][size];
 		// TODO call generator and ask for a new board. Load this into Field
 		// objects.
 		// TODO call solver with the generated board and load the solved values
 		// in the corresponding field objects.
+		// TODO generate using the size variable.
 	}
 
 	public void setValue(int x, int y, int value) throws UnkownFieldException {

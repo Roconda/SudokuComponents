@@ -8,7 +8,7 @@ public class DsArray {
 	private BoardDS ds;
 
 	public DsArray(int size) {
-		ds = new BoardDS(size, size);
+		ds = new BoardDS(size);
 	}
 
 	/**
