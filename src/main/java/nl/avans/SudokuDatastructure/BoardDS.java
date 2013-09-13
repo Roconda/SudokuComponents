@@ -17,6 +17,8 @@ class BoardDS {
 			board[y][x].setValue(value);
 		}catch(IndexOutOfBoundsException e){
 			throw new UnkownFieldException();
+		}catch(NullPointerException e) {
+			board[y][x] = new Field(value);
 		}
 	}
 

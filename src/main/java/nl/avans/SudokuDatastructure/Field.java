@@ -5,7 +5,7 @@ class Field {
 	private boolean editable = true;
 	
 	public Field(int value) {
-		
+		this.value = value;
 	}
 	
 	public Field setEditable(boolean value) {
