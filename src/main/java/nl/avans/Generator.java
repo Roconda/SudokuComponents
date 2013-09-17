@@ -2,6 +2,8 @@ package nl.avans;
 
 import java.util.Random;
 
+import nl.avans.utils.Randomizer;
+
 /**
  * Generator class.
  * 
@@ -66,9 +68,16 @@ public class Generator implements IGenerator
     	} else if (getSetSize() == 4) {
     		solvedGrid = solvedGrid4x4.clone();
     	}
+    	
+    	solvedGrid = Randomizer.randomize(solvedGrid);
     }
     
     
+    /**
+     * Gets the solved grid, used to generate the puzzle.
+     * 
+     * @return		The solved grid that is used to generate the puzzle out of.
+     */
     public int[][] getSolvedGrid() {
     	
     	return solvedGrid;
@@ -168,6 +177,11 @@ public class Generator implements IGenerator
     }
     
     
+    /**
+     * Gets the size of a Sudoku set.
+     * 
+     * @return		The size of a Sudoku set, based on the puzzle size.
+     */
     private int getSetSize() {
     	
     	return (int) Math.sqrt(puzzleSize);
