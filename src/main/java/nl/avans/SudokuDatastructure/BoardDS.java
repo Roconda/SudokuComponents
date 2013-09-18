@@ -1,10 +1,10 @@
 package nl.avans.SudokuDatastructure;
 
-class Board {
+class BoardDS {
 
 	private Field[][] board;
 
-	public Board(int size) {
+	public BoardDS(int size) {
 		makeStructure(size);
 	}
 

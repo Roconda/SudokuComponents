@@ -3,12 +3,12 @@ package nl.avans.SudokuDatastructure;
 /**
  * Only class which is accessible from outside this package
  */
-public class SudokuGame {
+public class DsArray {
 	private int size;
-	private Board ds;
+	private BoardDS ds;
 
-	public SudokuGame(int size) {
-		ds = new Board(size);
+	public DsArray(int size) {
+		ds = new BoardDS(size);
 	}
 
 	/**
