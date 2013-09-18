@@ -4,7 +4,14 @@
     <eAnnotations xmi:id="_-47OcBupEeOCrObUnLJ8uA" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_-49qsBupEeOCrObUnLJ8uA" source="codegen">
         <details xmi:id="_-49qsRupEeOCrObUnLJ8uA" key="codegenDirectory" value="/SudokuDatastructure/src/main/java"/>
-        <details xmi:id="__1EtoBupEeOCrObUnLJ8uA" key="AssociatedSourceCode" value="/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/BoardDS.java;1641360030/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/DsArray.java;4159204825/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/Field.java;477628564/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/GeneratedField.java;416151550/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/UnkownFieldException.java;3257818529/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/UserField.java;2480476611/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/EDifficulty.java;468087653/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/ISolver.java;2483551724/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/IGenerator.java;4067236277/1;"/>
+        <details xmi:id="__1EtoBupEeOCrObUnLJ8uA" key="AssociatedSourceCode" value="/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/DsArray.java;4159204825/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/Field.java;477628564/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/GeneratedField.java;416151550/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/UnkownFieldException.java;3257818529/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/UserField.java;2480476611/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/EDifficulty.java;468087653/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/ISolver.java;2483551724/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/IGenerator.java;2236411510/1;/SudokuDatastructure/src/main/java/nl/avans/SudokuDatastructure/Board.java;3277671592/1;"/>
+      </contents>
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_yS2gkCBQEeO8gaZoP1WjOw" source="preferences">
+        <contents xmi:type="ecore:EAnnotation" xmi:id="_yS3HoCBQEeO8gaZoP1WjOw" source="com.yattasolutions.codegen.reverse">
+          <details xmi:id="_yS3usCBQEeO8gaZoP1WjOw" key="com.yattasolutions.codegen.reverse.roundtrip.ReverseEngineerNewFiles" value="true"/>
+          <details xmi:id="_yS3usSBQEeO8gaZoP1WjOw" key="com.yattasolutions.codegen.reverse.roundtrip.ReverseEngineerChangedFiles" value="true"/>
+          <details xmi:id="_yS3usiBQEeO8gaZoP1WjOw" key="com.yattasolutions.codegen.reverse.roundtrip.RemoveDeletedFiles" value="true"/>
+        </contents>
       </contents>
     </eAnnotations>
     <elementImport xmi:id="_-5dZ8BupEeOCrObUnLJ8uA">
@@ -37,15 +44,12 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_-1FQQBupEeOCrObUnLJ8uA" name="nl">
       <packagedElement xmi:type="uml:Package" xmi:id="_-1F3UBupEeOCrObUnLJ8uA" name="avans">
         <packagedElement xmi:type="uml:Package" xmi:id="_-1pQ8BupEeOCrObUnLJ8uA" name="SudokuDatastructure">
-          <packagedElement xmi:type="uml:Class" xmi:id="_-4voQBupEeOCrObUnLJ8uA" name="BoardDS" visibility="package">
-            <ownedAttribute xmi:id="__BAMYBupEeOCrObUnLJ8uA" name="board" visibility="private" type="_-77fIBupEeOCrObUnLJ8uA" association="__Cn9ABupEeOCrObUnLJ8uA">
+          <packagedElement xmi:type="uml:Class" xmi:id="_-4voQBupEeOCrObUnLJ8uA" name="Board" visibility="package">
+            <ownedAttribute xmi:id="__BAMYBupEeOCrObUnLJ8uA" name="board" visibility="private" type="_-77fIBupEeOCrObUnLJ8uA" association="_Bjy-QCBVEeO8gaZoP1WjOw">
               <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__BFr8BupEeOCrObUnLJ8uA" value="*"/>
             </ownedAttribute>
-            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__B6LUBupEeOCrObUnLJ8uA" name="BoardDS" specification="_-510cBupEeOCrObUnLJ8uA">
-              <ownedParameter xmi:id="__B6LURupEeOCrObUnLJ8uA" name="size">
-                <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-              </ownedParameter>
-              <ownedParameter xmi:id="__B6LUhupEeOCrObUnLJ8uA" type="_-4voQBupEeOCrObUnLJ8uA" direction="return"/>
+            <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="__B6LUBupEeOCrObUnLJ8uA" name="Board" specification="_-510cBupEeOCrObUnLJ8uA">
+              <ownedParameter xmi:id="_BjpNQCBVEeO8gaZoP1WjOw" type="_-4voQBupEeOCrObUnLJ8uA" direction="return"/>
               <language>java</language>
               <body>makeStructure(size);
 	</body>
@@ -89,6 +93,7 @@
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
               <ownedParameter xmi:id="__CBgExupEeOCrObUnLJ8uA" direction="return">
+                <name xsi:nil="true"/>
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
               <language>java</language>
@@ -100,14 +105,14 @@
 		}
 	</body>
             </ownedBehavior>
-            <ownedOperation xmi:id="_-510cBupEeOCrObUnLJ8uA" name="BoardDS" method="__B6LUBupEeOCrObUnLJ8uA">
+            <ownedOperation xmi:id="_-510cBupEeOCrObUnLJ8uA" name="Board" method="__B6LUBupEeOCrObUnLJ8uA">
               <eAnnotations xmi:id="_-6AMgBupEeOCrObUnLJ8uA" source="http://www.eclipse.org/uml2/2.0.0/UML">
                 <details xmi:id="_-6AzkBupEeOCrObUnLJ8uA" key="create"/>
               </eAnnotations>
-              <ownedParameter xmi:id="_-54QsBupEeOCrObUnLJ8uA" name="size">
+              <ownedParameter xmi:id="_BiuAMCBVEeO8gaZoP1WjOw" type="_-4voQBupEeOCrObUnLJ8uA" direction="return"/>
+              <ownedParameter xmi:id="__B6LURupEeOCrObUnLJ8uA" name="size">
                 <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
               </ownedParameter>
-              <ownedParameter xmi:id="_-6BaoBupEeOCrObUnLJ8uA" type="_-4voQBupEeOCrObUnLJ8uA" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:id="_-6Ed8BupEeOCrObUnLJ8uA" name="makeStructure" visibility="private" method="__B91sBupEeOCrObUnLJ8uA">
               <ownedParameter xmi:id="_-6FsEBupEeOCrObUnLJ8uA" name="size">
@@ -389,9 +394,6 @@ Fields differ. Generated fields can not be changed by the user, for example.</bo
               <ownedParameter xmi:id="_-9as4BupEeOCrObUnLJ8uA" type="_-9JnIBupEeOCrObUnLJ8uA" direction="return"/>
             </ownedOperation>
           </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="__Cn9ABupEeOCrObUnLJ8uA" name="" memberEnd="__CokEBupEeOCrObUnLJ8uA __BAMYBupEeOCrObUnLJ8uA">
-            <ownedEnd xmi:id="__CokEBupEeOCrObUnLJ8uA" name="" type="_-4voQBupEeOCrObUnLJ8uA" association="__Cn9ABupEeOCrObUnLJ8uA"/>
-          </packagedElement>
           <packagedElement xmi:type="uml:Association" xmi:id="__C2mgBupEeOCrObUnLJ8uA" name="" memberEnd="__C2mgRupEeOCrObUnLJ8uA __BUVcBupEeOCrObUnLJ8uA">
             <ownedEnd xmi:id="__C2mgRupEeOCrObUnLJ8uA" name="" type="_-6910BupEeOCrObUnLJ8uA" association="__C2mgBupEeOCrObUnLJ8uA"/>
           </packagedElement>
@@ -423,6 +425,9 @@ Fields differ. Generated fields can not be changed by the user, for example.</bo
               </ownedParameter>
             </ownedOperation>
           </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="_Bjy-QCBVEeO8gaZoP1WjOw" name="" memberEnd="_Bjy-QSBVEeO8gaZoP1WjOw __BAMYBupEeOCrObUnLJ8uA">
+            <ownedEnd xmi:id="_Bjy-QSBVEeO8gaZoP1WjOw" name="" type="_-4voQBupEeOCrObUnLJ8uA" association="_Bjy-QCBVEeO8gaZoP1WjOw"/>
+          </packagedElement>
         </packagedElement>
       </packagedElement>
     </packagedElement>
@@ -443,10 +448,10 @@ Fields differ. Generated fields can not be changed by the user, for example.</bo
   <UMLLabProfile:LegacyStyledElement xmi:id="__BIvQBupEeOCrObUnLJ8uA" base_Element="__BAMYBupEeOCrObUnLJ8uA"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__BbDIBupEeOCrObUnLJ8uA" base_Element="__BUVcBupEeOCrObUnLJ8uA"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="__BpFkBupEeOCrObUnLJ8uA" base_Element="__Bk0IBupEeOCrObUnLJ8uA"/>
-  <UMLLabProfile:Reference xmi:id="__C1_cBupEeOCrObUnLJ8uA" base_Element="__Cn9ABupEeOCrObUnLJ8uA"/>
   <UMLLabProfile:Reference xmi:id="__C638BupEeOCrObUnLJ8uA" base_Element="__C2mgBupEeOCrObUnLJ8uA"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_yJmKMBurEeOCrObUnLJ8uA" base_Element="_yJWSkBurEeOCrObUnLJ8uA"/>
   <UMLLabProfile:Array xmi:id="_znS3QBurEeOCrObUnLJ8uA" dimensions="2" base_Element="_znJtUBurEeOCrObUnLJ8uA"/>
   <UMLLabProfile:Array xmi:id="_znbaIBurEeOCrObUnLJ8uA" dimensions="2" base_Element="_znMwoBurEeOCrObUnLJ8uA"/>
   <UMLLabProfile:Array xmi:id="_0cNGABurEeOCrObUnLJ8uA" dimensions="2" base_Element="_0cKpwBurEeOCrObUnLJ8uA"/>
+  <UMLLabProfile:Reference xmi:id="_Bj2BkCBVEeO8gaZoP1WjOw" base_Element="_Bjy-QCBVEeO8gaZoP1WjOw"/>
 </xmi:XMI>

@@ -1,44 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_vat0ABupEeOCrObUnLJ8uA">
   <modelElement href="SudokuDatastructure.uml#_-1pQ8BupEeOCrObUnLJ8uA"/>
-  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="__2V48BupEeOCrObUnLJ8uA" sourceAnchor="0.0,58.0" targetAnchor="404.0,63.0" target="__7EA4BupEeOCrObUnLJ8uA" source="__2YVMBupEeOCrObUnLJ8uA">
-    <modelElement href="SudokuDatastructure.uml#__Cn9ABupEeOCrObUnLJ8uA"/>
-    <stereotypes xmi:id="__2WgABupEeOCrObUnLJ8uA" name="Reference">
-      <modelElement href="SudokuDatastructure.uml#__C1_cBupEeOCrObUnLJ8uA"/>
-    </stereotypes>
-    <nameVisual xmi:id="__2WgARupEeOCrObUnLJ8uA" text="">
-      <visualProperties xmi:id="_A6SpQBuqEeOCrObUnLJ8uA" position="-21.0,-21.000000000000057"/>
-    </nameVisual>
-    <sourceRole xmi:id="__2WgAhupEeOCrObUnLJ8uA" aggregationKind="NONE" name="">
-      <modelElement href="SudokuDatastructure.uml#__CokEBupEeOCrObUnLJ8uA"/>
-      <visualProperties xmi:id="_A6O-4BuqEeOCrObUnLJ8uA" position="-32.0,-51.0"/>
-      <visibility xmi:id="__2WgAxupEeOCrObUnLJ8uA" label="+"/>
-      <cardinality xmi:id="__2WgBBupEeOCrObUnLJ8uA" label="1" max="1" min="1"/>
-    </sourceRole>
-    <targetRole xmi:id="__2WgBRupEeOCrObUnLJ8uA" aggregationKind="NONE" name="board" navigable="true">
-      <modelElement href="SudokuDatastructure.uml#__BAMYBupEeOCrObUnLJ8uA"/>
-      <visualProperties xmi:id="_A6T3YBuqEeOCrObUnLJ8uA" position="43.0,2.0"/>
-      <visibility xmi:id="__2WgBhupEeOCrObUnLJ8uA" label="-"/>
-      <cardinality xmi:id="__2WgBxupEeOCrObUnLJ8uA" label="1..*" max="-1" min="1"/>
-    </targetRole>
-  </edges>
-  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="__5O04BupEeOCrObUnLJ8uA" sourceAnchor="179.0,126.0" targetAnchor="141.0,0.0" target="__2YVMBupEeOCrObUnLJ8uA" source="__5jlABupEeOCrObUnLJ8uA">
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="__5O04BupEeOCrObUnLJ8uA" sourceAnchor="187.0,126.0" targetAnchor="142.0,0.0" target="__2YVMBupEeOCrObUnLJ8uA" source="__5jlABupEeOCrObUnLJ8uA">
     <modelElement href="SudokuDatastructure.uml#__C2mgBupEeOCrObUnLJ8uA"/>
     <stereotypes xmi:id="__5WwsBupEeOCrObUnLJ8uA" name="Reference">
       <modelElement href="SudokuDatastructure.uml#__C638BupEeOCrObUnLJ8uA"/>
     </stereotypes>
     <nameVisual xmi:id="__5U7gBupEeOCrObUnLJ8uA" text="">
-      <visualProperties xmi:id="_A6alEBuqEeOCrObUnLJ8uA" position="-105.0,18.0"/>
+      <visualProperties xmi:id="_A6alEBuqEeOCrObUnLJ8uA" position="-99.5,17.499999999999986"/>
     </nameVisual>
     <sourceRole xmi:id="__5VikBupEeOCrObUnLJ8uA" aggregationKind="NONE" name="">
       <modelElement href="SudokuDatastructure.uml#__C2mgRupEeOCrObUnLJ8uA"/>
-      <visualProperties xmi:id="_A6XhwBuqEeOCrObUnLJ8uA" position="-18.0,18.0"/>
+      <visualProperties xmi:id="_A6XhwBuqEeOCrObUnLJ8uA" position="-17.5,18.0"/>
       <visibility xmi:id="__5f6oBupEeOCrObUnLJ8uA" label="+"/>
       <cardinality xmi:id="__5fTkBupEeOCrObUnLJ8uA" label="1" max="1" min="1"/>
     </sourceRole>
     <targetRole xmi:id="__5WJoBupEeOCrObUnLJ8uA" aggregationKind="NONE" name="ds" navigable="true">
       <modelElement href="SudokuDatastructure.uml#__BUVcBupEeOCrObUnLJ8uA"/>
-      <visualProperties xmi:id="_A6caQBuqEeOCrObUnLJ8uA" position="2.0,-68.0"/>
+      <visualProperties xmi:id="_A6caQBuqEeOCrObUnLJ8uA" position="2.5,-67.0"/>
+      <stereotypes xmi:id="_wD8ZACBQEeO8gaZoP1WjOw" name="LegacyStyledElement">
+        <modelElement href="SudokuDatastructure.uml#__BbDIBupEeOCrObUnLJ8uA"/>
+      </stereotypes>
       <visibility xmi:id="__5ghsRupEeOCrObUnLJ8uA" label="-"/>
       <cardinality xmi:id="__5ghsBupEeOCrObUnLJ8uA" label="1" max="1" min="1"/>
     </targetRole>
@@ -53,10 +35,27 @@
   </edges>
   <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="__75HUBupEeOCrObUnLJ8uA" sourceAnchor="148.0,0.0" targetAnchor="202.0,126.0" superClass="__7EA4BupEeOCrObUnLJ8uA" subClass="__8C4UBupEeOCrObUnLJ8uA">
     <modelElement href="SudokuDatastructure.uml#__ALF8BupEeOCrObUnLJ8uA"/>
-    <bendpoints xmi:id="_YANKABusEeOCrObUnLJ8uA" sourceY="-49" targetX="473" targetY="154"/>
-    <bendpoints xmi:id="_YANxEBusEeOCrObUnLJ8uA" sourceX="-473" sourceY="-49" targetY="154"/>
+    <bendpoints xmi:id="_Fenf8CBTEeO8gaZoP1WjOw" sourceY="-49" targetX="473" targetY="154"/>
+    <bendpoints xmi:id="_Fenf8SBTEeO8gaZoP1WjOw" sourceX="-473" sourceY="-49" targetY="154"/>
   </edges>
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="__76VcBupEeOCrObUnLJ8uA" targetItem="__8C4UBupEeOCrObUnLJ8uA" sourceItem="__75uYBupEeOCrObUnLJ8uA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_BmV78CBVEeO8gaZoP1WjOw" target="__7EA4BupEeOCrObUnLJ8uA" source="__2YVMBupEeOCrObUnLJ8uA">
+    <modelElement href="SudokuDatastructure.uml#_Bjy-QCBVEeO8gaZoP1WjOw"/>
+    <stereotypes xmi:id="_BmV78SBVEeO8gaZoP1WjOw" name="Reference">
+      <modelElement href="SudokuDatastructure.uml#_Bj2BkCBVEeO8gaZoP1WjOw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_BmV78iBVEeO8gaZoP1WjOw" text=""/>
+    <sourceRole xmi:id="_BmWjACBVEeO8gaZoP1WjOw" aggregationKind="NONE" name="">
+      <modelElement href="SudokuDatastructure.uml#_Bjy-QSBVEeO8gaZoP1WjOw"/>
+      <visibility xmi:id="_BmWjASBVEeO8gaZoP1WjOw" label="+"/>
+      <cardinality xmi:id="_BmWjAiBVEeO8gaZoP1WjOw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_BmWjAyBVEeO8gaZoP1WjOw" aggregationKind="NONE" name="board" navigable="true">
+      <modelElement href="SudokuDatastructure.uml#__BAMYBupEeOCrObUnLJ8uA"/>
+      <visibility xmi:id="_BmWjBCBVEeO8gaZoP1WjOw" label="-"/>
+      <cardinality xmi:id="_BmWjBSBVEeO8gaZoP1WjOw" label="1..*" max="-1" min="1"/>
+    </targetRole>
+  </edges>
   <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="__5SfQBupEeOCrObUnLJ8uA" sourceConnectionVisual="__5TtYBupEeOCrObUnLJ8uA" text="Only class which is accessible from outside this package" item="__5jlABupEeOCrObUnLJ8uA">
     <modelElement href="SudokuDatastructure.uml#__CZ6kBupEeOCrObUnLJ8uA"/>
   </nodes>
@@ -65,9 +64,11 @@
   </nodes>
   <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="__6xF8BupEeOCrObUnLJ8uA" sourceConnectionVisual="__6xF8RupEeOCrObUnLJ8uA" text="The Class Field. This class is abstract and represents a field in the sudoku.&#xA;Fields differ. Generated fields can not be changed by the user, for example." item="__7EA4BupEeOCrObUnLJ8uA">
     <modelElement href="SudokuDatastructure.uml#__CbvwBupEeOCrObUnLJ8uA"/>
+    <visualProperties xmi:id="__Rh-4ButEeOCrObUnLJ8uA" position="528.0,49.0" size="200.0,150.0" visible="false"/>
   </nodes>
   <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="__61XYBupEeOCrObUnLJ8uA" sourceConnectionVisual="__61-cBupEeOCrObUnLJ8uA" text="Instantiates a new field.&#xA;&#x9; * &#xA;&#x9; * @param currentValue&#xA;&#x9; *            the current value&#xA;&#x9; * @param solutionValue&#xA;&#x9; *            the solution value" item="__7En-hupEeOCrObUnLJ8uA">
     <modelElement href="SudokuDatastructure.uml#__Cc94BupEeOCrObUnLJ8uA"/>
+    <visualProperties xmi:id="_AWxIoBuuEeOCrObUnLJ8uA" position="497.0,131.0" size="200.0,150.0" visible="false"/>
   </nodes>
   <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="__63zoBupEeOCrObUnLJ8uA" sourceConnectionVisual="__63zoRupEeOCrObUnLJ8uA" text="Sets the current value.&#xA;&#x9; * &#xA;&#x9; * @param newValue&#xA;&#x9; *            the new value&#xA;&#x9; * @return true, if successful" item="__7EoAxupEeOCrObUnLJ8uA">
     <modelElement href="SudokuDatastructure.uml#__Cdk8BupEeOCrObUnLJ8uA"/>
@@ -75,64 +76,75 @@
   <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="__75uYBupEeOCrObUnLJ8uA" sourceConnectionVisual="__76VcBupEeOCrObUnLJ8uA" text="The Class UserField. This is a concrete implementation of the Field class." item="__8C4UBupEeOCrObUnLJ8uA">
     <modelElement href="SudokuDatastructure.uml#__CezEBupEeOCrObUnLJ8uA"/>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="__7EA4BupEeOCrObUnLJ8uA" comments="__6xF8BupEeOCrObUnLJ8uA" targetConnectionVisual="__6xF8RupEeOCrObUnLJ8uA" name="Field" abstractClass="true" associationsIn="__2V48BupEeOCrObUnLJ8uA" subclassedBy="__7gFwBupEeOCrObUnLJ8uA __75HUBupEeOCrObUnLJ8uA">
-    <modelElement href="SudokuDatastructure.uml#_-77fIBupEeOCrObUnLJ8uA"/>
-    <visualProperties xmi:id="__7EA4RupEeOCrObUnLJ8uA" position="104.0,29.0" size="-1.0,-1.0"/>
-    <visibility xmi:id="__7En8BupEeOCrObUnLJ8uA" label="~"/>
-    <attributes xmi:id="__7En8RupEeOCrObUnLJ8uA" defaultValue="-1" name="currentValue">
-      <modelElement href="SudokuDatastructure.uml#__BiX4BupEeOCrObUnLJ8uA"/>
-      <visibility xmi:id="__7En8hupEeOCrObUnLJ8uA" label="+"/>
-      <cardinality xmi:id="__7En8xupEeOCrObUnLJ8uA" label="1" max="1" min="1"/>
-      <type xmi:id="__7En9BupEeOCrObUnLJ8uA" name="int">
-        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-      </type>
-    </attributes>
-    <attributes xmi:id="__7En9RupEeOCrObUnLJ8uA" defaultValue="-1" name="solutionValue">
-      <modelElement href="SudokuDatastructure.uml#__Bk0IBupEeOCrObUnLJ8uA"/>
-      <stereotypes xmi:id="__7En9hupEeOCrObUnLJ8uA" name="LegacyStyledElement">
-        <modelElement href="SudokuDatastructure.uml#__BpFkBupEeOCrObUnLJ8uA"/>
-      </stereotypes>
-      <visibility xmi:id="__7En9xupEeOCrObUnLJ8uA" label="-"/>
-      <cardinality xmi:id="__7En-BupEeOCrObUnLJ8uA" label="1" max="1" min="1"/>
-      <type xmi:id="__7En-RupEeOCrObUnLJ8uA" name="int">
-        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-      </type>
-    </attributes>
-    <operations xmi:id="__7En-hupEeOCrObUnLJ8uA" comments="__61XYBupEeOCrObUnLJ8uA" targetConnectionVisual="__61-cBupEeOCrObUnLJ8uA" name="Field">
-      <modelElement href="SudokuDatastructure.uml#_-8EpEBupEeOCrObUnLJ8uA"/>
-      <keywords xmi:id="__7En-xupEeOCrObUnLJ8uA" keyword="create"/>
-      <visibility xmi:id="__7En_BupEeOCrObUnLJ8uA" label="+"/>
-      <outParameters xmi:id="__7En_RupEeOCrObUnLJ8uA">
-        <modelElement href="SudokuDatastructure.uml#_-8KIohupEeOCrObUnLJ8uA"/>
-        <type xmi:id="__7En_hupEeOCrObUnLJ8uA" name="Field">
-          <modelElement href="SudokuDatastructure.uml#_-77fIBupEeOCrObUnLJ8uA"/>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:EnumerationVisual" xmi:id="_yRor4BurEeOCrObUnLJ8uA" name="EDifficulty">
+    <modelElement href="SudokuDatastructure.uml#_yJWSkBurEeOCrObUnLJ8uA"/>
+    <visualProperties xmi:id="_yRor4RurEeOCrObUnLJ8uA" position="1264.0,-5.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_yRor4hurEeOCrObUnLJ8uA" name="LegacyStyledElement">
+      <modelElement href="SudokuDatastructure.uml#_yJmKMBurEeOCrObUnLJ8uA"/>
+    </stereotypes>
+    <visibility xmi:id="_yRor4xurEeOCrObUnLJ8uA" label="+"/>
+    <literals xmi:id="_yRor5BurEeOCrObUnLJ8uA" name="LEVEL_1">
+      <modelElement href="SudokuDatastructure.uml#_yJmxQBurEeOCrObUnLJ8uA"/>
+    </literals>
+    <literals xmi:id="_yRor5RurEeOCrObUnLJ8uA" name="LEVEL_2">
+      <modelElement href="SudokuDatastructure.uml#_yJnYUBurEeOCrObUnLJ8uA"/>
+    </literals>
+    <literals xmi:id="_yRor5hurEeOCrObUnLJ8uA" name="LEVEL_3">
+      <modelElement href="SudokuDatastructure.uml#_yJn_YBurEeOCrObUnLJ8uA"/>
+    </literals>
+    <literals xmi:id="_yRor5xurEeOCrObUnLJ8uA" name="LEVEL_4">
+      <modelElement href="SudokuDatastructure.uml#_yJpNgBurEeOCrObUnLJ8uA"/>
+    </literals>
+    <literals xmi:id="_yRor6BurEeOCrObUnLJ8uA" name="LEVEL_5">
+      <modelElement href="SudokuDatastructure.uml#_yJqboBurEeOCrObUnLJ8uA"/>
+    </literals>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="__8C4UBupEeOCrObUnLJ8uA" comments="__75uYBupEeOCrObUnLJ8uA" targetConnectionVisual="__76VcBupEeOCrObUnLJ8uA" name="UserField" generalizations="__75HUBupEeOCrObUnLJ8uA">
+    <modelElement href="SudokuDatastructure.uml#_-9JnIBupEeOCrObUnLJ8uA"/>
+    <visualProperties xmi:id="__8C4URupEeOCrObUnLJ8uA" position="631.0,358.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="__8C4UhupEeOCrObUnLJ8uA" label="~"/>
+    <operations xmi:id="__8C4UxupEeOCrObUnLJ8uA" name="UserField">
+      <modelElement href="SudokuDatastructure.uml#_-9T_MBupEeOCrObUnLJ8uA"/>
+      <keywords xmi:id="__8C4VBupEeOCrObUnLJ8uA" keyword="create"/>
+      <visibility xmi:id="__8C4VRupEeOCrObUnLJ8uA" label="+"/>
+      <outParameters xmi:id="__8C4VhupEeOCrObUnLJ8uA">
+        <modelElement href="SudokuDatastructure.uml#_-9as4BupEeOCrObUnLJ8uA"/>
+        <type xmi:id="__8C4VxupEeOCrObUnLJ8uA" name="UserField">
+          <modelElement href="SudokuDatastructure.uml#_-9JnIBupEeOCrObUnLJ8uA"/>
         </type>
       </outParameters>
-      <parameters xmi:id="__7En_xupEeOCrObUnLJ8uA" name="currentValue">
-        <modelElement href="SudokuDatastructure.uml#_-8I6gBupEeOCrObUnLJ8uA"/>
-        <type xmi:id="__7EoABupEeOCrObUnLJ8uA" name="int">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </type>
-      </parameters>
-      <parameters xmi:id="__7EoARupEeOCrObUnLJ8uA" name="solutionValue">
-        <modelElement href="SudokuDatastructure.uml#_-8I6gRupEeOCrObUnLJ8uA"/>
-        <type xmi:id="__7EoAhupEeOCrObUnLJ8uA" name="int">
+      <parameters xmi:id="__8C4WBupEeOCrObUnLJ8uA" name="currentValue">
+        <modelElement href="SudokuDatastructure.uml#_-9Y3sBupEeOCrObUnLJ8uA"/>
+        <type xmi:id="__8C4WRupEeOCrObUnLJ8uA" name="int">
           <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </type>
       </parameters>
     </operations>
-    <operations xmi:id="__7EoAxupEeOCrObUnLJ8uA" comments="__63zoBupEeOCrObUnLJ8uA" targetConnectionVisual="__63zoRupEeOCrObUnLJ8uA" name="setCurrentValue">
-      <modelElement href="SudokuDatastructure.uml#_-8OaEBupEeOCrObUnLJ8uA"/>
-      <visibility xmi:id="__7EoBBupEeOCrObUnLJ8uA" label="+"/>
-      <outParameters xmi:id="__7EoBRupEeOCrObUnLJ8uA">
-        <modelElement href="SudokuDatastructure.uml#_-8SrgBupEeOCrObUnLJ8uA"/>
-        <type xmi:id="__7EoBhupEeOCrObUnLJ8uA" name="boolean">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="__5IuQBupEeOCrObUnLJ8uA" name="UnkownFieldException">
+    <modelElement href="SudokuDatastructure.uml#_-9BrUBupEeOCrObUnLJ8uA"/>
+    <visualProperties xmi:id="__5JVUBupEeOCrObUnLJ8uA" position="1209.0,-69.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="__5JVURupEeOCrObUnLJ8uA" label="~"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_zuOlsBurEeOCrObUnLJ8uA" name="ISolver">
+    <modelElement href="SudokuDatastructure.uml#_zm85ABurEeOCrObUnLJ8uA"/>
+    <visualProperties xmi:id="_zuOlsRurEeOCrObUnLJ8uA" position="794.0,204.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_zuOlshurEeOCrObUnLJ8uA" label="+"/>
+    <operations xmi:id="_zuOlsxurEeOCrObUnLJ8uA" name="solve">
+      <modelElement href="SudokuDatastructure.uml#_znJtUBurEeOCrObUnLJ8uA"/>
+      <stereotypes xmi:id="_zuOltBurEeOCrObUnLJ8uA" name="Array">
+        <modelElement href="SudokuDatastructure.uml#_znS3QBurEeOCrObUnLJ8uA"/>
+      </stereotypes>
+      <visibility xmi:id="_zuOltRurEeOCrObUnLJ8uA" label="+"/>
+      <outParameters xmi:id="_zuOlthurEeOCrObUnLJ8uA">
+        <modelElement href="SudokuDatastructure.uml#_znN-wBurEeOCrObUnLJ8uA"/>
+        <type xmi:id="_zuOltxurEeOCrObUnLJ8uA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </type>
       </outParameters>
-      <parameters xmi:id="__7EoBxupEeOCrObUnLJ8uA" name="newValue">
-        <modelElement href="SudokuDatastructure.uml#_-8SEcBupEeOCrObUnLJ8uA"/>
-        <type xmi:id="__7EoCBupEeOCrObUnLJ8uA" name="int">
+      <parameters xmi:id="_zuOluBurEeOCrObUnLJ8uA" name="input">
+        <modelElement href="SudokuDatastructure.uml#_znMwoBurEeOCrObUnLJ8uA"/>
+        <type xmi:id="_zuOluRurEeOCrObUnLJ8uA" name="int">
           <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </type>
       </parameters>
@@ -152,15 +164,15 @@
     </attributes>
     <attributes xmi:id="__5jlBxupEeOCrObUnLJ8uA" name="ds">
       <modelElement href="SudokuDatastructure.uml#__BUVcBupEeOCrObUnLJ8uA"/>
-      <stereotypes xmi:id="__5jlCBupEeOCrObUnLJ8uA" name="LegacyStyledElement">
+      <stereotypes xmi:id="__5hIwBupEeOCrObUnLJ8uA" name="LegacyStyledElement">
         <modelElement href="SudokuDatastructure.uml#__BbDIBupEeOCrObUnLJ8uA"/>
       </stereotypes>
-      <stereotypes xmi:id="__5hIwBupEeOCrObUnLJ8uA" name="LegacyStyledElement">
+      <stereotypes xmi:id="_wEr_4CBQEeO8gaZoP1WjOw" name="LegacyStyledElement">
         <modelElement href="SudokuDatastructure.uml#__BbDIBupEeOCrObUnLJ8uA"/>
       </stereotypes>
       <visibility xmi:id="__5kMEBupEeOCrObUnLJ8uA" label="-"/>
       <cardinality xmi:id="__5kMERupEeOCrObUnLJ8uA" label="1" max="1" min="1"/>
-      <type xmi:id="__5kMEhupEeOCrObUnLJ8uA" name="BoardDS">
+      <type xmi:id="__5kMEhupEeOCrObUnLJ8uA" name="Board">
         <modelElement href="SudokuDatastructure.uml#_-4voQBupEeOCrObUnLJ8uA"/>
       </type>
     </attributes>
@@ -232,45 +244,153 @@
       </parameters>
     </operations>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:EnumerationVisual" xmi:id="_yRor4BurEeOCrObUnLJ8uA" name="EDifficulty">
-    <modelElement href="SudokuDatastructure.uml#_yJWSkBurEeOCrObUnLJ8uA"/>
-    <visualProperties xmi:id="_yRor4RurEeOCrObUnLJ8uA" position="1264.0,-5.0" size="-1.0,-1.0"/>
-    <stereotypes xmi:id="_yRor4hurEeOCrObUnLJ8uA" name="LegacyStyledElement">
-      <modelElement href="SudokuDatastructure.uml#_yJmKMBurEeOCrObUnLJ8uA"/>
-    </stereotypes>
-    <visibility xmi:id="_yRor4xurEeOCrObUnLJ8uA" label="+"/>
-    <literals xmi:id="_yRor5BurEeOCrObUnLJ8uA" name="LEVEL_1">
-      <modelElement href="SudokuDatastructure.uml#_yJmxQBurEeOCrObUnLJ8uA"/>
-    </literals>
-    <literals xmi:id="_yRor5RurEeOCrObUnLJ8uA" name="LEVEL_2">
-      <modelElement href="SudokuDatastructure.uml#_yJnYUBurEeOCrObUnLJ8uA"/>
-    </literals>
-    <literals xmi:id="_yRor5hurEeOCrObUnLJ8uA" name="LEVEL_3">
-      <modelElement href="SudokuDatastructure.uml#_yJn_YBurEeOCrObUnLJ8uA"/>
-    </literals>
-    <literals xmi:id="_yRor5xurEeOCrObUnLJ8uA" name="LEVEL_4">
-      <modelElement href="SudokuDatastructure.uml#_yJpNgBurEeOCrObUnLJ8uA"/>
-    </literals>
-    <literals xmi:id="_yRor6BurEeOCrObUnLJ8uA" name="LEVEL_5">
-      <modelElement href="SudokuDatastructure.uml#_yJqboBurEeOCrObUnLJ8uA"/>
-    </literals>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="__7rr8BupEeOCrObUnLJ8uA" name="GeneratedField" generalizations="__7gFwBupEeOCrObUnLJ8uA">
+    <modelElement href="SudokuDatastructure.uml#_-8ff0BupEeOCrObUnLJ8uA"/>
+    <visualProperties xmi:id="__7rr8RupEeOCrObUnLJ8uA" position="29.0,339.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="__7rr8hupEeOCrObUnLJ8uA" label="~"/>
+    <operations xmi:id="__7rr8xupEeOCrObUnLJ8uA" name="GeneratedField">
+      <modelElement href="SudokuDatastructure.uml#_-8pQ0BupEeOCrObUnLJ8uA"/>
+      <keywords xmi:id="__7rr9BupEeOCrObUnLJ8uA" keyword="create"/>
+      <visibility xmi:id="__7rr9RupEeOCrObUnLJ8uA" label="+"/>
+      <outParameters xmi:id="__7rr9hupEeOCrObUnLJ8uA">
+        <modelElement href="SudokuDatastructure.uml#_-8xMoBupEeOCrObUnLJ8uA"/>
+        <type xmi:id="__7rr9xupEeOCrObUnLJ8uA" name="GeneratedField">
+          <modelElement href="SudokuDatastructure.uml#_-8ff0BupEeOCrObUnLJ8uA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="__7rr-BupEeOCrObUnLJ8uA" name="currentValue">
+        <modelElement href="SudokuDatastructure.uml#_-8rtEBupEeOCrObUnLJ8uA"/>
+        <type xmi:id="__7rr-RupEeOCrObUnLJ8uA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="__7rr-hupEeOCrObUnLJ8uA" name="solutionValue">
+        <modelElement href="SudokuDatastructure.uml#_-8sUIBupEeOCrObUnLJ8uA"/>
+        <type xmi:id="__7rr-xupEeOCrObUnLJ8uA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="__7rr_BupEeOCrObUnLJ8uA" name="setCurrentValue">
+      <modelElement href="SudokuDatastructure.uml#_-82FIBupEeOCrObUnLJ8uA"/>
+      <visibility xmi:id="__7sTABupEeOCrObUnLJ8uA" label="+"/>
+      <outParameters xmi:id="__7sTARupEeOCrObUnLJ8uA">
+        <modelElement href="SudokuDatastructure.uml#_-85vgBupEeOCrObUnLJ8uA"/>
+        <type xmi:id="__7sTAhupEeOCrObUnLJ8uA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="__7sTAxupEeOCrObUnLJ8uA" name="newValue">
+        <modelElement href="SudokuDatastructure.uml#_-82sMBupEeOCrObUnLJ8uA"/>
+        <type xmi:id="__7sTBBupEeOCrObUnLJ8uA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="__2YVMBupEeOCrObUnLJ8uA" name="BoardDS" associationsIn="__5O04BupEeOCrObUnLJ8uA" associationsOut="__2V48BupEeOCrObUnLJ8uA">
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="__7EA4BupEeOCrObUnLJ8uA" comments="__6xF8BupEeOCrObUnLJ8uA" targetConnectionVisual="__6xF8RupEeOCrObUnLJ8uA" name="Field" abstractClass="true" associationsIn="_BmV78CBVEeO8gaZoP1WjOw" subclassedBy="__7gFwBupEeOCrObUnLJ8uA __75HUBupEeOCrObUnLJ8uA">
+    <modelElement href="SudokuDatastructure.uml#_-77fIBupEeOCrObUnLJ8uA"/>
+    <visualProperties xmi:id="__7EA4RupEeOCrObUnLJ8uA" position="104.0,29.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="__7En8BupEeOCrObUnLJ8uA" label="~"/>
+    <attributes xmi:id="__7En8RupEeOCrObUnLJ8uA" defaultValue="-1" name="currentValue">
+      <modelElement href="SudokuDatastructure.uml#__BiX4BupEeOCrObUnLJ8uA"/>
+      <visibility xmi:id="__7En8hupEeOCrObUnLJ8uA" label="+"/>
+      <cardinality xmi:id="__7En8xupEeOCrObUnLJ8uA" label="1" max="1" min="1"/>
+      <type xmi:id="__7En9BupEeOCrObUnLJ8uA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="__7En9RupEeOCrObUnLJ8uA" defaultValue="-1" name="solutionValue">
+      <modelElement href="SudokuDatastructure.uml#__Bk0IBupEeOCrObUnLJ8uA"/>
+      <stereotypes xmi:id="__7En9hupEeOCrObUnLJ8uA" name="LegacyStyledElement">
+        <modelElement href="SudokuDatastructure.uml#__BpFkBupEeOCrObUnLJ8uA"/>
+      </stereotypes>
+      <visibility xmi:id="__7En9xupEeOCrObUnLJ8uA" label="-"/>
+      <cardinality xmi:id="__7En-BupEeOCrObUnLJ8uA" label="1" max="1" min="1"/>
+      <type xmi:id="__7En-RupEeOCrObUnLJ8uA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="__7En-hupEeOCrObUnLJ8uA" comments="__61XYBupEeOCrObUnLJ8uA" targetConnectionVisual="__61-cBupEeOCrObUnLJ8uA" name="Field">
+      <modelElement href="SudokuDatastructure.uml#_-8EpEBupEeOCrObUnLJ8uA"/>
+      <keywords xmi:id="__7En-xupEeOCrObUnLJ8uA" keyword="create"/>
+      <visibility xmi:id="__7En_BupEeOCrObUnLJ8uA" label="+"/>
+      <outParameters xmi:id="__7En_RupEeOCrObUnLJ8uA">
+        <modelElement href="SudokuDatastructure.uml#_-8KIohupEeOCrObUnLJ8uA"/>
+        <type xmi:id="__7En_hupEeOCrObUnLJ8uA" name="Field">
+          <modelElement href="SudokuDatastructure.uml#_-77fIBupEeOCrObUnLJ8uA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="__7En_xupEeOCrObUnLJ8uA" name="currentValue">
+        <modelElement href="SudokuDatastructure.uml#_-8I6gBupEeOCrObUnLJ8uA"/>
+        <type xmi:id="__7EoABupEeOCrObUnLJ8uA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="__7EoARupEeOCrObUnLJ8uA" name="solutionValue">
+        <modelElement href="SudokuDatastructure.uml#_-8I6gRupEeOCrObUnLJ8uA"/>
+        <type xmi:id="__7EoAhupEeOCrObUnLJ8uA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="__7EoAxupEeOCrObUnLJ8uA" comments="__63zoBupEeOCrObUnLJ8uA" targetConnectionVisual="__63zoRupEeOCrObUnLJ8uA" name="setCurrentValue">
+      <modelElement href="SudokuDatastructure.uml#_-8OaEBupEeOCrObUnLJ8uA"/>
+      <visibility xmi:id="__7EoBBupEeOCrObUnLJ8uA" label="+"/>
+      <outParameters xmi:id="__7EoBRupEeOCrObUnLJ8uA">
+        <modelElement href="SudokuDatastructure.uml#_-8SrgBupEeOCrObUnLJ8uA"/>
+        <type xmi:id="__7EoBhupEeOCrObUnLJ8uA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="__7EoBxupEeOCrObUnLJ8uA" name="newValue">
+        <modelElement href="SudokuDatastructure.uml#_-8SEcBupEeOCrObUnLJ8uA"/>
+        <type xmi:id="__7EoCBupEeOCrObUnLJ8uA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_0g1uYBurEeOCrObUnLJ8uA" name="IGenerator">
+    <modelElement href="SudokuDatastructure.uml#_0b91cBurEeOCrObUnLJ8uA"/>
+    <visualProperties xmi:id="_0g1uYRurEeOCrObUnLJ8uA" position="1073.0,203.0" size="361.0,83.0"/>
+    <visibility xmi:id="_0g1uYhurEeOCrObUnLJ8uA" label="+"/>
+    <operations xmi:id="_0g1uYxurEeOCrObUnLJ8uA" name="generate">
+      <modelElement href="SudokuDatastructure.uml#_0cKpwBurEeOCrObUnLJ8uA"/>
+      <stereotypes xmi:id="_0g1uZBurEeOCrObUnLJ8uA" name="Array">
+        <modelElement href="SudokuDatastructure.uml#_0cNGABurEeOCrObUnLJ8uA"/>
+      </stereotypes>
+      <visibility xmi:id="_0g1uZRurEeOCrObUnLJ8uA" label="+"/>
+      <outParameters xmi:id="_0g1uZhurEeOCrObUnLJ8uA">
+        <modelElement href="SudokuDatastructure.uml#_0cL34BurEeOCrObUnLJ8uA"/>
+        <type xmi:id="_0g1uZxurEeOCrObUnLJ8uA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_0g1uaBurEeOCrObUnLJ8uA" name="difficulty">
+        <modelElement href="SudokuDatastructure.uml#_0cLQ0BurEeOCrObUnLJ8uA"/>
+        <type xmi:id="_0g1uaRurEeOCrObUnLJ8uA" name="EDifficulty">
+          <modelElement href="SudokuDatastructure.uml#_yJWSkBurEeOCrObUnLJ8uA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="__2YVMBupEeOCrObUnLJ8uA" name="Board" associationsIn="__5O04BupEeOCrObUnLJ8uA" associationsOut="_BmV78CBVEeO8gaZoP1WjOw">
     <modelElement href="SudokuDatastructure.uml#_-4voQBupEeOCrObUnLJ8uA"/>
-    <visualProperties xmi:id="__2YVMRupEeOCrObUnLJ8uA" position="777.0,34.0" size="285.0,119.0"/>
+    <visualProperties xmi:id="__2YVMRupEeOCrObUnLJ8uA" position="784.0,32.0" size="285.0,119.0"/>
     <visibility xmi:id="__2YVMhupEeOCrObUnLJ8uA" label="~"/>
     <attributes xmi:id="__2YVMxupEeOCrObUnLJ8uA" name="board">
       <modelElement href="SudokuDatastructure.uml#__BAMYBupEeOCrObUnLJ8uA"/>
-      <stereotypes xmi:id="__2YVNBupEeOCrObUnLJ8uA" name="Array">
-        <modelElement href="SudokuDatastructure.uml#__BGTABupEeOCrObUnLJ8uA"/>
-      </stereotypes>
-      <stereotypes xmi:id="__2YVNRupEeOCrObUnLJ8uA" name="LegacyStyledElement">
-        <modelElement href="SudokuDatastructure.uml#__BIvQBupEeOCrObUnLJ8uA"/>
-      </stereotypes>
       <stereotypes xmi:id="__2YVNhupEeOCrObUnLJ8uA" name="Array">
         <modelElement href="SudokuDatastructure.uml#__BGTABupEeOCrObUnLJ8uA"/>
       </stereotypes>
       <stereotypes xmi:id="__2YVNxupEeOCrObUnLJ8uA" name="LegacyStyledElement">
+        <modelElement href="SudokuDatastructure.uml#__BIvQBupEeOCrObUnLJ8uA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_wEl5QCBQEeO8gaZoP1WjOw" name="Array">
+        <modelElement href="SudokuDatastructure.uml#__BGTABupEeOCrObUnLJ8uA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_wEmgUCBQEeO8gaZoP1WjOw" name="LegacyStyledElement">
         <modelElement href="SudokuDatastructure.uml#__BIvQBupEeOCrObUnLJ8uA"/>
       </stereotypes>
       <visibility xmi:id="__2YVOBupEeOCrObUnLJ8uA" label="-"/>
@@ -279,19 +399,19 @@
         <modelElement href="SudokuDatastructure.uml#_-77fIBupEeOCrObUnLJ8uA"/>
       </type>
     </attributes>
-    <operations xmi:id="__2YVOxupEeOCrObUnLJ8uA" name="BoardDS">
+    <operations xmi:id="__2YVOxupEeOCrObUnLJ8uA" name="Board">
       <modelElement href="SudokuDatastructure.uml#_-510cBupEeOCrObUnLJ8uA"/>
       <keywords xmi:id="__2YVPBupEeOCrObUnLJ8uA" keyword="create"/>
       <visibility xmi:id="__2YVPRupEeOCrObUnLJ8uA" label="+"/>
-      <outParameters xmi:id="__2YVPhupEeOCrObUnLJ8uA">
-        <modelElement href="SudokuDatastructure.uml#_-6BaoBupEeOCrObUnLJ8uA"/>
-        <type xmi:id="__2YVPxupEeOCrObUnLJ8uA" name="BoardDS">
+      <outParameters xmi:id="_BkY0ICBVEeO8gaZoP1WjOw">
+        <modelElement href="SudokuDatastructure.uml#_BiuAMCBVEeO8gaZoP1WjOw"/>
+        <type xmi:id="_BkY0ISBVEeO8gaZoP1WjOw" name="Board">
           <modelElement href="SudokuDatastructure.uml#_-4voQBupEeOCrObUnLJ8uA"/>
         </type>
       </outParameters>
-      <parameters xmi:id="__2YVQBupEeOCrObUnLJ8uA" name="size">
-        <modelElement href="SudokuDatastructure.uml#_-54QsBupEeOCrObUnLJ8uA"/>
-        <type xmi:id="__2YVQRupEeOCrObUnLJ8uA" name="int">
+      <parameters xmi:id="_Bkb3cCBVEeO8gaZoP1WjOw" name="size">
+        <modelElement href="SudokuDatastructure.uml#__B6LURupEeOCrObUnLJ8uA"/>
+        <type xmi:id="_Bkb3cSBVEeO8gaZoP1WjOw" name="int">
           <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
         </type>
       </parameters>
@@ -350,124 +470,5 @@
         </type>
       </parameters>
     </operations>
-  </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_0g1uYBurEeOCrObUnLJ8uA" name="IGenerator">
-    <modelElement href="SudokuDatastructure.uml#_0b91cBurEeOCrObUnLJ8uA"/>
-    <visualProperties xmi:id="_0g1uYRurEeOCrObUnLJ8uA" position="1073.0,203.0" size="361.0,83.0"/>
-    <visibility xmi:id="_0g1uYhurEeOCrObUnLJ8uA" label="+"/>
-    <operations xmi:id="_0g1uYxurEeOCrObUnLJ8uA" name="generate">
-      <modelElement href="SudokuDatastructure.uml#_0cKpwBurEeOCrObUnLJ8uA"/>
-      <stereotypes xmi:id="_0g1uZBurEeOCrObUnLJ8uA" name="Array">
-        <modelElement href="SudokuDatastructure.uml#_0cNGABurEeOCrObUnLJ8uA"/>
-      </stereotypes>
-      <visibility xmi:id="_0g1uZRurEeOCrObUnLJ8uA" label="+"/>
-      <outParameters xmi:id="_0g1uZhurEeOCrObUnLJ8uA">
-        <modelElement href="SudokuDatastructure.uml#_0cL34BurEeOCrObUnLJ8uA"/>
-        <type xmi:id="_0g1uZxurEeOCrObUnLJ8uA" name="int">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </type>
-      </outParameters>
-      <parameters xmi:id="_0g1uaBurEeOCrObUnLJ8uA" name="difficulty">
-        <modelElement href="SudokuDatastructure.uml#_0cLQ0BurEeOCrObUnLJ8uA"/>
-        <type xmi:id="_0g1uaRurEeOCrObUnLJ8uA" name="EDifficulty">
-          <modelElement href="SudokuDatastructure.uml#_yJWSkBurEeOCrObUnLJ8uA"/>
-        </type>
-      </parameters>
-    </operations>
-  </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="__7rr8BupEeOCrObUnLJ8uA" name="GeneratedField" generalizations="__7gFwBupEeOCrObUnLJ8uA">
-    <modelElement href="SudokuDatastructure.uml#_-8ff0BupEeOCrObUnLJ8uA"/>
-    <visualProperties xmi:id="__7rr8RupEeOCrObUnLJ8uA" position="29.0,339.0" size="-1.0,-1.0"/>
-    <visibility xmi:id="__7rr8hupEeOCrObUnLJ8uA" label="~"/>
-    <operations xmi:id="__7rr8xupEeOCrObUnLJ8uA" name="GeneratedField">
-      <modelElement href="SudokuDatastructure.uml#_-8pQ0BupEeOCrObUnLJ8uA"/>
-      <keywords xmi:id="__7rr9BupEeOCrObUnLJ8uA" keyword="create"/>
-      <visibility xmi:id="__7rr9RupEeOCrObUnLJ8uA" label="+"/>
-      <outParameters xmi:id="__7rr9hupEeOCrObUnLJ8uA">
-        <modelElement href="SudokuDatastructure.uml#_-8xMoBupEeOCrObUnLJ8uA"/>
-        <type xmi:id="__7rr9xupEeOCrObUnLJ8uA" name="GeneratedField">
-          <modelElement href="SudokuDatastructure.uml#_-8ff0BupEeOCrObUnLJ8uA"/>
-        </type>
-      </outParameters>
-      <parameters xmi:id="__7rr-BupEeOCrObUnLJ8uA" name="currentValue">
-        <modelElement href="SudokuDatastructure.uml#_-8rtEBupEeOCrObUnLJ8uA"/>
-        <type xmi:id="__7rr-RupEeOCrObUnLJ8uA" name="int">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </type>
-      </parameters>
-      <parameters xmi:id="__7rr-hupEeOCrObUnLJ8uA" name="solutionValue">
-        <modelElement href="SudokuDatastructure.uml#_-8sUIBupEeOCrObUnLJ8uA"/>
-        <type xmi:id="__7rr-xupEeOCrObUnLJ8uA" name="int">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </type>
-      </parameters>
-    </operations>
-    <operations xmi:id="__7rr_BupEeOCrObUnLJ8uA" name="setCurrentValue">
-      <modelElement href="SudokuDatastructure.uml#_-82FIBupEeOCrObUnLJ8uA"/>
-      <visibility xmi:id="__7sTABupEeOCrObUnLJ8uA" label="+"/>
-      <outParameters xmi:id="__7sTARupEeOCrObUnLJ8uA">
-        <modelElement href="SudokuDatastructure.uml#_-85vgBupEeOCrObUnLJ8uA"/>
-        <type xmi:id="__7sTAhupEeOCrObUnLJ8uA" name="boolean">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
-        </type>
-      </outParameters>
-      <parameters xmi:id="__7sTAxupEeOCrObUnLJ8uA" name="newValue">
-        <modelElement href="SudokuDatastructure.uml#_-82sMBupEeOCrObUnLJ8uA"/>
-        <type xmi:id="__7sTBBupEeOCrObUnLJ8uA" name="int">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </type>
-      </parameters>
-    </operations>
-  </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="__8C4UBupEeOCrObUnLJ8uA" comments="__75uYBupEeOCrObUnLJ8uA" targetConnectionVisual="__76VcBupEeOCrObUnLJ8uA" name="UserField" generalizations="__75HUBupEeOCrObUnLJ8uA">
-    <modelElement href="SudokuDatastructure.uml#_-9JnIBupEeOCrObUnLJ8uA"/>
-    <visualProperties xmi:id="__8C4URupEeOCrObUnLJ8uA" position="631.0,358.0" size="-1.0,-1.0"/>
-    <visibility xmi:id="__8C4UhupEeOCrObUnLJ8uA" label="~"/>
-    <operations xmi:id="__8C4UxupEeOCrObUnLJ8uA" name="UserField">
-      <modelElement href="SudokuDatastructure.uml#_-9T_MBupEeOCrObUnLJ8uA"/>
-      <keywords xmi:id="__8C4VBupEeOCrObUnLJ8uA" keyword="create"/>
-      <visibility xmi:id="__8C4VRupEeOCrObUnLJ8uA" label="+"/>
-      <outParameters xmi:id="__8C4VhupEeOCrObUnLJ8uA">
-        <modelElement href="SudokuDatastructure.uml#_-9as4BupEeOCrObUnLJ8uA"/>
-        <type xmi:id="__8C4VxupEeOCrObUnLJ8uA" name="UserField">
-          <modelElement href="SudokuDatastructure.uml#_-9JnIBupEeOCrObUnLJ8uA"/>
-        </type>
-      </outParameters>
-      <parameters xmi:id="__8C4WBupEeOCrObUnLJ8uA" name="currentValue">
-        <modelElement href="SudokuDatastructure.uml#_-9Y3sBupEeOCrObUnLJ8uA"/>
-        <type xmi:id="__8C4WRupEeOCrObUnLJ8uA" name="int">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </type>
-      </parameters>
-    </operations>
-  </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_zuOlsBurEeOCrObUnLJ8uA" name="ISolver">
-    <modelElement href="SudokuDatastructure.uml#_zm85ABurEeOCrObUnLJ8uA"/>
-    <visualProperties xmi:id="_zuOlsRurEeOCrObUnLJ8uA" position="794.0,204.0" size="-1.0,-1.0"/>
-    <visibility xmi:id="_zuOlshurEeOCrObUnLJ8uA" label="+"/>
-    <operations xmi:id="_zuOlsxurEeOCrObUnLJ8uA" name="solve">
-      <modelElement href="SudokuDatastructure.uml#_znJtUBurEeOCrObUnLJ8uA"/>
-      <stereotypes xmi:id="_zuOltBurEeOCrObUnLJ8uA" name="Array">
-        <modelElement href="SudokuDatastructure.uml#_znS3QBurEeOCrObUnLJ8uA"/>
-      </stereotypes>
-      <visibility xmi:id="_zuOltRurEeOCrObUnLJ8uA" label="+"/>
-      <outParameters xmi:id="_zuOlthurEeOCrObUnLJ8uA">
-        <modelElement href="SudokuDatastructure.uml#_znN-wBurEeOCrObUnLJ8uA"/>
-        <type xmi:id="_zuOltxurEeOCrObUnLJ8uA" name="int">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </type>
-      </outParameters>
-      <parameters xmi:id="_zuOluBurEeOCrObUnLJ8uA" name="input">
-        <modelElement href="SudokuDatastructure.uml#_znMwoBurEeOCrObUnLJ8uA"/>
-        <type xmi:id="_zuOluRurEeOCrObUnLJ8uA" name="int">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </type>
-      </parameters>
-    </operations>
-  </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="__5IuQBupEeOCrObUnLJ8uA" name="UnkownFieldException">
-    <modelElement href="SudokuDatastructure.uml#_-9BrUBupEeOCrObUnLJ8uA"/>
-    <visualProperties xmi:id="__5JVUBupEeOCrObUnLJ8uA" position="1209.0,-69.0" size="-1.0,-1.0"/>
-    <visibility xmi:id="__5JVURupEeOCrObUnLJ8uA" label="~"/>
   </nodes>
 </com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
