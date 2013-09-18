@@ -1,6 +1,5 @@
-package nl.avans;
+package nl.avans.SudokuDatastructure;
 
-public interface ISolver 
-{
-    public int[][] Solve(int[][] array);
+public interface ISolver {
+	int[][] solve(int[][] input);
 }
