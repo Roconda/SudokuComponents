@@ -3,15 +3,18 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>nl.avans</groupId>
-  <artifactId>solver</artifactId>
+  <artifactId>lib</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>solver</name>
+
+  <name>lib</name>
   <url>http://maven.apache.org</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
   </properties>
 
   <dependencies>
