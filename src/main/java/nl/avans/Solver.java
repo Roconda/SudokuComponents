@@ -7,7 +7,6 @@ public class Solver implements ISolver
 	private int[][] board;
 	private boolean[][][] possibilities;
 	
-	
     public int[][] Solve(int[][] board)
     {
     	this.SIZE = board.length;
@@ -15,11 +14,13 @@ public class Solver implements ISolver
     	this.board = board;
     	this.possibilities = new boolean[SIZE][SIZE][SIZE+1];
     	
-    	for(int count = 0; count <= 1000000; count++)
+    	boolean filled = true;
+    	while(filled)
     	{
+    		filled = false;
     		checkPossibilities();
-    		fillSpot();
-            fillOnlyNumber();
+    		filled = filled || fillSpot();
+            filled = filled || fillOnlyNumber();
     	}
     	
     	return board;
@@ -52,8 +53,10 @@ public class Solver implements ISolver
     	}
     }
     
-    private void fillSpot()
+    private boolean fillSpot()
     {
+    	boolean filled = false;
+    	
     	for(int i = 0; i < SIZE; i++)
     	{
     		for(int j = 0; j < SIZE; j++)
@@ -73,14 +76,18 @@ public class Solver implements ISolver
     				if(possibleNumbers == 1)
     				{
     					board[i][j] = possibleNumber;
+    					filled = true;
     				}
     			}
     		}
     	}
+    	return filled;
     }
 
-    private void fillOnlyNumber()
+    private boolean fillOnlyNumber()
     {
+    	boolean filled = false;
+    	
         for(int k = 0; k < SIZE; k++)
         {
             for(int i = 0; i < SIZE; i++)
@@ -113,8 +120,10 @@ public class Solver implements ISolver
                 if(possibleRowSpots == 1)
                 {
                     board[rowSpot][i] = k;
+                    filled = true;
                 }
             }
         }
+        return filled;
     }
 }
