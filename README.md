@@ -1,1 +1,1 @@
-Please change branches to toggle components
+Please change branch to view components
