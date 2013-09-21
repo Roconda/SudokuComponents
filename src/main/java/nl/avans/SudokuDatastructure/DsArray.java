@@ -4,39 +4,91 @@ package nl.avans.SudokuDatastructure;
  * Only class which is accessible from outside this package
  */
 public class DsArray {
-	private int size;
-	private BoardDS ds;
+	private BoardDS board;
 
-	public DsArray(int size) {
-		ds = new BoardDS(size);
+	public DsArray(int size, EDifficulty difficulty, IGenerator generator, ISolver solver) {
+		this.board = new BoardDS(size, difficulty, generator, solver); 
 	}
-
-	/**
-	 * @return the xSize
-	 */
-	public int getSize() {
-		return size;
+	
+	public int getCurrentValue(int x, int y) {
+		return this.board.getCurrentValue(x, y);
 	}
-
-	/**
-	 * @return if a field exists on the grid or not
-	 */
-	public boolean setValue(int x, int y, int value) {
-		try {
-			ds.setValue(x, y, value);
-		} catch (UnkownFieldException e) {
-			return false;
+	
+	public void setCurrentValue(int x, int y, int currentValue) {
+		this.board.setCurrentValue(x, y, currentValue);
+	}
+	
+	public int getSolutionValue(int x, int y) {
+		return this.board.getSolutionValue(x, y);
+	}
+	
+	public int[][] getSubRegion(int subregion) {
+		int columns = (int) Math.sqrt(getNumberOfColumns());
+		int rows = (int) Math.sqrt(getNumberOfColumns());
+		
+		if(subregion < 0 ^ (subregion > columns - 1 && subregion > rows - 1)) {
+			throw new IllegalArgumentException("The parameter subregion cannot be smaller than 0 or larger than the number of subregions minus one.");
 		}
-
-		return true;
-	}
-
-	public int getValue(int x, int y) {
-		try {
-			return ds.getValue(x, y);
-		} catch (UnkownFieldException e) {
-			return -1;
+		
+		if(getNumberOfColumns() % columns != 0 && getNumberOfRows() % rows != 0) {
+			throw new IllegalArgumentException("The columns and rows of the sudoku cannot be evenly divided into subregions.");
 		}
+		
+		int[][] elements = new int[columns][rows];
+		
+		for(int x = subregion * columns; x < getNumberOfColumns(); x++) {
+			for(int y = subregion * rows; y < getNumberOfRows(); y++) {
+				elements[x][y] = getCurrentValue(x, y);
+			}
+		}
+		
+		return elements;
+	}
+	
+	public int[] getColumn(int column)
+	{
+		if(column < 0 ^ column > getNumberOfColumns() - 1) {
+			throw new IllegalArgumentException("The parameter column cannot be smaller than 0 or larger than the number of columns minus one.");
+		}
+		
+		int[] elements = new int[getNumberOfRows()];
+		
+		for(int i = 0; i < getNumberOfRows(); i++) {
+			elements[i] = getCurrentValue(column, i);
+		}
+		
+		return elements;
+	}
+	
+	public int[] getRow(int row)
+	{
+		if(row < 0 ^ row > getNumberOfColumns() - 1) {
+			throw new IllegalArgumentException("The parameter row cannot be smaller than 0 or larger than the number of rows minus one.");
+		}
+		
+		int[] elements = new int[getNumberOfColumns()];
+		
+		for(int i = 0; i < getNumberOfColumns(); i++) {
+			elements[i] = getCurrentValue(i, row);
+		}
+		
+		return elements;
 	}
 
+	public int getNumberOfColumns() {
+		return this.board.getNumberOfColumns();
+	}
+	
+	public int getNumberOfRows() {
+		return this.board.getNumberOfRows();
+	}
+	
+	public int getSize()
+	{
+		return this.board.getSize();
+	}
+	
+	public EDifficulty getDifficulty() {
+		return this.board.getDifficulty();
+	}
 }
