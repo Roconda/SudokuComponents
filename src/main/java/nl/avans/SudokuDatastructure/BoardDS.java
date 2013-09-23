@@ -1,4 +1,5 @@
 package nl.avans.SudokuDatastructure;
+import nl.avans.lib.*;
 
 class BoardDS {
 	private Field[][] board;

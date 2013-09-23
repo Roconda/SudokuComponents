@@ -1,4 +1,5 @@
 package nl.avans.SudokuDatastructure;
+import nl.avans.lib.*;
 
 /**
  * Only class which is accessible from outside this package
