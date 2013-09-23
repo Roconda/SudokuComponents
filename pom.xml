@@ -14,7 +14,20 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <repositories>
+      <repository>
+	  <name>sudoku</name>
+          <id>sudoku-repository</id>
+          <url>https://raw.github.com/Roconda/SudokuComponents/mvn-repo/repository/</url>
+      </repository>
+  </repositories>
+
   <dependencies>
+    <dependency>
+      <groupId>nl.avans</groupId>
+      <artifactId>lib</artifactId>
+      <version>0.4</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -22,4 +35,5 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
 </project>
