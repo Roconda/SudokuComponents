@@ -1,6 +1,11 @@
 package nl.avans.solver-nakedsingles-bruteforce;
 
 
+/**
+ * Represents a Brute Force based Sudoku solver.
+ * 
+ * @author Dustin Sarioglu
+ */
 public class BruteForceSolver {
 	
 	private int[][] solutionGrid;
@@ -8,12 +13,23 @@ public class BruteForceSolver {
 	private int puzzleSize;
 	
 	
+	/**
+	 * Initializes a new instance of the BruteForceSolver class.
+	 * 
+	 * @param puzzleSize
+	 */
 	BruteForceSolver(int puzzleSize) {
 		
 		this.puzzleSize = puzzleSize;
 	}
 	
 	
+	/**
+	 * Solves a Sudoku grid using the Brute Force method.
+	 * 
+	 * @param grid		The Sudoku grid to solve.
+	 * @return			The Brute Force solved Sudoku grid.
+	 */
 	int[][] solve(int[][] grid) {
 		
 		do {
@@ -24,6 +40,14 @@ public class BruteForceSolver {
 	}
 	
 	
+	/**
+	 * Solves a Sudoku grid using the Brute Force method.
+	 * 
+	 * @param grid		The Sudoku grid to solve.
+	 * @return			True or false due another correct value was found.
+	 * 
+	 * NOTE:			The return parameter is only used by the recursive call in this method.
+	 */
 	private boolean trySolve(int[][] grid) {
 		
 		int[][] helpGrid = grid.clone();
@@ -79,6 +103,12 @@ public class BruteForceSolver {
 		return false;
 	}
 	
+	/**
+	 * Checks wether the Sudoku grid is empty.
+	 * 
+	 * @param grid		The Sudoku grid.
+	 * @return			True or false due the Sudoku grid is empty.
+	 */
 	private boolean isEmpty(int[][] grid) {
 		
 		for (int row = 0; row < puzzleSize; row++) {
@@ -92,6 +122,11 @@ public class BruteForceSolver {
 	}
 	
 	
+	/**
+	 * Gets the size of a set, based on the Sudoku puzzle.
+	 * 
+	 * @return		The size of a set, based on the Sudoku puzzle.
+	 */
 	private int getSetSize() {
 		
 		return ((int) Math.sqrt(puzzleSize));
