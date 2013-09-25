@@ -1,4 +1,4 @@
-package src.main.java.nl.avans;
+package nl.avans.lib;
 
 public interface IGUI {
 	public int getCurrentValue(int x, int y);
