@@ -2,11 +2,11 @@ package nl.avans.game;
 
 import nl.avans.Generator;
 import nl.avans.IGenerator;
-import nl.avans.ISolver;
-import nl.avans.Solver;
 import nl.avans.datastructure.Datastructure;
 import nl.avans.lib.EDifficulty;
 import nl.avans.lib.IDatastructure;
+import nl.avans.lib.ISolver;
+import nl.avans.solver.Solver;
 
 /**
  * Only class which is accessible from outside this package
