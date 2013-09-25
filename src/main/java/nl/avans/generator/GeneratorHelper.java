@@ -5,18 +5,34 @@ import java.util.ArrayList;
 import java.util.Random;
 
 
+/**
+ * Helps the generator generating a Sudoku puzzle @ random.
+ * 
+ * @author Dustin Sarioglu
+ */
 class GeneratorHelper {
 	
 	private int[][] puzzleGrid;
 	
 	private int puzzleSize;
 	
+	
+	/**
+	 * Initializes a new instance of the GeneratorHelper class.
+	 * 
+	 * @param puzzleSize	The size of the puzzle to generate.
+	 */
 	GeneratorHelper(int puzzleSize) {
 		
 		this.puzzleSize = puzzleSize;
 	}
 	
 	
+	/**
+	 * Generates a new Sudoku puzzle @ random.
+	 * 
+	 * @return		The @ random generated Sudoku puzzle.
+	 */
 	int[][] generate() {
 		
 		int[][] grid = new int[puzzleSize][puzzleSize];
@@ -81,7 +97,12 @@ class GeneratorHelper {
 	}
 	
 	
-	
+	/**
+	 * Finishes a Sudoku puzzle grid for usage.
+	 * 
+	 * @param grid		The grid to finish.
+	 * @return			The finished Sudoku puzzle grid.
+	 */
 	private boolean finish(int[][] grid) {
 		
 		int[][] helpGrid = grid.clone();
@@ -137,7 +158,13 @@ class GeneratorHelper {
 		return false;
 	}
 	
-	
+	/**
+	 * Checks whether a specific value is (already) filled in the first set of the puzzle.
+	 * 
+	 * @param grid		The grid to do the check in.
+	 * @param value		The value to check for.
+	 * @return			True or false due the value is (already) filled in the first set of the puzzle.
+	 */
 	private boolean isValueInFirstSet(int[][] grid, int value) {
 		
 		for (int row = 0; row < getSetSize(); row++) {
@@ -149,6 +176,11 @@ class GeneratorHelper {
 	}
 	
 	
+	/**
+	 * Gets the size of a set based on the puzzle's size.
+	 * 
+	 * @return		The size of a set based on the puzzle's size.
+	 */
 	private int getSetSize() {
 		return ((int) Math.sqrt(puzzleSize));
 	}

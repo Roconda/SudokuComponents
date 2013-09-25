@@ -4,18 +4,37 @@ package nl.avans.generator;
 import java.util.Iterator;
 
 
+/**
+ * This class helps creating a row of numbers between a specific range.
+ * For example:
+ * 1 till 9 will return:
+ * 		1 2 3 4 5 6 7 8 9
+ * 
+ * @author Dustin Sarioglu
+ *
+ */
 class Range implements Iterable<Integer> {
 
 	private int min;
 	private int count;
 	
 	
+	/**
+	 * Initializes a new instance of the Range class.
+	 * 
+	 * @param min		The start position of the range.
+	 * @param count		The end position of the range.
+	 */
 	Range(int min, int count) {
 		this.min = min;
 		this.count = count;
 	}
 	
 	
+	/**
+	 * Iterates from the start position of the range to the end position,
+	 * creating all numbers for the row.
+	 */
 	public Iterator<Integer> iterator() {
 		
 		return new Iterator<Integer>() {
