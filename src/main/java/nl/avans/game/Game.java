@@ -1,10 +1,9 @@
 package nl.avans.game;
 
-import nl.avans.Generator;
-import nl.avans.IGenerator;
 import nl.avans.datastructure.Datastructure;
-import nl.avans.lib.EDifficulty;
+import nl.avans.generator.Generator;
 import nl.avans.lib.IDatastructure;
+import nl.avans.lib.IGenerator;
 import nl.avans.lib.ISolver;
 import nl.avans.solver.Solver;
 
@@ -14,7 +13,7 @@ import nl.avans.solver.Solver;
 public class Game {
 	private IDatastructure board;
 
-	public Game(int size, EDifficulty difficulty) {
+	public Game(int size, int difficulty) {
 		ISolver solver = new Solver();
 		IGenerator generator = new Generator(size);
 		this.board = new Datastructure(size, difficulty, generator, solver);

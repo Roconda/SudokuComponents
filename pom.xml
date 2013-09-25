@@ -39,12 +39,12 @@
     <dependency>
       <groupId>nl.avans</groupId>
       <artifactId>datastructure</artifactId>
-      <version>0.5</version>
+      <version>0.5.1</version>
     </dependency>
     <dependency>
       <groupId>nl.avans</groupId>
       <artifactId>lib</artifactId>
-      <version>0.4</version>
+      <version>0.5</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
