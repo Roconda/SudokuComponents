@@ -1,13 +1,13 @@
-package nl.avans.SudokuDatastructure;
+package nl.avans.datastructure;
 import nl.avans.lib.*;
 
 /**
  * Only class which is accessible from outside this package
  */
-public class DsArray {
+public class Datastructure implements IDatastructure {
 	private BoardDS board;
 
-	public DsArray(int size, EDifficulty difficulty, IGenerator generator, ISolver solver) {
+	public Datastructure(int size, EDifficulty difficulty, IGenerator generator, ISolver solver) {
 		this.board = new BoardDS(size, difficulty, generator, solver); 
 	}
 	

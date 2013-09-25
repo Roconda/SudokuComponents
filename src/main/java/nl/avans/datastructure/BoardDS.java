@@ -1,4 +1,4 @@
-package nl.avans.SudokuDatastructure;
+package nl.avans.datastructure;
 import nl.avans.lib.*;
 
 class BoardDS {
@@ -27,7 +27,7 @@ class BoardDS {
 	private void generate() {
 		long startTime = System.currentTimeMillis();
 
-		int[][] content = generator.generate(getDifficulty(), getSize());
+		int[][] content = generator.generate(getSize(), getDifficulty());
 
 		long finishTime = System.currentTimeMillis();
 		System.out.println("Generating time: " + (finishTime - startTime)

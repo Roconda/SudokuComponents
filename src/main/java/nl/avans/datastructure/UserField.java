@@ -1,4 +1,4 @@
-package nl.avans.SudokuDatastructure;
+package nl.avans.datastructure;
 
 class UserField extends Field {
 	public UserField(int currentValue, int solutionValue) {

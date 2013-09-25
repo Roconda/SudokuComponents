@@ -1,4 +1,4 @@
-package nl.avans.SudokuDatastructure;
+package nl.avans.datastructure;
 
 // TODO: Auto-generated Javadoc
 /**
