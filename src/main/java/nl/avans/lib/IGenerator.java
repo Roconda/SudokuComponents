@@ -1,5 +1,5 @@
 package nl.avans.lib;
 
 public interface IGenerator {
-	int[][] generate(int size, EDifficulty difficulty);
+	int[][] generate(int size, int difficulty);
 }
