@@ -1,4 +1,4 @@
-package nl.avans.lib;
+package nl.avans.game;
 
 public interface IGUI {
 	public int getCurrentValue(int x, int y);
