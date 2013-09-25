@@ -1,5 +1,6 @@
 package nl.avans.generator;
 
+
 import java.util.Random;
 
 import nl.avans.lib.IGenerator;
@@ -23,24 +24,8 @@ public class Generator implements IGenerator
 	
 	/**
 	 * Initializes a new instance of the Generator class.
-	 * 
-	 * @param solvedGrid	The already solved grid to hide numbers in.
 	 */
-    public Generator(int puzzleSize) {
-    	generatorHelper = new GeneratorHelper(puzzleSize);
-    	solvedGrid = generatorHelper.generate();
-    }
-    
-    
-    /**
-     * Gets the solved grid, used to generate the puzzle.
-     * 
-     * @return		The solved grid that is used to generate the puzzle out of.
-     */
-    public int[][] getSolvedGrid() {
-    	
-    	return solvedGrid;
-    }
+    public Generator() { }
     
     
     /**
@@ -57,6 +42,9 @@ public class Generator implements IGenerator
     		desiredBlankValues;
     	
     	this.puzzleSize = puzzleSize;
+    	
+    	generatorHelper = new GeneratorHelper(puzzleSize);
+    	solvedGrid = generatorHelper.generate();
     	
     	helpGrid = solvedGrid.clone();
     	
