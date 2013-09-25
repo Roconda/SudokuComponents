@@ -1,8 +1,10 @@
-package nl.avans;
+package nl.avans.generator;
 
 import java.util.Random;
 
-import nl.avans.utils.Randomizer;
+import nl.avans.lib.IGenerator;
+import nl.avans.lib.EDifficulty;
+
 
 /**
  * Generator class.
@@ -13,41 +15,7 @@ public class Generator implements IGenerator
 {
 	private static int[][] solvedGrid;
 	
-	private static int[][] solvedGrid2x2 = {
-		{ 4, 1, 3, 2 },
-		{ 3, 2, 1, 4 },
-		{ 1, 4, 2, 3 },
-		{ 2, 3, 4, 1 }
-	};
-	private static int[][] solvedGrid3x3 = {
-		{ 7, 5, 4, 3, 2, 1, 9, 8, 6 },
-		{ 1, 6, 8, 7, 5, 9, 2, 3, 4 },
-		{ 9, 2, 3, 4, 8, 6, 7, 1, 5 },
-		{ 3, 9, 7, 5, 1, 4, 6, 2, 8 },
-		{ 6, 8, 2, 9, 3, 7, 5, 4, 1 },
-		{ 5, 4, 1, 8, 6, 2, 3, 7, 9 },
-		{ 8, 3, 9, 1, 7, 5, 4, 6, 2 },
-		{ 4, 1, 6, 2, 9, 3, 8, 5, 7 },
-		{ 2, 7, 5, 6, 4, 8, 1, 9, 3 }
-	};
-	private static int[][] solvedGrid4x4 = {
-		{ 6, 16, 1, 8, 13, 10, 5, 3, 14, 12, 2, 4, 11, 15, 7, 9 },
-		{ 15, 10, 13, 9, 1, 14, 2, 4, 16, 11, 3, 7, 6, 12, 8, 5 },
-		{ 12, 14, 4, 11, 7, 6, 15, 9, 10, 5, 1, 8, 13, 2, 16, 3 },
-		{ 2, 7, 3, 5, 12, 11, 8, 16, 15, 6, 9, 13, 1, 10, 4, 14 },
-		{ 13, 6, 8, 2, 5, 12, 16, 15, 1, 3, 11, 10, 7, 14, 9, 4 },
-		{ 3, 9, 12, 14, 11, 4, 7, 1, 8, 2, 13, 15, 16, 5, 6, 10 },
-		{ 4, 15, 7, 16, 9, 8, 10, 13, 6, 14, 12, 5, 3, 1, 11, 2 },
-		{ 10, 5, 11, 1, 6, 3, 14, 2, 7, 9, 4, 16, 12, 8, 15, 13 },
-		{ 5, 2, 15, 6, 16, 13, 9, 10, 4, 7, 8, 12, 14, 11, 3, 1 },
-		{ 14, 3, 10, 4, 8, 2, 1, 5, 11, 13, 15, 6, 9, 7, 12, 16 },
-		{ 8, 13, 16, 12, 3, 7, 11, 6, 9, 1, 5, 14, 2, 4, 10, 15 },
-		{ 1, 11, 9, 7, 14, 15, 4, 12, 2, 16, 10, 3, 5, 6, 13, 8 },
-		{ 11, 4, 5, 13, 10, 9, 6, 14, 3, 8, 7, 1, 15, 16, 2, 12 },
-		{ 7, 12, 2, 3, 4, 16, 13, 8, 5, 15, 14, 11, 10, 9, 1, 6 },
-		{ 16, 8, 14, 15, 2, 1, 12, 11, 13, 10, 6, 9, 4, 3, 5, 7 },
-		{ 9, 1, 6, 10, 15, 5, 3, 7, 12, 4, 16, 2, 8, 13, 14, 11 }
-	};
+	private GeneratorHelper generatorHelper;
 	
 	private int blankValues;
 	private int puzzleSize;
@@ -59,17 +27,8 @@ public class Generator implements IGenerator
 	 * @param solvedGrid	The already solved grid to hide numbers in.
 	 */
     public Generator(int puzzleSize) {
-    	this.puzzleSize = puzzleSize;
-    	
-    	if (getSetSize() == 2) {
-    		solvedGrid = solvedGrid2x2.clone();
-    	} else if (getSetSize() == 3) {
-    		solvedGrid = solvedGrid3x3.clone();
-    	} else if (getSetSize() == 4) {
-    		solvedGrid = solvedGrid4x4.clone();
-    	}
-    	
-    	solvedGrid = Randomizer.randomize(solvedGrid);
+    	generatorHelper = new GeneratorHelper(puzzleSize);
+    	solvedGrid = generatorHelper.generate();
     }
     
     
@@ -89,13 +48,15 @@ public class Generator implements IGenerator
      * 
      * @return		A new generated sudoku puzzle, based on the solved grid.
      */
-    public int[][] generate() {
+    public int[][] generate(int puzzleSize, EDifficulty difficulty) {
     	
     	int[][] helpGrid;
     	
     	int blankValues = 0,
     		symmetryType = 0,
     		desiredBlankValues;
+    	
+    	this.puzzleSize = puzzleSize;
     	
     	helpGrid = solvedGrid.clone();
     	
@@ -105,7 +66,6 @@ public class Generator implements IGenerator
     	symmetryType = random.nextInt(2);
     	
     	do {
-    		
     		helpGrid = maskNumbers(helpGrid, symmetryType);
     		blankValues = this.blankValues;
     	} while (blankValues < desiredBlankValues);
@@ -174,16 +134,5 @@ public class Generator implements IGenerator
     	}
     	
     	return grid;
-    }
-    
-    
-    /**
-     * Gets the size of a Sudoku set.
-     * 
-     * @return		The size of a Sudoku set, based on the puzzle size.
-     */
-    private int getSetSize() {
-    	
-    	return (int) Math.sqrt(puzzleSize);
     }
 }
