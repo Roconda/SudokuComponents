@@ -1,19 +1,21 @@
 package nl.avans.datastructure;
-import nl.avans.lib.*;
+
+import nl.avans.lib.IGenerator;
+import nl.avans.lib.ISolver;
 
 class BoardDS {
 	private Field[][] board;
 	private IGenerator generator;
 	private ISolver solver;
-	private EDifficulty difficulty;
 	private int size;
+	private int difficulty;
 
-	public BoardDS(int size, EDifficulty difficulty, IGenerator generator,
+	public BoardDS(int size, int difficulty, IGenerator generator,
 			ISolver solver) {
 		this.size = size;
-		this.difficulty = difficulty;
 		this.generator = generator;
 		this.solver = solver;
+		this.difficulty = difficulty;
 
 		setup();
 	}
@@ -136,7 +138,7 @@ class BoardDS {
 		return size;
 	}
 
-	public EDifficulty getDifficulty() {
+	public int getDifficulty() {
 		return difficulty;
 	}
 }
