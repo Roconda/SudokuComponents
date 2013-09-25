@@ -6,6 +6,8 @@ import junit.framework.TestSuite;
 
 /**
  * Unit test for the datastructure component.
+ * 
+ * @author		Dustin Sarioglu
  */
 public class DsArrayTest 
 	extends TestCase
@@ -90,20 +92,21 @@ public class DsArrayTest
 	 *
 	 * @param testName name of the test case
      */
-    public DsArrayTest( String testName )
-    {
+    public DsArrayTest( String testName ) {
         super( testName );
     }
 
     /**
      * @return the suite of tests being tested
      */
-    public static Test suite()
-    {
+    public static Test suite() {
         return new TestSuite( Solver.class );
     }
     
     
+    /**
+     * Tests the solver when solving a 2x2 Sudoku puzzle.
+     */
     public void testSolve2x2() {
     	
 		Solver solver = new Solver(4);
@@ -112,6 +115,9 @@ public class DsArrayTest
 		assertEquals(result, puzzle2x2Solution);
     }
     
+    /**
+     * Tests the solver when solving a 3x3 Sudoku puzzle.
+     */
     public void testSolve3x3() {
     	
 		Solver solver = new Solver(9);
@@ -120,6 +126,9 @@ public class DsArrayTest
 		assertEquals(result, puzzle3x3Solution);
     }
     
+    /**
+     * Tests the solver when solving a 4x4 Sudoku puzzle.
+     */
     public void testSolve4x4() {
     	
 		Solver solver = new Solver(16);
@@ -128,8 +137,94 @@ public class DsArrayTest
 		assertEquals(result, puzzle4x4Solution);
     }
     
-    public void testEntirelyFilled() {
+    /**
+     * Tests the result grid being entirely filled.
+     */
+    public void testEntirelyFilled2x2() {
+    	
+    	Solver solver = new Solver(4);
+    	result = solver.Solve(puzzle2x2);
+    	
+    	assertTrue(isEntirelyFilled(result));
+    }
+    
+    /**
+     * Tests the result grid being entirely filled.
+     */
+    public void testEntirelyFilled3x3() {
     	
     	Solver solver = new Solver(9);
+    	result = solver.Solve(puzzle3x3);
+    	
+    	assertTrue(isEntirelyFilled(result));
+    }
+    
+    /**
+     * Tests the result grid being entirely filled.
+     */
+    public void testEntirelyFilled4x4() {
+    	
+    	Solver solver = new Solver(16);
+    	result = solver.Solve(puzzle4x4);
+    	
+    	assertTrue(isEntirelyFilled(result));
+    }
+    
+    /**
+     * Tests the result grid having a correct size equal to the puzzle's desired size.
+     */
+    public void is2x2Length4() {
+    	
+    	Solver solver = new Solver(4);
+    	result = solver.Solve(puzzle2x2);
+    	
+    	assertTrue(result.length == 4 && result[0].length == 4);
+    }
+    
+    /**
+     * Tests the result grid having a correct size equal to the puzzle's desired size.
+     */
+    public void is3x3Length9() {
+    	
+    	Solver solver = new Solver(9);
+    	result = solver.Solve(puzzle3x3);
+    	
+    	assertTrue(result.length == 9 && result[0].length == 9);
+    }
+    
+    /**
+     * Tests the result grid having a correct size equal to the puzzle's desired size.
+     */
+    public void is4x4Length16() {
+    	
+    	Solver solver = new Solver(16);
+    	result = solver.Solve(puzzle4x4);
+    	
+    	assertTrue(result.length == 16 && result[0].length == 16);
+    }
+    
+    /**
+     * Helps checking if each field in the puzzle is filled or not.
+     * 
+     * @param grid		The grid to check.
+     * @return			True or false due the grid is entirely filled.
+     */
+    private boolean isEntirelyFilled(int[][] grid) {
+    	
+    	if (grid == null)
+    		return false;
+    	
+    	for (int x = 0; x < grid.length; x++) {
+    		
+    		if (grid[x] == null)
+    			return false;
+    		
+    		for (int y = 0; y < grid[x].length; y++) {
+    			if (grid[x][y] == 0 ^ grid[x][y] == null)
+    				return false;
+    		}
+    	}
+    	
+    	return true;
     }
 }
