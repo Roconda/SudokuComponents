@@ -16,6 +16,18 @@ public class Generator implements IGenerator {
 
 	private int blankValues;
 	private int puzzleSize;
+	
+	
+	/**
+	 * These constants are used to help finding the desired values to blank, based
+	 * on a specific difficulty.
+	 */
+	private static final int EASY = -5;
+	private static final int NORMAL = 0;
+	private static final int HARD = 5;
+	private static final int VERY_HARD = 10;
+	private static final int EXPERT = 20;
+	
 
 	/**
 	 * Initializes a new instance of the Generator class.
@@ -43,7 +55,7 @@ public class Generator implements IGenerator {
 
 		Random random = new Random();
 
-		desiredBlankValues = ((puzzleSize * puzzleSize) / 2);
+		desiredBlankValues = getDesiredValuesToBlank(difficulty);
 		symmetryType = random.nextInt(2);
 
 		do {
@@ -114,5 +126,56 @@ public class Generator implements IGenerator {
 		}
 
 		return grid;
+	}
+	
+	
+	/**
+	 * Gets the desired count of values to blank in a Sudoku puzzle, based on the
+	 * difficulty.
+	 * 
+	 * @param difficulty	The difficulty of the puzzle.
+	 * @return				The desired count of values to blank.
+	 */
+	private int getDesiredValuesToBlank(int difficulty) {
+		
+		int desiredValuesToBlank = ((puzzleSize * puzzleSize) / 2);
+		int difficultyOffset;
+		
+		switch (difficulty) {
+			case 0:
+				difficultyOffset = EASY;
+				break;
+			case 2:
+				difficultyOffset = HARD;
+				break;
+			case 3:
+				difficultyOffset = VERY_HARD;
+				break;
+			case 4:
+				difficultyOffset = EXPERT;
+				break;
+				
+			case 1:
+			default:
+				difficultyOffset = NORMAL;
+				break;
+		}
+		
+		while (difficultyOffset != 0) {
+			if (desiredValuesToBlank > puzzleSize && desiredValuesToBlank < ((puzzleSize * puzzleSize) - puzzleSize)) {
+				
+				if (difficultyOffset < 0) {
+					desiredValuesToBlank -= 1;
+					difficultyOffset--;
+				} else {
+					desiredValuesToBlank += 1;
+					difficultyOffset++;
+				}	
+			} else {
+				break;
+			}
+		}
+		
+		return desiredValuesToBlank;
 	}
 }
