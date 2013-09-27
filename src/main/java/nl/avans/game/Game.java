@@ -15,7 +15,7 @@ public class Game {
 
 	public Game(int size, int difficulty) {
 		ISolver solver = new Solver();
-		IGenerator generator = new Generator(size);
+		IGenerator generator = new Generator();
 		this.board = new Datastructure(size, difficulty, generator, solver);
 	}
 
