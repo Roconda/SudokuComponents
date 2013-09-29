@@ -16,6 +16,7 @@ public class Generator implements IGenerator {
 
 	private int blankValues;
 	private int puzzleSize;
+	private int minAvailableFields;
 	
 	
 	/**
@@ -26,7 +27,7 @@ public class Generator implements IGenerator {
 	private static final int NORMAL = 0;
 	private static final int HARD = 5;
 	private static final int VERY_HARD = 10;
-	private static final int EXPERT = 20;
+	private static final int EXPERT = 15;
 	
 
 	/**
@@ -47,6 +48,8 @@ public class Generator implements IGenerator {
 		int blankValues = 0, symmetryType = 0, desiredBlankValues;
 
 		this.puzzleSize = puzzleSize;
+		
+		minAvailableFields = (puzzleSize * 2) - 1;
 
 		generatorHelper = new GeneratorHelper(puzzleSize);
 		solvedGrid = generatorHelper.generate();
@@ -140,6 +143,7 @@ public class Generator implements IGenerator {
 		
 		int desiredValuesToBlank = ((puzzleSize * puzzleSize) / 2);
 		int difficultyOffset;
+		int puzzleSurface = (puzzleSize * puzzleSize);
 		
 		switch (difficulty) {
 			case 0:
@@ -162,17 +166,17 @@ public class Generator implements IGenerator {
 		}
 		
 		while (difficultyOffset != 0) {
-			if (desiredValuesToBlank > puzzleSize && desiredValuesToBlank < ((puzzleSize * puzzleSize) - puzzleSize)) {
-				
-				if (difficultyOffset < 0) {
-					desiredValuesToBlank -= 1;
-					difficultyOffset--;
-				} else {
-					desiredValuesToBlank += 1;
-					difficultyOffset++;
-				}	
-			} else {
+			
+			if ((puzzleSurface - desiredValuesToBlank) <= minAvailableFields)
 				break;
+			
+			
+			if (difficultyOffset < 0) {
+				desiredValuesToBlank += -1;
+				difficultyOffset++;
+			} else {
+				desiredValuesToBlank += 1;
+				difficultyOffset--;
 			}
 		}
 		

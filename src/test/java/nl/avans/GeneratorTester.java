@@ -18,7 +18,9 @@ public abstract class GeneratorTester {
 		
 		generator = new Generator();
 		
-		puzzleGrid = generator.generate(4, 4);
+		puzzleGrid = generator.generate(16, 4);
+		
+		System.out.println("Result**:");
 		System.out.println(gridToString(puzzleGrid));
 	}
 	

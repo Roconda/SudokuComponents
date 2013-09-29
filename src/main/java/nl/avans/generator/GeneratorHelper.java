@@ -182,6 +182,7 @@ class GeneratorHelper {
 	 * @return		The size of a set based on the puzzle's size.
 	 */
 	private int getSetSize() {
+		
 		return ((int) Math.sqrt(puzzleSize));
 	}
 }
