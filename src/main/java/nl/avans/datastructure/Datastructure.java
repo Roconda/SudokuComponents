@@ -28,7 +28,7 @@ public class Datastructure implements IDatastructure {
 	}
 
 	public int[][] getSubRegion(int subregion) {
-		int columns = (int) Math.sqrt(getNumberOfColumns());
+		int columns = (int) Math.sqrt(getNumberOfRows());
 		int rows = (int) Math.sqrt(getNumberOfColumns());
 
 		if (subregion < 0 ^ (subregion > columns - 1 && subregion > rows - 1)) {
@@ -44,8 +44,8 @@ public class Datastructure implements IDatastructure {
 
 		int[][] elements = new int[columns][rows];
 
-		for (int x = subregion * columns; x < getNumberOfColumns(); x++) {
-			for (int y = subregion * rows; y < getNumberOfRows(); y++) {
+		for (int x = subregion * rows; x < getNumberOfRows(); x++) {
+			for (int y = subregion * columns; y < getNumberOfColumns(); y++) {
 				elements[x][y] = getCurrentValue(x, y);
 			}
 		}

@@ -35,9 +35,9 @@ class BoardDS {
 		System.out.println("Generating time: " + (finishTime - startTime)
 				+ " ms");
 
-		for (int x = 0; x < getNumberOfColumns(); x++) {
-			for (int y = 0; y < getNumberOfRows(); y++) {
-				if (content[x][y] == -1) {
+		for (int x = 0; x < getNumberOfRows(); x++) {
+			for (int y = 0; y < getNumberOfColumns(); y++) {
+				if (content[x][y] == 0) {
 					this.board[x][y] = new UserField(-1, -1);
 				} else {
 					this.board[x][y] = new GeneratedField(content[x][y], -1);
@@ -54,8 +54,8 @@ class BoardDS {
 		long finishTime = System.currentTimeMillis();
 		System.out.println("Solving time: " + (finishTime - startTime) + " ms");
 
-		for (int x = 0; x < getNumberOfColumns(); x++) {
-			for (int y = 0; y < getNumberOfRows(); y++) {
+		for (int x = 0; x < getNumberOfRows(); x++) {
+			for (int y = 0; y < getNumberOfColumns(); y++) {
 				if (board[x][y] instanceof UserField) {
 					setSolutionValue(x, y, content[x][y]);
 				}
@@ -66,8 +66,8 @@ class BoardDS {
 	private int[][] getBoardAsIntegers() {
 		int[][] snapshot = new int[getNumberOfColumns()][getNumberOfRows()];
 
-		for (int x = 0; x < getNumberOfColumns(); x++) {
-			for (int y = 0; y < getNumberOfRows(); y++) {
+		for (int x = 0; x < getNumberOfRows(); x++) {
+			for (int y = 0; y < getNumberOfColumns(); y++) {
 				snapshot[x][y] = getCurrentValue(x, y);
 			}
 		}
@@ -110,8 +110,8 @@ class BoardDS {
 	}
 
 	private boolean isFieldNotOnGrid(int x, int y) {
-		if ((x < 0 || x > getNumberOfColumns())
-				|| (y < 0 || y > getNumberOfRows())) {
+		if ((x < 0 || x > getNumberOfRows())
+				|| (y < 0 || y > getNumberOfColumns())) {
 			return true;
 		}
 
@@ -120,10 +120,10 @@ class BoardDS {
 
 	private boolean isIllegalValue(int value) {
 		if (value < 1 || value > getSize()) {
-			return false;
+			return true;
 		}
 
-		return true;
+		return false;
 	}
 
 	public int getNumberOfColumns() {
