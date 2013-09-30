@@ -112,10 +112,10 @@ class BoardDS {
 	private boolean isFieldNotOnGrid(int x, int y) {
 		if ((x < 0 || x > getNumberOfColumns())
 				|| (y < 0 || y > getNumberOfRows())) {
-			return false;
+			return true;
 		}
 
-		return true;
+		return false;
 	}
 
 	private boolean isIllegalValue(int value) {
@@ -127,11 +127,11 @@ class BoardDS {
 	}
 
 	public int getNumberOfColumns() {
-		return this.board.length;
+		return this.board[0].length;
 	}
 
 	public int getNumberOfRows() {
-		return this.board[0].length;
+		return this.board.length;
 	}
 
 	public int getSize() {
