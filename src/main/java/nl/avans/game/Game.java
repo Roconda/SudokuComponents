@@ -46,39 +46,6 @@ public class Game {
 	}
 
 	public int[][] getSubRegion(int subregion) {
-		/*int columns = (int) Math.sqrt(getNumberOfColumns());
-		int rows = (int) Math.sqrt(getNumberOfRows());
-
-		if (subregion < 0 ^ (subregion > columns - 1 && subregion > rows - 1)) {
-			throw new IllegalArgumentException(
-					"The parameter subregion cannot be smaller than 0 or larger than the number of subregions minus one.");
-		}
-
-		if (getNumberOfColumns() % columns != 0
-				&& getNumberOfRows() % rows != 0) {
-			throw new IllegalArgumentException(
-					"The columns and rows of the sudoku cannot be evenly divided into subregions.");
-		}
-
-		int[][] elements = new int[columns][rows];
-		for (int x = subregion * columns; x < getNumberOfColumns(); x++) {
-			for (int y = subregion * rows; y < getNumberOfRows(); y++) {
-				elements[x][y] = getCurrentValue(x, y);
-			}
-		}
-		
-		int refX = (subregion * rows),
-			refY = (subregion * columns);
-		for (int x = 0; x < rows; x++) {
-			for (int y = 0; y < columns; y++) {
-				elements[x][y] = getCurrentValue(refX, refY);
-				refY++;
-			}
-			refX++;
-		}
-
-		return elements;*/
-		
 		return this.board.getSubRegion(subregion);
 	}
 

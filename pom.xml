@@ -40,6 +40,9 @@
 	  <name>sudoku</name>
           <id>sudoku-repository</id>
           <url>http://mvn.avans-project.nl/</url>
+          <snapshots>
+              <enabled>true</enabled>
+          </snapshots>
       </repository>
   </repositories>
 
