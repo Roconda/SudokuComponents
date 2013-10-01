@@ -45,12 +45,9 @@ public class SolverTest extends TestCase {
 		ISolver solver = new Solver();
 		int[][] result = solver.solve(board);
 
-		for (int i = 0; i < 9; i++) {
-			for (int j = 0; j < 9; j++) {
-				System.out.print(result[i][j] + " ");
-			}
-			System.out.print("\n");
-		}
-		assertTrue(true);
+		assertTrue(board[0][8] == 9);
+		assertTrue(board[7][0] == 6);
+		assertTrue(board[1][1] == 5);
+		assertTrue(board[8][8] == 9);
 	}
 }
