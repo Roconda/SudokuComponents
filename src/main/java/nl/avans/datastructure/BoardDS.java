@@ -22,11 +22,9 @@ class BoardDS {
 
 	private void setup() {
 		board = new Field[getSize()][getSize()];
-		generate();
-		solve();
 	}
 
-	private void generate() {
+	public void generate() {
 		long startTime = System.currentTimeMillis();
 
 		int[][] content = generator.generate(getSize(), getDifficulty());
@@ -46,7 +44,7 @@ class BoardDS {
 		}
 	}
 
-	private void solve() {
+	public void solve() {
 		long startTime = System.currentTimeMillis();
 
 		int[][] content = solver.solve(getBoardAsIntegers());

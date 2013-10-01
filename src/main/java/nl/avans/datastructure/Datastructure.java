@@ -14,6 +14,16 @@ public class Datastructure implements IDatastructure {
 			ISolver solver) {
 		this.board = new BoardDS(size, difficulty, generator, solver);
 	}
+	
+	
+	public void generate() {
+		this.board.generate();
+	}
+	
+	public void solve() {
+		this.board.solve();
+	}
+	
 
 	public int getCurrentValue(int x, int y) {
 		return this.board.getCurrentValue(x, y);
