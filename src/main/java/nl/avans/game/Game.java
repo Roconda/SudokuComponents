@@ -5,7 +5,8 @@ import nl.avans.generator.Generator;
 import nl.avans.lib.IDatastructure;
 import nl.avans.lib.IGenerator;
 import nl.avans.lib.ISolver;
-import nl.avans.solver.Solver;
+
+import nl.avans.nsbfsolver.Solver;
 
 /**
  * Only class which is accessible from outside this package
@@ -13,11 +14,24 @@ import nl.avans.solver.Solver;
 public class Game {
 	private IDatastructure board;
 
+	/**
+	 * TODO: Difficulty should be of type EDifficulty.
+	 */
 	public Game(int size, int difficulty) {
-		ISolver solver = new Solver();
+		ISolver solver = new Solver(size);
 		IGenerator generator = new Generator();
 		this.board = new Datastructure(size, difficulty, generator, solver);
 	}
+	
+	
+	public void generate() {
+		this.board.generate();
+	}
+	
+	public void solve() {
+		this.board.solve();
+	}
+	
 
 	public int getCurrentValue(int x, int y) {
 		return this.board.getCurrentValue(x, y);
@@ -32,8 +46,8 @@ public class Game {
 	}
 
 	public int[][] getSubRegion(int subregion) {
-		int columns = (int) Math.sqrt(getNumberOfColumns());
-		int rows = (int) Math.sqrt(getNumberOfColumns());
+		/*int columns = (int) Math.sqrt(getNumberOfColumns());
+		int rows = (int) Math.sqrt(getNumberOfRows());
 
 		if (subregion < 0 ^ (subregion > columns - 1 && subregion > rows - 1)) {
 			throw new IllegalArgumentException(
@@ -47,14 +61,25 @@ public class Game {
 		}
 
 		int[][] elements = new int[columns][rows];
-
 		for (int x = subregion * columns; x < getNumberOfColumns(); x++) {
 			for (int y = subregion * rows; y < getNumberOfRows(); y++) {
 				elements[x][y] = getCurrentValue(x, y);
 			}
 		}
+		
+		int refX = (subregion * rows),
+			refY = (subregion * columns);
+		for (int x = 0; x < rows; x++) {
+			for (int y = 0; y < columns; y++) {
+				elements[x][y] = getCurrentValue(refX, refY);
+				refY++;
+			}
+			refX++;
+		}
 
-		return elements;
+		return elements;*/
+		
+		return this.board.getSubRegion(subregion);
 	}
 
 	public int[] getColumn(int column) {
