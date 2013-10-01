@@ -33,6 +33,14 @@
     <maven.compiler.source>1.6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
   </properties>
+  
+  <repositories>
+      <repository>
+	  <name>sudoku</name>
+          <id>sudoku-repository</id>
+          <url>http://mvn.avans-project.nl/</url>
+      </repository>
+  </repositories>
 
   <dependencies>
     <dependency>
