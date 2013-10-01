@@ -1,4 +1,4 @@
-package nl.avans.solver-nakedsingles-bruteforce;
+package nl.avans.nsbfsolver;
 
 
 /**

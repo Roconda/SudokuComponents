@@ -1,5 +1,6 @@
-package nl.avans.solver-nakedsingles-bruteforce;
+package nl.avans.nsbfsolver;
 
+import nl.avans.lib.ISolver;
 
 /**
  * Represents the base system for solving Sudoku puzzles.
