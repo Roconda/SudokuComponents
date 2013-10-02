@@ -3,8 +3,6 @@ package nl.avans.lib;
 public interface IDatastructure {
 	int getCurrentValue(int x, int y);
 	void setCurrentValue(int x, int y, int currentValue);
-	void generate();
-	void solve();
 	int getSolutionValue(int x, int y);
 	int[][] getSubRegion(int subregion);
 	int[] getColumn(int column);
