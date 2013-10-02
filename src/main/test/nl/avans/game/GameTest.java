@@ -24,7 +24,6 @@ public class GameTest extends TestCase {
         super( testName );
         
         game = new Game(9, 0);
-        game.generate();
     }
 
     /**

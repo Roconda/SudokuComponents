@@ -22,16 +22,6 @@ public class Game {
 		IGenerator generator = new Generator();
 		this.board = new Datastructure(size, difficulty, generator, solver);
 	}
-	
-	
-	public void generate() {
-		this.board.generate();
-	}
-	
-	public void solve() {
-		this.board.solve();
-	}
-	
 
 	public int getCurrentValue(int x, int y) {
 		return this.board.getCurrentValue(x, y);
