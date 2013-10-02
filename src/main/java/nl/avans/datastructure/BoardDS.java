@@ -78,7 +78,7 @@ class BoardDS {
 
 	public int getCurrentValue(int x, int y) {
 		if (isFieldNotOnGrid(x, y))
-			throw new IllegalArgumentException("The field is not on the grid.");
+			return -1;
 
 		return this.board[x][y].getCurrentValue();
 	}
@@ -95,7 +95,7 @@ class BoardDS {
 
 	public int getSolutionValue(int x, int y) {
 		if (isFieldNotOnGrid(x, y))
-			throw new IllegalArgumentException("The field is not on the grid.");
+			return -1;
 
 		return this.board[x][y].getSolutionValue();
 	}
