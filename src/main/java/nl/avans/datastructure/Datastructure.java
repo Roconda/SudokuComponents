@@ -14,16 +14,6 @@ public class Datastructure implements IDatastructure {
 			ISolver solver) {
 		this.board = new BoardDS(size, difficulty, generator, solver);
 	}
-	
-	
-	public void generate() {
-		this.board.generate();
-	}
-	
-	public void solve() {
-		this.board.solve();
-	}
-	
 
 	public int getCurrentValue(int x, int y) {
 		return this.board.getCurrentValue(x, y);
@@ -38,28 +28,37 @@ public class Datastructure implements IDatastructure {
 	}
 
 	public int[][] getSubRegion(int subregion) {
-		int columns = (int) Math.sqrt(getNumberOfRows());
-		int rows = (int) Math.sqrt(getNumberOfColumns());
+		int setSize = (int) Math.sqrt(getSize());
 
-		if (subregion < 0 ^ (subregion > columns - 1 && subregion > rows - 1)) {
+		if (subregion < 0 ^ subregion > setSize - 1) {
 			throw new IllegalArgumentException(
 					"The parameter subregion cannot be smaller than 0 or larger than the number of subregions minus one.");
 		}
 
-		if (getNumberOfColumns() % columns != 0
-				&& getNumberOfRows() % rows != 0) {
+		if (getSize() % setSize != 0) {
 			throw new IllegalArgumentException(
 					"The columns and rows of the sudoku cannot be evenly divided into subregions.");
 		}
 
-		int[][] elements = new int[columns][rows];
-
-		for (int x = subregion * rows; x < getNumberOfRows(); x++) {
-			for (int y = subregion * columns; y < getNumberOfColumns(); y++) {
-				elements[x][y] = getCurrentValue(x, y);
+		
+		int[][] elements = new int[setSize][setSize];
+		
+		int setIndex = (subregion / setSize);
+		int lowestRow = (setSize * setIndex),
+			lowestColumn = (setSize * setIndex);
+		
+		int setX = 0,
+			setY = 0;
+		for (int x = lowestRow; x < (lowestRow + setSize); x++) {
+			setY = 0;
+			for (int y = lowestColumn; y < (lowestColumn + setSize); y++) {
+				elements[setX][setY] = this.board.getCurrentValue(x, y);
+				setY++;
 			}
+			
+			setX++;
 		}
-
+		
 		return elements;
 	}
 

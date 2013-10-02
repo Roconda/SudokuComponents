@@ -22,6 +22,9 @@ class BoardDS {
 
 	private void setup() {
 		board = new Field[getSize()][getSize()];
+		
+		generate();
+		solve();
 	}
 
 	public void generate() {
@@ -36,9 +39,9 @@ class BoardDS {
 		for (int x = 0; x < getNumberOfRows(); x++) {
 			for (int y = 0; y < getNumberOfColumns(); y++) {
 				if (content[x][y] == 0) {
-					this.board[x][y] = new UserField(-1, -1);
+					this.board[x][y] = new UserField(0, 0);
 				} else {
-					this.board[x][y] = new GeneratedField(content[x][y], -1);
+					this.board[x][y] = new GeneratedField(content[x][y], 0);
 				}
 			}
 		}
