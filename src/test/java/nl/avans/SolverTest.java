@@ -48,6 +48,6 @@ public class SolverTest extends TestCase {
 		assertTrue(board[0][8] == 9);
 		assertTrue(board[7][0] == 6);
 		assertTrue(board[1][1] == 5);
-		assertTrue(board[8][8] == 9);
+		assertTrue(board[8][8] == 8);
 	}
 }
