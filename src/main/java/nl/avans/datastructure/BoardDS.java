@@ -120,7 +120,7 @@ class BoardDS {
 	}
 
 	private boolean isIllegalValue(int value) {
-		if (value < 1 || value > getSize()) {
+		if (value < 0 || value > getSize()) {
 			return true;
 		}
 
