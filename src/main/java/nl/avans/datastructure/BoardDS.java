@@ -90,7 +90,8 @@ class BoardDS {
 			throw new IllegalArgumentException(
 					"The value is lower or higher than allowed.");
 
-		this.board[x][y].setCurrentValue(currentValue);
+		if (this.board[x][y] instanceof UserField)
+			this.board[x][y].setCurrentValue(currentValue);
 	}
 
 	public int getSolutionValue(int x, int y) {
