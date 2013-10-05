@@ -33,14 +33,24 @@ public class Solver implements ISolver {
 	public int[][] solve(int[][] grid) {
 		
 		NakedSinglesSolver nakedSinglesSolver = new NakedSinglesSolver(puzzleSize);
+		NakedPairsSolver nakedPairsSolver = new NakedPairsSolver(puzzleSize);
 		BruteForceSolver bruteForceSolver = new BruteForceSolver(puzzleSize);
 		
 		int[][] singleSolutionGrid = nakedSinglesSolver.solve(grid);
+		int[][] pairsSolutionGrid = nakedPairsSolver.solve(grid);
 		int[][] solutionGrid;
 		
-		solutionGrid = (isSolved(singleSolutionGrid)) ? 
+		pairsSolutionGrid = (isSolved(singleSolutionGrid)) ? 
 				singleSolutionGrid.clone() : 
-				bruteForceSolver.solve(singleSolutionGrid);
+				nakedPairsSolver.solve(singleSolutionGrid);
+		
+		if (pairsSolutionGrid != null) {
+			solutionGrid = (isSolved(pairsSolutionGrid)) ?
+				pairsSolutionGrid.clone() :
+				bruteForceSolver.solve(pairsSolutionGrid);
+		} else {
+			solutionGrid = bruteForceSolver.solve(singleSolutionGrid);
+		}
 		
 		return solutionGrid;
 	}
