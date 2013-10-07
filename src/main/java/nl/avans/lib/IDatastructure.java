@@ -17,14 +17,25 @@ public interface IDatastructure {
 	int getCurrentValue(int x, int y);
 
         /**
-         * Gets the current value of a specific field.
+         * Changes the current setting of the datastructure. 
          * 
          * @param size                          The size of the puzzle.
          * @param difficulty                    The generated difficulty.
          * @param gen                           An IGenerator instance.
-         * @return                              The current value of the desired field.
+         * @return                              The current datastructure.
          */
 	IDatastructure setSettings(int size, int difficulty, IGenerator gen);
+
+        /**
+         * Sets a value in the board.
+         * 
+         * @param x                             The x-coordinate of the field in the matrix.
+         * @param y                             The y-coordinate of the field in the matrix.
+         * @param value                         The current value of the desired field.
+         * @return                              True if success, false if not.
+         */
+        boolean setField(int x, int y, int value);
+
 
 	/**
 	 * Sets the current value of a specific field.
