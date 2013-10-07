@@ -12,9 +12,9 @@ public class Datastructure implements IDatastructure {
 		board = new BoardDS().setSize(size).setDifficulty(difficulty).setGenerator(gen);
 	}
 	
-	public Datastructure setSettings(int size, int difficulty, IGenerator gen) {
+	public IDatastructure setSettings(int size, int difficulty, IGenerator gen) {
 		board = new BoardDS().setSize(size).setDifficulty(difficulty).setGenerator(gen);
-		return this;
+		return (IDatastructure)this;
 	}
 	
 	public int getCurrentValue(int x, int y) {
@@ -30,10 +30,13 @@ public class Datastructure implements IDatastructure {
 	public boolean setCurrentValue(int x, int y, int currentValue) {
 		try {
 			this.board.setCurrentValue(x, y, currentValue);
+			return true;
 		} catch (UnkownFieldException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
+		return false;
 	}
 
 	public int getSolutionValue(int x, int y) {
