@@ -15,7 +15,10 @@ import java.util.Iterator;
  */
 class Range implements Iterable<Integer> {
 
+	/** The min. */
 	private int min;
+	
+	/** The count. */
 	private int count;
 	
 	
@@ -34,6 +37,8 @@ class Range implements Iterable<Integer> {
 	/**
 	 * Iterates from the start position of the range to the end position,
 	 * creating all numbers for the row.
+	 *
+	 * @return the iterator
 	 */
 	public Iterator<Integer> iterator() {
 		

@@ -11,12 +11,20 @@ import nl.avans.lib.IGenerator;
  * @see IGenerator
  */
 public class Generator implements IGenerator {
+	
+	/** The solved grid. */
 	private static int[][] solvedGrid;
 
+	/** The generator helper. */
 	private GeneratorHelper generatorHelper;
 
+	/** The blank values. */
 	private int blankValues;
+	
+	/** The puzzle size. */
 	private int puzzleSize;
+	
+	/** The min available fields. */
 	private int minAvailableFields;
 	
 	
@@ -25,9 +33,17 @@ public class Generator implements IGenerator {
 	 * on a specific difficulty.
 	 */
 	private static final int EASY = -5;
+	
+	/** The Constant NORMAL. */
 	private static final int NORMAL = 0;
+	
+	/** The Constant HARD. */
 	private static final int HARD = 5;
+	
+	/** The Constant VERY_HARD. */
 	private static final int VERY_HARD = 10;
+	
+	/** The Constant EXPERT. */
 	private static final int EXPERT = 15;
 	
 
@@ -40,10 +56,10 @@ public class Generator implements IGenerator {
 	
 	/**
 	 * Generates a matrix based Sudoku puzzle with a specific size and difficulty.
-	 * 
-	 * @param size			The size of the puzzle.
-	 * @param difficulty	The difficulty of the puzzle.
-	 * @return				A matrix based Sudoku puzzle with the desired size and difficulty.
+	 *
+	 * @param puzzleSize the puzzle size
+	 * @param difficulty The difficulty of the puzzle.
+	 * @return 			A matrix based Sudoku puzzle with the desired size and difficulty.
 	 */
 	public int[][] generate(int puzzleSize, int difficulty) {
 

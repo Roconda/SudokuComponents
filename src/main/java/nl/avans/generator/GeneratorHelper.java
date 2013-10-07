@@ -12,8 +12,10 @@ import java.util.Random;
  */
 class GeneratorHelper {
 	
+	/** The puzzle grid. */
 	private int[][] puzzleGrid;
 	
+	/** The puzzle size. */
 	private int puzzleSize;
 	
 	
