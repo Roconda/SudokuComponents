@@ -10,6 +10,7 @@ public class BruteForceSolver {
 	
 	private int[][] solutionGrid;
 	
+	/** The puzzle size. */
 	private int puzzleSize;
 	
 	

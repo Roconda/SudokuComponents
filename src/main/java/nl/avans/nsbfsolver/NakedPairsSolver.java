@@ -5,11 +5,12 @@ import java.util.Random;
 /**
  * Represents a Naked Pairs based Sudoku solver.
  * 
- * @author Dustin
+ * @author Dustin Sarioglu
  *
  */
 class NakedPairsSolver {
 	
+	/** The max recursions. */
 	private final int MAX_RECURSIONS = 1000;
 	
 	private int[][][] solutionGrids;

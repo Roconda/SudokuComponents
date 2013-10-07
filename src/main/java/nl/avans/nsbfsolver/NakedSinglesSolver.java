@@ -15,8 +15,8 @@ class NakedSinglesSolver {
 	
 	/**
 	 * Initializes a new instance of the NakedSinglesSolver class.
-	 * 
-	 * @param puzzleSize
+	 *
+	 * @param puzzleSize the puzzle size
 	 */
 	NakedSinglesSolver(int puzzleSize) { 
 		
