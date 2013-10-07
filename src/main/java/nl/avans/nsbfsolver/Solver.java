@@ -22,13 +22,10 @@ public class Solver implements ISolver {
 	
 	
 	/**
-	 * Solves a Sudoku grid.
+	 * Solves a Sudoku puzzle.
 	 * 
-	 * First method is solving the puzzle based on all Naked Singles.
-	 * Second method is solving the puzzle @ Brute Force.
-	 * 
-	 * @param grid		The Sudoku grid to solve.
-	 * @return			The solved Sudoku grid.
+	 * @param input		The matrix based Sudoku puzzle to solve.
+	 * @return			The matrix based Sudoku puzzle solved from the input.
 	 */
 	public int[][] solve(int[][] grid) {
 		
