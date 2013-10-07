@@ -34,7 +34,7 @@ public interface IDatastructure {
 	 * @param y				The y-coordinate of the field in the matrix.
 	 * @param currentValue	The desired value to set the field's current value to.
 	 */
-	void setCurrentValue(int x, int y, int currentValue);
+	boolean setCurrentValue(int x, int y, int currentValue);
 	
 	/**
 	 * Gets the solution value of a specific field.
