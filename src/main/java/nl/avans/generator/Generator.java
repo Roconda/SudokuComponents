@@ -8,6 +8,7 @@ import nl.avans.lib.IGenerator;
  * Generator class.
  * 
  * @author Dustin Sarioglu
+ * @see IGenerator
  */
 public class Generator implements IGenerator {
 	private static int[][] solvedGrid;
@@ -36,10 +37,13 @@ public class Generator implements IGenerator {
 	public Generator() {
 	}
 
+	
 	/**
-	 * Generates a new Sudoku-puzzle.
+	 * Generates a matrix based Sudoku puzzle with a specific size and difficulty.
 	 * 
-	 * @return A new generated sudoku puzzle, based on the solved grid.
+	 * @param size			The size of the puzzle.
+	 * @param difficulty	The difficulty of the puzzle.
+	 * @return				A matrix based Sudoku puzzle with the desired size and difficulty.
 	 */
 	public int[][] generate(int puzzleSize, int difficulty) {
 
