@@ -1,33 +1,33 @@
 package nl.avans.datastructure;
 
 import nl.avans.lib.IGenerator;
-import nl.avans.lib.ISolver;
 
 class BoardDS {
+	private final int PLACEHOLDER = -9999; 
 	private Field[][] board;
 	private IGenerator generator;
-	private ISolver solver;
-	private int size;
-	private int difficulty;
+	private int size = PLACEHOLDER;
+	private int difficulty = PLACEHOLDER;
 
-	public BoardDS(int size, int difficulty, IGenerator generator,
-			ISolver solver) {
+	public BoardDS setSize(int size) {
 		this.size = size;
-		this.generator = generator;
-		this.solver = solver;
-		this.difficulty = difficulty;
-
-		setup();
-	}
-
-	private void setup() {
 		board = new Field[getSize()][getSize()];
-		
-		generate();
-		solve();
+		return this;
+	}
+	
+	public BoardDS setGenerator(IGenerator generator) {
+		this.generator = generator;
+		return this;
+
+	}
+	
+	public BoardDS setDifficulty(int difficulty) {
+		this.difficulty = difficulty;
+		return this;
 	}
 
-	public void generate() {
+	public void generate() throws CannotGenerateException {
+		generateCheck();
 		long startTime = System.currentTimeMillis();
 
 		int[][] content = generator.generate(getSize(), getDifficulty());
@@ -46,49 +46,21 @@ class BoardDS {
 			}
 		}
 	}
-
-	public void solve() {
-		long startTime = System.currentTimeMillis();
-
-		int[][] content = solver.solve(getBoardAsIntegers());
-
-		long finishTime = System.currentTimeMillis();
-		System.out.println("Solving time: " + (finishTime - startTime) + " ms");
-
-		for (int x = 0; x < getNumberOfRows(); x++) {
-			for (int y = 0; y < getNumberOfColumns(); y++) {
-				if (board[x][y] instanceof UserField) {
-					setSolutionValue(x, y, content[x][y]);
-				}
-			}
-		}
-	}
-
-	private int[][] getBoardAsIntegers() {
-		int[][] snapshot = new int[getNumberOfColumns()][getNumberOfRows()];
-
-		for (int x = 0; x < getNumberOfRows(); x++) {
-			for (int y = 0; y < getNumberOfColumns(); y++) {
-				snapshot[x][y] = getCurrentValue(x, y);
-			}
-		}
-
-		return snapshot;
-	}
-
-	public int getCurrentValue(int x, int y) {
+	
+	public int getCurrentValue(int x, int y) throws CannotGenerateException {
+		generateCheck();
+		
 		if (isFieldNotOnGrid(x, y))
 			return -1;
 
 		return this.board[x][y].getCurrentValue();
 	}
 
-	public void setCurrentValue(int x, int y, int currentValue) {
+	public void setCurrentValue(int x, int y, int currentValue) throws UnkownFieldException {
 		if (isFieldNotOnGrid(x, y))
-			throw new IllegalArgumentException("The field is not on the grid.");
+			throw new UnkownFieldException("The field is not on the grid.");
 		if (isIllegalValue(currentValue))
-			throw new IllegalArgumentException(
-					"The value is lower or higher than allowed.");
+			throw new UnkownFieldException("The value is lower or higher than allowed.");
 
 		if (this.board[x][y] instanceof UserField)
 			this.board[x][y].setCurrentValue(currentValue);
@@ -101,31 +73,12 @@ class BoardDS {
 		return this.board[x][y].getSolutionValue();
 	}
 
-	private void setSolutionValue(int x, int y, int solutionValue) {
-		if (isFieldNotOnGrid(x, y))
-			throw new IllegalArgumentException("The field is not on the grid.");
-		if (isIllegalValue(solutionValue))
-			throw new IllegalArgumentException(
-					"The value is lower or higher than allowed.");
-
-		this.board[x][y].setSolutionValue(solutionValue);
-	}
-
 	private boolean isFieldNotOnGrid(int x, int y) {
-		if ((x < 0 || x > getNumberOfRows())
-				|| (y < 0 || y > getNumberOfColumns())) {
-			return true;
-		}
-
-		return false;
+		return ((x < 0 || x > getNumberOfRows()) || (y < 0 || y > getNumberOfColumns()));
 	}
 
 	private boolean isIllegalValue(int value) {
-		if (value < 0 || value > getSize()) {
-			return true;
-		}
-
-		return false;
+		return (value < 0 || value > getSize());	
 	}
 
 	public int getNumberOfColumns() {
@@ -142,5 +95,25 @@ class BoardDS {
 
 	public int getDifficulty() {
 		return difficulty;
+	}
+	
+	private void generateCheck() throws CannotGenerateException {
+		boolean canGenerate = true;
+		StringBuilder message = new StringBuilder("Something bad has happened:\n\n");
+		
+		if(generator == null) {
+			canGenerate = false;
+			message.append("- No generator found\n");
+		}
+		if(difficulty == PLACEHOLDER) {
+			 canGenerate = false;
+			 message.append("- No difficulty was set\n");
+		}
+		if(size == PLACEHOLDER) {
+			 canGenerate = false;
+			 message.append("- Size not set\n");
+		}
+		
+		if(!canGenerate) throw new CannotGenerateException(message.toString());
 	}
 }

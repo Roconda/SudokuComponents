@@ -1,8 +1,6 @@
 package nl.avans.datastructure;
 
-import nl.avans.lib.IDatastructure;
-import nl.avans.lib.IGenerator;
-import nl.avans.lib.ISolver;
+import nl.avans.lib.*;
 
 /**
  * Only class which is accessible from outside this package
@@ -10,17 +8,32 @@ import nl.avans.lib.ISolver;
 public class Datastructure implements IDatastructure {
 	private BoardDS board;
 
-	public Datastructure(int size, int difficulty, IGenerator generator,
-			ISolver solver) {
-		this.board = new BoardDS(size, difficulty, generator, solver);
+	public Datastructure(int size, int difficulty, IGenerator gen) {
+		board = new BoardDS().setSize(size).setDifficulty(difficulty).setGenerator(gen);
 	}
-
+	
+	public Datastructure setSettings(int size, int difficulty, IGenerator gen) {
+		board = new BoardDS().setSize(size).setDifficulty(difficulty).setGenerator(gen);
+		return this;
+	}
+	
 	public int getCurrentValue(int x, int y) {
-		return this.board.getCurrentValue(x, y);
+		try {
+			return this.board.getCurrentValue(x, y);
+		} catch (CannotGenerateException e) {
+			// TODO Printen of niet?
+			e.printStackTrace();
+			return -1;
+		}
 	}
 
-	public void setCurrentValue(int x, int y, int currentValue) {
-		this.board.setCurrentValue(x, y, currentValue);
+	public boolean setCurrentValue(int x, int y, int currentValue) {
+		try {
+			this.board.setCurrentValue(x, y, currentValue);
+		} catch (UnkownFieldException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public int getSolutionValue(int x, int y) {
@@ -52,7 +65,12 @@ public class Datastructure implements IDatastructure {
 		for (int x = lowestRow; x < (lowestRow + setSize); x++) {
 			setY = 0;
 			for (int y = lowestColumn; y < (lowestColumn + setSize); y++) {
-				elements[setX][setY] = this.board.getCurrentValue(x, y);
+				try {
+					elements[setX][setY] = this.board.getCurrentValue(x, y);
+				} catch (CannotGenerateException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				setY++;
 			}
 			
