@@ -14,6 +14,8 @@ import nl.avans.nsbfsolver.Solver;
  * @author	Christiaan Reubsaet
  */
 public class Game {
+	
+	/** The board. */
 	private IDatastructure board;
 
 	/**

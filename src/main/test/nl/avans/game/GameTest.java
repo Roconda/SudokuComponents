@@ -12,13 +12,14 @@ import junit.framework.TestSuite;
  */
 public class GameTest extends TestCase {
 	
+	/** The game. */
 	private Game game;
 	
 	/**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
+	 * Create the test case.
+	 *
+	 * @param testName name of the test case
+	 */
     public GameTest( String testName )
     {
         super( testName );
@@ -27,6 +28,8 @@ public class GameTest extends TestCase {
     }
 
     /**
+     * Suite.
+     *
      * @return the suite of tests being tested
      */
     public static Test suite()
@@ -37,6 +40,9 @@ public class GameTest extends TestCase {
     
     //TESTCASES
     
+    /**
+     * Test get current value.
+     */
     public void testGetCurrentValue() {
     	
     	assertNotSame(game.getCurrentValue(1, 4), -1);
@@ -45,6 +51,9 @@ public class GameTest extends TestCase {
     	assertNotSame(game.getCurrentValue(7, 6), -1);
     }
     
+    /**
+     * Test get value out of bounds.
+     */
     public void testGetValueOutOfBounds() {
     	
     	try {
@@ -55,6 +64,9 @@ public class GameTest extends TestCase {
     	}
     }
     
+    /**
+     * Test set current value.
+     */
     public void testSetCurrentValue() {
     	
     	game.setCurrentValue(4, 8, 1);
@@ -66,6 +78,9 @@ public class GameTest extends TestCase {
     	assertEquals(game.getCurrentValue(6, 3), 9);
     }
     
+    /**
+     * Test get subregion.
+     */
     public void testGetSubregion() {
     	
     	assertEquals(game.getSubRegion(2).length, 3);
@@ -74,6 +89,9 @@ public class GameTest extends TestCase {
     	assertEquals(game.getSubRegion(1)[0].length, 3);
     }
     
+    /**
+     * Test get illegal subregion.
+     */
     public void testGetIllegalSubregion() {
     	
     	try {
@@ -84,6 +102,9 @@ public class GameTest extends TestCase {
     	}
     }
     
+    /**
+     * Test get row.
+     */
     public void testGetRow() {
     	
     	assertEquals(game.getRow(0).length, 9);
@@ -91,6 +112,9 @@ public class GameTest extends TestCase {
     	assertEquals(game.getRow(5).length, 9);
     }
     
+    /**
+     * Test get illegal row.
+     */
     public void testGetIllegalRow() {
     	
     	try {
@@ -101,6 +125,9 @@ public class GameTest extends TestCase {
     	}
     }
     
+    /**
+     * Test get column.
+     */
     public void testGetColumn() {
     	
     	assertEquals(game.getColumn(1).length, 9);
@@ -108,6 +135,9 @@ public class GameTest extends TestCase {
     	assertEquals(game.getColumn(6).length, 9);
     }
     
+    /**
+     * Test get illegal column.
+     */
     public void testGetIllegalColumn() {
     	
     	try {
@@ -118,16 +148,25 @@ public class GameTest extends TestCase {
     	}
     }
     
+    /**
+     * Test get number of columns.
+     */
     public void testGetNumberOfColumns() {
     	
     	assertEquals(game.getNumberOfColumns(), 9);
     }
     
+    /**
+     * Test get number of rows.
+     */
     public void testGetNumberOfRows() {
     	
     	assertEquals(game.getNumberOfRows(), 9);
     }
     
+    /**
+     * Test get size.
+     */
     public void testGetSize() {
     	
     	assertEquals(game.getSize(), 9);
