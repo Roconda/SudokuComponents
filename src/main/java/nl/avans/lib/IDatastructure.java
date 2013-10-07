@@ -26,16 +26,6 @@ public interface IDatastructure {
          */
 	IDatastructure setSettings(int size, int difficulty, IGenerator gen);
 
-        /**
-         * Sets a value in the board.
-         * 
-         * @param x                             The x-coordinate of the field in the matrix.
-         * @param y                             The y-coordinate of the field in the matrix.
-         * @param value                         The current value of the desired field.
-         * @return                              True if success, false if not.
-         */
-        boolean setField(int x, int y, int value);
-
 
 	/**
 	 * Sets the current value of a specific field.
