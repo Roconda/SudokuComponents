@@ -26,7 +26,8 @@ public class Game {
 	 */
 	public Game(int size, int difficulty) {
 		IGenerator generator = new Generator();
-		this.board = new Datastructure(size, difficulty, generator);
+		int[][] board = generator.generate(size, difficulty);
+		this.board = new Datastructure(size, difficulty, board);
 	}
 
 	
