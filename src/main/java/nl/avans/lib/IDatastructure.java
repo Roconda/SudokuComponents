@@ -24,7 +24,7 @@ public interface IDatastructure {
          * @param gen                           An IGenerator instance.
          * @return                              The current datastructure.
          */
-	IDatastructure setSettings(int size, int difficulty, IGenerator gen);
+	IDatastructure setSettings(int size, int difficulty, int[][] generatedBoard);
 
 
 	/**
