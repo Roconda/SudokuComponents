@@ -8,12 +8,12 @@ import nl.avans.lib.*;
 public class Datastructure implements IDatastructure {
 	private BoardDS board;
 
-	public Datastructure(int size, int difficulty, IGenerator gen) {
-		board = new BoardDS().setSize(size).setDifficulty(difficulty).setGenerator(gen);
+	public Datastructure(int size, int difficulty, int[][] generatedBoard) throws CannotGenerateException {
+		board = new BoardDS().setSize(size).setDifficulty(difficulty).fill(generatedBoard);
 	}
 	
-	public IDatastructure setSettings(int size, int difficulty, IGenerator gen) {
-		board = new BoardDS().setSize(size).setDifficulty(difficulty).setGenerator(gen);
+	public IDatastructure setSettings(int size, int difficulty, int[][] generatedBoard) throws CannotGenerateException {
+		board = new BoardDS().setSize(size).setDifficulty(difficulty).fill(generatedBoard);
 		return (IDatastructure)this;
 	}
 	

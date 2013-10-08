@@ -1,11 +1,8 @@
 package nl.avans.datastructure;
 
-import nl.avans.lib.IGenerator;
-
 class BoardDS {
-	private final int PLACEHOLDER = -9999; 
+	private final int PLACEHOLDER = -9999;
 	private Field[][] board;
-	private IGenerator generator;
 	private int size = PLACEHOLDER;
 	private int difficulty = PLACEHOLDER;
 
@@ -15,26 +12,13 @@ class BoardDS {
 		return this;
 	}
 	
-	public BoardDS setGenerator(IGenerator generator) {
-		this.generator = generator;
-		return this;
-
-	}
-	
 	public BoardDS setDifficulty(int difficulty) {
 		this.difficulty = difficulty;
 		return this;
 	}
 
-	public void generate() throws CannotGenerateException {
+	public BoardDS fill(int[][] content) throws CannotGenerateException {
 		generateCheck();
-		long startTime = System.currentTimeMillis();
-
-		int[][] content = generator.generate(getSize(), getDifficulty());
-
-		long finishTime = System.currentTimeMillis();
-		System.out.println("Generating time: " + (finishTime - startTime)
-				+ " ms");
 
 		for (int x = 0; x < getNumberOfRows(); x++) {
 			for (int y = 0; y < getNumberOfColumns(); y++) {
@@ -45,6 +29,7 @@ class BoardDS {
 				}
 			}
 		}
+		return this;
 	}
 	
 	public int getCurrentValue(int x, int y) throws CannotGenerateException {
@@ -101,10 +86,6 @@ class BoardDS {
 		boolean canGenerate = true;
 		StringBuilder message = new StringBuilder("Something bad has happened:\n\n");
 		
-		if(generator == null) {
-			canGenerate = false;
-			message.append("- No generator found\n");
-		}
 		if(difficulty == PLACEHOLDER) {
 			 canGenerate = false;
 			 message.append("- No difficulty was set\n");
