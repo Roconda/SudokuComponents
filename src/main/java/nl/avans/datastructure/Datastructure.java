@@ -12,8 +12,8 @@ public class Datastructure implements IDatastructure {
 		board = new BoardDS().setSize(size).setDifficulty(difficulty).fill(generatedBoard);
 	}
 	
-	public IDatastructure setSettings(int size, int difficulty, int[][] generatedBoard) throws CannotGenerateException {
-		board = new BoardDS().setSize(size).setDifficulty(difficulty).fill(generatedBoard);
+	public IDatastructure setSettings(int size, int difficulty) throws CannotGenerateException {
+		board = new BoardDS().setSize(size).setDifficulty(difficulty);
 		return (IDatastructure)this;
 	}
 	
