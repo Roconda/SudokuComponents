@@ -25,9 +25,8 @@ public class Game {
 	 * @param difficulty	The difficulty of the Sudoku puzzle.
 	 */
 	public Game(int size, int difficulty) {
-		ISolver solver = new Solver(size);
 		IGenerator generator = new Generator();
-		this.board = new Datastructure(size, difficulty, generator, solver);
+		this.board = new Datastructure(size, difficulty, generator);
 	}
 
 	
