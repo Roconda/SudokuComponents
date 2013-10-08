@@ -4,21 +4,12 @@ class BoardDS {
 	private final int PLACEHOLDER = -9999;
 	private Field[][] board;
 	private int size = PLACEHOLDER;
-	private int difficulty = PLACEHOLDER;
 
-	public BoardDS setSize(int size) {
-		this.size = size;
+	public BoardDS fill(int[][] content) {
+		
+		// Initialize board
+		this.size = content.length;
 		board = new Field[getSize()][getSize()];
-		return this;
-	}
-	
-	public BoardDS setDifficulty(int difficulty) {
-		this.difficulty = difficulty;
-		return this;
-	}
-
-	public BoardDS fill(int[][] content) throws CannotGenerateException {
-		generateCheck();
 
 		for (int x = 0; x < getNumberOfRows(); x++) {
 			for (int y = 0; y < getNumberOfColumns(); y++) {
@@ -77,22 +68,14 @@ class BoardDS {
 	public int getSize() {
 		return size;
 	}
-
-	public int getDifficulty() {
-		return difficulty;
-	}
 	
 	private void generateCheck() throws CannotGenerateException {
 		boolean canGenerate = true;
 		StringBuilder message = new StringBuilder("Something bad has happened:\n\n");
-		
-		if(difficulty == PLACEHOLDER) {
-			 canGenerate = false;
-			 message.append("- No difficulty was set\n");
-		}
-		if(size == PLACEHOLDER) {
-			 canGenerate = false;
-			 message.append("- Size not set\n");
+
+		if(board == null) {
+			 canGenerate = !canGenerate;
+			 message.append("- Board not set\n");
 		}
 		
 		if(!canGenerate) throw new CannotGenerateException(message.toString());
