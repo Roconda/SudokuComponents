@@ -16,15 +16,14 @@ public interface IDatastructure {
 	 */
 	int getCurrentValue(int x, int y);
 
-        /**
-         * Changes the current setting of the datastructure. 
-         * 
-         * @param size                          The size of the puzzle.
-         * @param difficulty                    The generated difficulty.
-         * @param gen                           An IGenerator instance.
-         * @return                              The current datastructure.
-         */
-	IDatastructure setSettings(int size, int difficulty);
+	/**
+	 * Changes the current setting of the datastructure.
+	 * 
+	 * @param content
+	 *            Puzzle's content.
+	 * @return The current datastructure.
+	 */
+	IDatastructure setSettings(int content[][]);
 
 
 	/**
