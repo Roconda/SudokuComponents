@@ -42,6 +42,7 @@
           <url>http://mvn.avans-project.nl/</url>
           <snapshots>
               <enabled>true</enabled>
+              <updatePolicy>always</updatePolicy>
           </snapshots>
       </repository>
   </repositories>
