@@ -8,7 +8,6 @@
   <packaging>jar</packaging>
 
   <name>solver</name>
-  <url>http://maven.apache.org</url>
   
   <build>
     <plugins>
