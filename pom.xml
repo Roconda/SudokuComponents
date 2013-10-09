@@ -37,6 +37,10 @@
 	  <name>sudoku</name>
           <id>sudoku-repository</id>
           <url>http://mvn.avans-project.nl/</url>
+          <snapshots>
+              <enabled>true</enabled>
+              <updatePolicy>always</updatePolicy>
+          </snapshots>
       </repository>
   </repositories>
 
@@ -45,12 +49,6 @@
       <groupId>nl.avans</groupId>
       <artifactId>lib</artifactId>
       <version>1.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>nl.avans</groupId>
-      <artifactId>generator</artifactId>
-      <version>1.0-SNAPSHOT</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
