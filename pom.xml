@@ -36,7 +36,11 @@
       <repository>
 	  <name>sudoku</name>
           <id>sudoku-repository</id>
-          <url>https://raw.github.com/Roconda/SudokuComponents/mvn-repo/repository/</url>
+          <url>http://mvn.avans-project.nl/</url>
+		  <snapshots>
+              <enabled>true</enabled>
+              <updatePolicy>always</updatePolicy>
+          </snapshots>
       </repository>
   </repositories>
 
