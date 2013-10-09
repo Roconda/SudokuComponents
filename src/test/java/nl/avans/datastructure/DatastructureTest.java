@@ -18,7 +18,13 @@ public class DatastructureTest
 			{2,3,5,3},
 			{3,5,7,5}
 	};
-	
+
+	int[][] board2 = {
+			{2,0,2,8},
+			{2,7,9,6},
+			{2,3,5,3},
+			{3,5,7,0}
+	};
 	
     /**
      * Create the test case
@@ -56,11 +62,15 @@ public class DatastructureTest
     	assertEquals(ds1.getNumberOfRows(), 4);
     }
     
-    public void setField() {
+    public void testGetField() {
     	IDatastructure ds1 = new Datastructure(board1);
     	
     	assertEquals(ds1.getCurrentValue(0, 1), 6);
     	assertEquals(ds1.getCurrentValue(3, 3), 5);
+    }
+    
+    public void testSetField() {
+    	IDatastructure ds1 = new Datastructure(board2);
     	
     	ds1.setCurrentValue(0, 1, 7);
     	ds1.setCurrentValue(3, 3, 2);
