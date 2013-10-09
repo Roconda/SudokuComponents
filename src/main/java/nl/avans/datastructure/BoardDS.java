@@ -53,7 +53,7 @@ class BoardDS {
 	}
 
 	private boolean isIllegalValue(int value) {
-		return (value < 0 || value > getSize());	
+		return (value < 0 || value > getSize());
 	}
 
 	public int getNumberOfColumns() {
