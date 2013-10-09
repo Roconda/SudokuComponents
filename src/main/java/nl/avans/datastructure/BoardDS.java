@@ -32,14 +32,17 @@ class BoardDS {
 		return this.board[x][y].getCurrentValue();
 	}
 
-	public void setCurrentValue(int x, int y, int currentValue) throws UnkownFieldException {
+	public boolean setCurrentValue(int x, int y, int currentValue) throws UnkownFieldException {
 		if (isFieldNotOnGrid(x, y))
-			throw new UnkownFieldException("The field is not on the grid.");
+			throw new UnkownFieldException("BoardDS.setCurrentValue: The field is not on the grid.");
 		if (isIllegalValue(currentValue))
-			throw new UnkownFieldException("The value is lower or higher than allowed.");
+			throw new UnkownFieldException("BoardDS.setCurrentValue: The value is lower or higher than allowed.");
 
-		if (this.board[x][y] instanceof UserField)
+		if (this.board[x][y] instanceof UserField) {
 			this.board[x][y].setCurrentValue(currentValue);
+			return true;
+		} else
+			return false;
 	}
 
 	public int getSolutionValue(int x, int y) {
