@@ -18,11 +18,15 @@
   </properties>
 
   <repositories>
-      <repository>
-   <name>sudoku</name>
-          <id>sudoku-repository</id>
-          <url>http://mvn.avans-project.nl/</url>
-      </repository>
+		<repository>
+			<name>sudoku</name>
+			<id>sudoku-repository</id>
+			<url>http://mvn.avans-project.nl/</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
   </repositories>
 
   <dependencies>
