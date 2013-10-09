@@ -27,9 +27,50 @@ public class Game {
 	public Game(int size, int difficulty) {
 		IGenerator generator = new Generator();
 		int[][] board = generator.generate(size, difficulty);
-		this.board = new Datastructure(size, difficulty, board);
+		this.board = new Datastructure(board);
 	}
 
+	
+	/**
+	 * Checks if it is allowed to place the number at the specified place
+	 * 	
+	 * @param x The x coordinate of the place.
+	 * @param y The y coordinate of the place.
+	 * @param value The number to be checked.
+	 * @return True if it is allowed, false otherwise.
+	 */
+	public boolean isAllowed(int x, int y, int value)
+	{
+		boolean check = true;
+		for(int i = 0; i < getSize(); i++)
+		{
+			if(getCurrentValue(i, y) == value)
+				check = false;
+			if(getCurrentValue(x, i) == value)
+				check = false;
+		}
+		double sqrtSize = Math.sqrt(getSize());
+		for(int i = 0; i < sqrtSize; i++)
+			for(int j = 0; j < sqrtSize; j++)
+				if(getCurrentValue(i, j) == value)
+					check = false;
+		
+		return check;
+	}
+	
+	/**
+	 * Checks if the game is completed.
+	 * @return True if all values are correct, false otherwise.
+	 */
+	public boolean isWon()
+	{
+		boolean check = true;
+		for(int i = 0; i < getSize(); i++)
+			for(int j = 0; j < getSize(); j++)
+				if(getCurrentValue(i, j) != getSolutionValue(i, j))
+					check = false;
+		return check;
+	}
 	
 	/**
 	 * Gets the current value of a specific field.
