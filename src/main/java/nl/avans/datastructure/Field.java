@@ -37,8 +37,10 @@ abstract class Field {
 	 *
 	 * @param currentValue the new current value
 	 */
-	public void setCurrentValue(int currentValue) {
+	public boolean setCurrentValue(int currentValue) {
 		this.currentValue = currentValue;
+		
+		return true;
 	}
 	
 	/**
