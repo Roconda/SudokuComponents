@@ -37,12 +37,8 @@ class BoardDS {
 			throw new UnkownFieldException("BoardDS.setCurrentValue: The field is not on the grid.");
 		if (isIllegalValue(currentValue))
 			throw new UnkownFieldException("BoardDS.setCurrentValue: The value is lower or higher than allowed.");
-
-		if (this.board[x][y] instanceof UserField) {
-			this.board[x][y].setCurrentValue(currentValue);
-			return true;
-		} else
-			return false;
+		
+		return this.board[x][y].setCurrentValue(currentValue);
 	}
 
 	public int getSolutionValue(int x, int y) {
