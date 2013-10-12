@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SudokuCollection amount="6">
+	<size id="9">
+		<difficulty level="2" amount="3">
+			<sudoku id="1">
+				002598074030000200009370001000000503086000920903000000200015700005000040390427800
+			</sudoku>
+	
+			<sudoku id="2">
+				051000907200000010308000040003501004006070800900804700070000109060000005109000260
+			</sudoku>
+	
+			<sudoku id="3">
+				000040906000109080002000047001960003500000009600053700340000100050304000207080000
+			</sudoku>
+		</difficulty>
+		
+		<difficulty level="3" amount="3">
+			<sudoku id="1" >
+				asdsdf
+			</sudoku>
+			
+			<sudoku id="2" >
+				232fdsf
+			</sudoku>
+			
+			<sudoku id="3">
+				hfgd
+			</sudoku>
+		</difficulty>
+	</size>
+	
+	<size id="16">
+	</size>
+</SudokuCollection>
