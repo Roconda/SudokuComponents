@@ -26,7 +26,11 @@ public class Datastructure implements IDatastructure {
 			return -1;
 		}
 	}
-
+	
+	public int getSolutionValue(int x, int y) {
+		return this.board.getSolutionValue(x, y);
+	}
+	
 	public boolean setCurrentValue(int x, int y, int currentValue) {
 		try {
 			return this.board.setCurrentValue(x, y, currentValue);
@@ -37,11 +41,7 @@ public class Datastructure implements IDatastructure {
 
 		return false;
 	}
-
-	public int getSolutionValue(int x, int y) {
-		return this.board.getSolutionValue(x, y);
-	}
-
+	
 	public int[][] getSubRegion(int subregion) {
 		
 		int setSize = (int) Math.sqrt(getSize());
@@ -127,6 +127,26 @@ public class Datastructure implements IDatastructure {
 		return this.board.getSize();
 	}
 	
+	public boolean isGeneratedField(int x, int y) {
+		return this.board.isGeneratedField(x, y);
+	}
+	
+	public void getHint() {
+		boolean isFound = false;
+		
+		for (int x = 0; x < board.getNumberOfRows(); x++) {
+			if(isFound) {
+				break;
+			}
+			
+			for (int y = 0; y < board.getNumberOfColumns(); y++) {
+				if (getCurrentValue(x, y) == 0) {
+					setCurrentValue(x, y, getSolutionValue(x, y));
+					isFound = true;
+				}
+			}
+		}
+	}
 	
 	private void isValidSubRegion(int subregion, int setSize) throws UnknownSubRegionException {
 		

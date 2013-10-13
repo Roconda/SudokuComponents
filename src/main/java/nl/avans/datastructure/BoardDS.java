@@ -79,4 +79,12 @@ class BoardDS {
 		
 		if(!canGenerate) throw new CannotGenerateException(message.toString());
 	}
+	
+	public boolean isGeneratedField(int x, int y) {
+		if(board[x][y] instanceof GeneratedField) {
+			return true;
+		}
+		
+		return false;
+	}
 }
