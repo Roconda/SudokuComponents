@@ -88,4 +88,18 @@ public interface IDatastructure {
 	 * @return				The size of the puzzle.
 	 */
 	int getSize();
+	
+	/**
+	 * Checks if the field is of the type GeneratedField
+	 * 
+	 * @param x			The x-coordinate of the field in the matrix.
+	 * @param y			The y-coordinate of the field in the matrix.
+	 * @return			truth-value.
+	 */
+	boolean isGeneratedField(int x, int y);
+	
+	/**
+	 * Changes the current value of a random field to its solution value.
+	 */
+	void getHint();
 }
