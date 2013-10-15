@@ -1,6 +1,5 @@
 package nl.avans.datastructure;
 
-import nl.avans.generator.Generator;
 import nl.avans.lib.IDatastructure;
 import junit.framework.Test;
 import junit.framework.TestCase;
