@@ -97,7 +97,7 @@ public class GameTest extends TestCase {
     	try {
     		game.getSubRegion(9);
     		fail("testGetIllegalSubregion should throw an IllegalArgumentException!");
-    	} catch (IllegalArgumentException e) {
+    	} catch (UnknownSubRegionException e) {
     		assertTrue(true);
     	}
     }
