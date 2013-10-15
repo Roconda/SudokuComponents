@@ -71,10 +71,12 @@ public class DatastructureTest
     public void testSetField() {
     	IDatastructure ds1 = new Datastructure(board2);
     	
-    	ds1.setCurrentValue(0, 1, 4);
-    	ds1.setCurrentValue(3, 3, 2);
+    	assertEquals(ds1.setCurrentValue(0, 1, 4), true);
+    	assertEquals(ds1.setCurrentValue(3, 3, 2), true);
+    	assertEquals(ds1.setCurrentValue(0, 0, 1), false);
     	
     	assertEquals(ds1.getCurrentValue(0, 1), 4);
     	assertEquals(ds1.getCurrentValue(3, 3), 2);
+    	assertEquals(ds1.getCurrentValue(0, 0), 2);
     }
 }
