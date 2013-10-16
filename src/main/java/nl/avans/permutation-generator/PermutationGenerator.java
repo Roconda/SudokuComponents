@@ -1,4 +1,7 @@
+package nl.avans.permutationgenerator; 
+
 import java.util.Random;
+import nl.avans.lib.IGenerator; 
 
 /**
  * The responsibility of the class PermutationGenerator is to generates a sudoku of a particular
@@ -6,7 +9,7 @@ import java.util.Random;
  * 
  * @dependency: IGenerator, SudokuReader
  */
-public class PermutationGenerator { //EXTEND: implements IGenerator {
+public class PermutationGenerator implements IGenerator {
 	private int[][] sudoku;
 	private int size; // REFACTOR: EnumDifficulty
 	private int numberOfColumns;
@@ -158,8 +161,10 @@ public class PermutationGenerator { //EXTEND: implements IGenerator {
 	 * @param secondSymbol	The value of the second symbol
 	 */
 	private void symbolPermutation(int firstSymbol, int secondSymbol) {
-		// BUG: What if a parameter is not in the range of permitted numbers?
-		
+		if((firstSymbol < 1 ^ firstSymbol > size) ^ (secondSymbol < 1 ^ secondSymbol > size)) {
+			throw new IllegalArgumentException("A symbol cannot be lower than 1 or higher than the size of a sudoku");
+		}
+
 		for (int i = 0; i < numberOfRows; i++) {
 			for (int j = 0; j < numberOfColumns; j++) {
 				if (sudoku[i][j] == firstSymbol) {

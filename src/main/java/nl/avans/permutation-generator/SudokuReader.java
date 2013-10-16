@@ -1,3 +1,5 @@
+package nl.avans.permutationgenerator;
+
 import java.util.Random;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -42,13 +44,13 @@ public class SudokuReader extends DefaultHandler {
 	 * for a sudoku with the parameter size and parameter difficulty as constraints. 
 	 * Once found the method sets the field 'String sudoku' with the sudoku of the file.
 	 * 
+	 * TODO: What if the given value in parameter size doesn't exists in file?
+	 * TODO: What if the given value in parameter difficulty doesn't exists in file?
+	 * 
 	 * @param size	The size of a sudoku.
 	 * @param difficulty	The level of difficulty of a sudoku.
 	 */
 	private void getXML(final int size, final int difficulty) {
-		// BUG: What if the given value in parameter size doesn't exists in file?
-		// BUG: What if the given value in parameter difficulty doesn't exists in file? 
-		
 		try {
 			SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
 			SAXParser saxParser = saxParserFactory.newSAXParser();

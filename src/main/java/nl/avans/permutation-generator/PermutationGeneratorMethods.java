@@ -1,3 +1,4 @@
+package nl.avans.permutationgenerator;
 
 /**
  * The class PermutationGeneratorMethods is a way to test the method separately from
