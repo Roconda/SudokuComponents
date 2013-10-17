@@ -29,6 +29,15 @@ public class Game {
 		int[][] board = generator.generate(size, difficulty);
 		this.board = new Datastructure(board);
 	}
+	
+	/**
+	 * Initializes a new instance of the Game class using specified board.
+	 * 
+	 * @param board			The board specified.
+	 */
+	public Game(int[][] board) {
+		this.board = new Datastructure(board);
+	}
 
 	
 	/**
@@ -39,8 +48,7 @@ public class Game {
 	 * @param value The number to be checked.
 	 * @return True if it is allowed, false otherwise.
 	 */
-	public boolean isAllowed(int x, int y, int value)
-	{
+	public boolean isAllowed(int x, int y, int value) {
 		boolean check = true;
 		for(int i = 0; i < getSize(); i++)
 		{
@@ -50,8 +58,8 @@ public class Game {
 				check = false;
 		}
 		double sqrtSize = Math.sqrt(getSize());
-		for(int i = 0; i < sqrtSize; i++)
-			for(int j = 0; j < sqrtSize; j++)
+		for(int i = (x / 3); i < sqrtSize; i++)
+			for(int j = (y / 3); j < sqrtSize; j++)
 				if(getCurrentValue(i, j) == value)
 					check = false;
 		
@@ -62,13 +70,29 @@ public class Game {
 	 * Checks if the game is completed.
 	 * @return True if all values are correct, false otherwise.
 	 */
-	public boolean isWon()
-	{
+	public boolean isWon() {
 		boolean check = true;
 		for(int i = 0; i < getSize(); i++)
 			for(int j = 0; j < getSize(); j++)
 				if(getCurrentValue(i, j) != getSolutionValue(i, j))
 					check = false;
+		return check;
+	}
+	
+	/**
+	 * Solves the field in datastructure
+	 * @return
+	 */
+	public boolean Solve() {
+		boolean check = true;
+		for(int i = 0; i < getSize(); i++) {
+			for(int j = 0; j < getSize(); j++) {
+				if(getSolutionValue(i, j) == 0) {
+					check = false;
+				}
+				setCurrentValue(i, j, getSolutionValue(i, j));
+			}
+		}
 		return check;
 	}
 	

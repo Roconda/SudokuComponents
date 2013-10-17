@@ -165,4 +165,42 @@ public class GameTest extends TestCase {
     	
     	assertEquals(game.getSize(), 9);
     }
+    
+    /**
+     * Test isWon.
+     */
+    public void testisWon() {
+    	
+    	assertFalse(game.isWon());
+    	game.Solve();
+    	assertTrue(game.isWon());
+    }
+    
+    /**
+     * Test isAllowed
+     */
+    public void testisAllowed() {
+    	
+    	int[][] board = new int[9][9];
+    	board[0] = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 0 };
+        board[1] = new int[] { 4, 0, 6, 0, 0, 0, 0, 0, 0 };
+        board[2] = new int[] { 7, 8, 9, 0, 0, 0, 0, 0, 0 };
+        board[3] = new int[] { 2, 0, 0, 0, 0, 0, 8, 0, 0 };
+        board[4] = new int[] { 5, 0, 0, 0, 0, 0, 0, 0, 0 };
+        board[5] = new int[] { 3, 0, 0, 0, 0, 0, 0, 0, 0 };
+        board[6] = new int[] { 8, 0, 0, 0, 0, 0, 0, 0, 0 };
+        board[7] = new int[] { 0, 0, 0, 0, 8, 0, 0, 0, 0 };
+        board[8] = new int[] { 9, 0, 0, 0, 0, 0, 0, 0, 0 };
+        Game testGame = new Game(board);
+        assertTrue(testGame.isAllowed(1, 1, 5));
+        
+        assertFalse(testGame.isAllowed(1, 1, 1));
+        assertFalse(testGame.isAllowed(1, 1, 2));
+        assertFalse(testGame.isAllowed(1, 1, 3));
+        assertFalse(testGame.isAllowed(1, 1, 4));
+        assertFalse(testGame.isAllowed(1, 1, 6));
+        assertFalse(testGame.isAllowed(1, 1, 7));
+        assertFalse(testGame.isAllowed(1, 1, 8));
+        assertFalse(testGame.isAllowed(1, 1, 9));
+    }
 }
