@@ -98,13 +98,16 @@ public class Datastructure implements IDatastructure {
 	}
 
 	public int[] getRow(int row) {
-		
+		/**
+		 * @TODO deze check oplossen
+		 * 
 		try {
 			isValidRow(row);
 		} catch (UnknownRowException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		**/
 
 		int[] elements = new int[getNumberOfColumns()];
 
@@ -148,31 +151,25 @@ public class Datastructure implements IDatastructure {
 		}
 	}
 	
-	private void isValidSubRegion(int subregion, int setSize) throws UnknownSubRegionException {
+	private boolean isValidSubRegion(int subregion, int setSize) {
 		
 
-		if (subregion < 0 ^ subregion > setSize - 1) {
-			throw new UnknownSubRegionException(
-					"Datastructure.getSubRegion: The parameter subregion cannot be smaller than 0 or larger than the number of subregions minus one.");
-		}
+		if (subregion < 0 ^ subregion > setSize - 1) return false;
 
-		if (getSize() % setSize != 0) {
-			throw new UnknownSubRegionException(
-					"Datastructure.getSubRegion: The columns and rows of the sudoku cannot be evenly divided into subregions.");
-		}
+		if (getSize() % setSize != 0) return false;
+		
+		return true;
 	}
 	
-	private void isValidRow(int row) throws UnknownRowException {
-		if (row < 0 ^ row > getNumberOfColumns() - 1) {
-			throw new UnknownRowException(
-					"Datastructure.getRow: The parameter row cannot be smaller than 0 or larger than the number of rows minus one.");
-		}
+	private boolean isValidRow(int row) {
+		if (row < 0 ^ row > getNumberOfColumns() - 1) return false;
+		
+		return true;
 	}
 	
-	private void isValidColumn(int column) throws UnknownColumnException {
-		if (column < 0 ^ column > getNumberOfColumns() - 1) {
-			throw new UnknownColumnException(
-					"Datastructure.getColumn: The parameter column cannot be smaller than 0 or larger than the number of columns minus one.");
-		}
+	private boolean isValidColumn(int column) {
+		if (column < 0 ^ column > getNumberOfColumns() - 1) return false;
+		
+		return true;
 	}
 }
