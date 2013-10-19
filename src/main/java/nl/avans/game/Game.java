@@ -17,6 +17,11 @@ public class Game {
 	
 	/** The board. */
 	private IDatastructure board;
+	
+	/** Benchmarking fields. */
+	private long timeSpentGenerating;
+	private long timeSpentSolving;
+	
 
 	/**
 	 * Initializes a new instance of the Game class.
@@ -26,7 +31,11 @@ public class Game {
 	 */
 	public Game(int size, int difficulty) {
 		IGenerator generator = new Generator();
+		
+		long timeStart = System.currentTimeMillis();
 		int[][] board = generator.generate(size, difficulty);
+		timeSpentGenerating = (System.currentTimeMillis() - timeStart);
+		
 		this.board = new Datastructure(board);
 	}
 	
@@ -84,6 +93,9 @@ public class Game {
 	 * @return
 	 */
 	public boolean Solve() {
+		
+		long timeStart = System.currentTimeMillis();
+		
 		boolean check = true;
 		for(int i = 0; i < getSize(); i++) {
 			for(int j = 0; j < getSize(); j++) {
@@ -93,6 +105,9 @@ public class Game {
 				setCurrentValue(i, j, getSolutionValue(i, j));
 			}
 		}
+		
+		timeSpentSolving = (System.currentTimeMillis() - timeStart);
+		
 		return check;
 	}
 	
@@ -206,5 +221,21 @@ public class Game {
 	 */
 	public int getSize() {
 		return this.board.getSize();
+	}
+	
+	
+	public boolean isGeneratedField(int x, int y) {
+		return this.board.isGeneratedField(x, y);
+	}
+	
+	
+	public String getGeneratingBenchmarking() {
+		
+		return ("Sudoku puzzle generated in " + timeSpentGenerating + " milliseconds.");
+	}
+	
+	public String getSolvingBenchmarking() {
+		
+		return ("Sudoku puzzle solved in " + timeSpentSolving + " milliseconds.");
 	}
 }
