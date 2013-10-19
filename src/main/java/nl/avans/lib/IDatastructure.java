@@ -94,7 +94,7 @@ public interface IDatastructure {
 	 * 
 	 * @param x			The x-coordinate of the field in the matrix.
 	 * @param y			The y-coordinate of the field in the matrix.
-	 * @return			truth-value.
+	 * @return			True or false due the field is a GeneratedField or UserField.
 	 */
 	boolean isGeneratedField(int x, int y);
 	
