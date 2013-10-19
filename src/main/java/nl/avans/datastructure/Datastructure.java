@@ -126,6 +126,10 @@ public class Datastructure implements IDatastructure {
 		return this.board.getSize();
 	}
 	
+	
+	/**
+	 * Checks if a field is a generated field. (When not, it's a userfield)
+	 */
 	public boolean isGeneratedField(int x, int y) {
 		return this.board.isGeneratedField(x, y);
 	}

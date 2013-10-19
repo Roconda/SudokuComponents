@@ -80,6 +80,9 @@ class BoardDS {
 		if(!canGenerate) throw new CannotGenerateException(message.toString());
 	}
 	
+	/**
+	 * Checks if a field is a generated field. (When not, it's a userfield)
+	 */
 	public boolean isGeneratedField(int x, int y) {
 		if(board[x][y] instanceof GeneratedField) {
 			return true;
