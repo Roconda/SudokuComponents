@@ -247,11 +247,11 @@ public class Game {
 		return ("Sudoku puzzle solved in " + timeSpentSolving + " milliseconds.");
 	}
 	
-	public void FillSolutionValues(int[][] currentBoard) {
+	private void FillSolutionValues(int[][] currentBoard) {
 		ISolver solver = new Solver(getSize());
 		int[][] solvedBoard = solver.solve(currentBoard);
 		for(int i = 0; i < getSize(); i++)
 			for(int j = 0; j < getSize(); j++)
-				this.board.setSolutionValue(i, j, solvedBoard[i][j]);
+				//this.board.setSolutionValue(i, j, solvedBoard[i][j]);
 	}
 }
