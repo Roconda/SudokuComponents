@@ -252,6 +252,8 @@ public class Game {
 		int[][] solvedBoard = solver.solve(currentBoard);
 		for(int i = 0; i < getSize(); i++)
 			for(int j = 0; j < getSize(); j++)
+			{
 				//this.board.setSolutionValue(i, j, solvedBoard[i][j]);
+			}
 	}
 }
