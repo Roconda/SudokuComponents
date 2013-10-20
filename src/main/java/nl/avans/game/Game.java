@@ -37,6 +37,8 @@ public class Game {
 		timeSpentGenerating = (System.currentTimeMillis() - timeStart);
 		
 		this.board = new Datastructure(board);
+		
+		FillSolutionValues(board);
 	}
 	
 	/**
@@ -46,6 +48,8 @@ public class Game {
 	 */
 	public Game(int[][] board) {
 		this.board = new Datastructure(board);
+		
+		FillSolutionValues(board);
 	}
 
 	
@@ -58,21 +62,26 @@ public class Game {
 	 * @return True if it is allowed, false otherwise.
 	 */
 	public boolean isAllowed(int x, int y, int value) {
-		boolean check = true;
+		if(value == 0)
+			return true;
+
 		for(int i = 0; i < getSize(); i++)
 		{
 			if(getCurrentValue(i, y) == value)
-				check = false;
+				if(i != x)
+					return false;
 			if(getCurrentValue(x, i) == value)
-				check = false;
+				if(i != y)
+					return false;
 		}
 		double sqrtSize = Math.sqrt(getSize());
 		for(int i = (x / 3); i < sqrtSize; i++)
 			for(int j = (y / 3); j < sqrtSize; j++)
 				if(getCurrentValue(i, j) == value)
-					check = false;
+					if(i != x && y != j)
+						return false;
 		
-		return check;
+		return true;
 	}
 	
 	/**
@@ -80,12 +89,12 @@ public class Game {
 	 * @return True if all values are correct, false otherwise.
 	 */
 	public boolean isWon() {
-		boolean check = true;
+		
 		for(int i = 0; i < getSize(); i++)
 			for(int j = 0; j < getSize(); j++)
 				if(getCurrentValue(i, j) != getSolutionValue(i, j))
-					check = false;
-		return check;
+					return false;
+		return true;
 	}
 	
 	/**
@@ -96,11 +105,10 @@ public class Game {
 		
 		long timeStart = System.currentTimeMillis();
 		
-		boolean check = true;
 		for(int i = 0; i < getSize(); i++) {
 			for(int j = 0; j < getSize(); j++) {
 				if(getSolutionValue(i, j) == 0) {
-					check = false;
+					return false;
 				}
 				setCurrentValue(i, j, getSolutionValue(i, j));
 			}
@@ -108,7 +116,7 @@ public class Game {
 		
 		timeSpentSolving = (System.currentTimeMillis() - timeStart);
 		
-		return check;
+		return true;
 	}
 	
 	/**
@@ -237,5 +245,13 @@ public class Game {
 	public String getSolvingBenchmarking() {
 		
 		return ("Sudoku puzzle solved in " + timeSpentSolving + " milliseconds.");
+	}
+	
+	public void FillSolutionValues(int[][] currentBoard) {
+		ISolver solver = new Solver(getSize());
+		int[][] solvedBoard = solver.solve(currentBoard);
+		for(int i = 0; i < getSize(); i++)
+			for(int j = 0; j < getSize(); j++)
+				this.board.setSolutionValue(i, j, solvedBoard[i][j]);
 	}
 }
