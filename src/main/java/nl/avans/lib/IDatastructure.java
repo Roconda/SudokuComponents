@@ -43,6 +43,16 @@ public interface IDatastructure {
 	 * @return				The solution value of the desired field.
 	 */
 	int getSolutionValue(int x, int y);
+
+
+	/**
+	 * Sets the solution value for specific field.
+	 *
+ 	 * @param x				The x-coordinate of the field in the matrix.
+	 * @param y				The y-coordinate of the field in the matrix.
+	 * @param value			The value to set as solution
+	 */
+	void setSolutionValue(int x, int y, int value);
 	
 	/**
 	 * Gets all values in a specific sub-region within the puzzle's matrix.
