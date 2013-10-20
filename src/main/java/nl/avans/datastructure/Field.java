@@ -57,7 +57,11 @@ abstract class Field {
 	 *
 	 * @param solutionValue the new solution value
 	 */
-	public void setSolutionValue(int solutionValue) {
+	public boolean setSolutionValue(int solutionValue) {
+		if(solutionValue < 0)
+			return false;
+		
 		this.solutionValue = solutionValue;
+		return true;
 	}
 }

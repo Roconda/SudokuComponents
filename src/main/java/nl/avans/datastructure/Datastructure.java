@@ -31,6 +31,10 @@ public class Datastructure implements IDatastructure {
 		return this.board.getSolutionValue(x, y);
 	}
 	
+	public boolean setSolutionValue(int x, int y, int value) {
+		return this.board.setSolutionValue(x, y, value);
+	}
+	
 	public boolean setCurrentValue(int x, int y, int currentValue) {
 		try {
 			return this.board.setCurrentValue(x, y, currentValue);

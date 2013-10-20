@@ -47,6 +47,17 @@ class BoardDS {
 
 		return this.board[x][y].getSolutionValue();
 	}
+	
+	public boolean setSolutionValue(int x, int y, int value) {
+		if (isFieldNotOnGrid(x, y))
+			return false;
+		
+		if(isIllegalValue(value))
+			return false;
+		
+		this.board[x][y].setSolutionValue(value);
+		return true;
+	}
 
 	private boolean isFieldNotOnGrid(int x, int y) {
 		return ((x < 0 || x > getNumberOfRows()) || (y < 0 || y > getNumberOfColumns()));
