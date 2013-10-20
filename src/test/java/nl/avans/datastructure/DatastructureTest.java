@@ -4,6 +4,7 @@ import nl.avans.lib.IDatastructure;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import org.junit.Assert;
 
 /**
  * Unit test for the datastructure component.
@@ -49,6 +50,21 @@ public class DatastructureTest
     public void testSize() {
     	IDatastructure ds = new Datastructure(board1);
     	assertEquals(ds.getSize(), 4);
+    }
+    
+    public void testGetRow() {
+    	IDatastructure ds = new Datastructure(board1);
+    	Assert.assertArrayEquals(ds.getRow(0), new int[] { 2, 6, 2, 8});
+    }
+    
+    public void testGetColumn() {
+    	IDatastructure ds = new Datastructure(board1);
+    	Assert.assertArrayEquals(ds.getColumn(0), new int[] { 2, 2, 2, 3});
+    }
+    
+    public void TestGetSubRegion() {
+    	IDatastructure ds = new Datastructure(board1);
+    	Assert.assertArrayEquals(ds.getSubRegion(0), new int[][] {{ 2, 6 }, { 2, 7 }});
     }
 
     public void testGetNumberOfColumns() {
