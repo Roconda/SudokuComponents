@@ -98,4 +98,10 @@ public class DatastructureTest
     	assertEquals(ds1.getCurrentValue(3, 3), 2);
     	assertEquals(ds1.getCurrentValue(0, 0), 2);
     }
+    
+    public void testIsGeneratedField() {
+    	IDatastructure ds2 = new Datastructure(board2);
+    	assertTrue(ds2.isGeneratedField(0, 0));
+    	assertFalse(ds2.isGeneratedField(0, 1));
+    }
 }
