@@ -55,16 +55,19 @@ public class DatastructureTest
     public void testGetRow() {
     	IDatastructure ds = new Datastructure(board1);
     	Assert.assertArrayEquals(ds.getRow(0), new int[] { 2, 6, 2, 8});
+    	Assert.assertArrayEquals(ds.getRow(9999), new int[] {});
     }
     
     public void testGetColumn() {
     	IDatastructure ds = new Datastructure(board1);
     	Assert.assertArrayEquals(ds.getColumn(0), new int[] { 2, 2, 2, 3});
+    	Assert.assertArrayEquals(ds.getColumn(9999), new int[] {});
     }
     
     public void TestGetSubRegion() {
     	IDatastructure ds = new Datastructure(board1);
     	Assert.assertArrayEquals(ds.getSubRegion(0), new int[][] {{ 2, 6 }, { 2, 7 }});
+    	Assert.assertArrayEquals(ds.getSubRegion(9999), new int[][] {});
     }
 
     public void testGetNumberOfColumns() {

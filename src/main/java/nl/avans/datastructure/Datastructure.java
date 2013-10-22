@@ -50,10 +50,7 @@ public class Datastructure implements IDatastructure {
 		
 		int setSize = (int) Math.sqrt(getSize());
 		
-		/* @TODO check if valid region
-		 * 
-			isValidSubRegion(subregion, setSize);
-		*/
+		if(!isValidSubRegion(subregion, setSize)) return new int[][] {};
 		
 		int[][] elements = new int[setSize][setSize];
 		
@@ -82,17 +79,8 @@ public class Datastructure implements IDatastructure {
 	}
 
 	public int[] getColumn(int column) {
-		
-		/**
-		 * @TODO deze check oplossen
-		 * 
-		try {
-			isValidRow(row);
-		} catch (UnknownRowException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		**/
+		if(!isValidColumn(column)) return new int[] {};
+
 
 		int[] elements = new int[getNumberOfColumns()];
 
@@ -104,11 +92,7 @@ public class Datastructure implements IDatastructure {
 	}
 
 	public int[] getRow(int row) {
-		
-		/*
-		 * @TODO check if valid column
-			isValidColumn(column);
-		*/
+		if(!isValidRow(row)) return new int[] {};
 		
 		int[] elements = new int[getNumberOfRows()];
 
