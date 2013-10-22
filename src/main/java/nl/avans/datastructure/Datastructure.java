@@ -83,21 +83,6 @@ public class Datastructure implements IDatastructure {
 
 	public int[] getColumn(int column) {
 		
-		/*
-		 * @TODO check if valid column
-			isValidColumn(column);
-		*/
-		
-		int[] elements = new int[getNumberOfRows()];
-
-		for (int i = 0; i < getNumberOfRows(); i++) {
-			elements[i] = getCurrentValue(column, i);
-		}
-
-		return elements;
-	}
-
-	public int[] getRow(int row) {
 		/**
 		 * @TODO deze check oplossen
 		 * 
@@ -112,7 +97,23 @@ public class Datastructure implements IDatastructure {
 		int[] elements = new int[getNumberOfColumns()];
 
 		for (int i = 0; i < getNumberOfColumns(); i++) {
-			elements[i] = getCurrentValue(i, row);
+			elements[i] = getCurrentValue(i, column);
+		}
+
+		return elements;
+	}
+
+	public int[] getRow(int row) {
+		
+		/*
+		 * @TODO check if valid column
+			isValidColumn(column);
+		*/
+		
+		int[] elements = new int[getNumberOfRows()];
+
+		for (int i = 0; i < getNumberOfRows(); i++) {
+			elements[i] = getCurrentValue(row, i);
 		}
 
 		return elements;
