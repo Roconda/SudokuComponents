@@ -79,7 +79,7 @@ public class Game {
 		
 		int sqrtSize = (int)Math.sqrt(getSize());
 		for (int i = ((x+1) / sqrtSize) * sqrtSize; i < (((x+1) / sqrtSize) + 1) * sqrtSize; i++)
-			for (int j = ((y+1) / sqrtSize) * sqrtSize; j < (((y+1) / sqrtSize) + 1) * sqrtSize; y++)
+			for (int j = ((y+1) / sqrtSize) * sqrtSize; j < (((y+1) / sqrtSize) + 1) * sqrtSize; j++)
 				if(getCurrentValue(i, j) == value)
 					if(i != x && j != y)
 						return false;

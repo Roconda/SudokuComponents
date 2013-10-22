@@ -181,7 +181,7 @@ public class GameTest extends TestCase {
      */
     public void testisAllowed() {
     	
-    	assertTrue(game.isAllowed(1, 1, 0));
+    	assertTrue(game.isAllowed(1, 1, 3));
     	assertFalse(game.isAllowed(1, 1, -1));
     }
 }
