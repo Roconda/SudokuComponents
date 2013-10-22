@@ -64,19 +64,6 @@ public class GameTest extends TestCase {
     	}
     }
     
-    /**
-     * Test set current value.
-     */
-    public void testSetCurrentValue() {
-    	
-    	game.setCurrentValue(4, 8, 1);
-    	game.setCurrentValue(2, 4, 3);
-    	game.setCurrentValue(6, 3, 9);
-    	
-    	assertEquals(game.getCurrentValue(4, 8), 1);
-    	assertEquals(game.getCurrentValue(2, 4), 3);
-    	assertEquals(game.getCurrentValue(6, 3), 9);
-    }
     
     /**
      * Test get subregion.
@@ -93,7 +80,12 @@ public class GameTest extends TestCase {
      * Test get illegal subregion.
      */
     public void testGetIllegalSubregion() {
-    	assertEquals(game.getSubRegion(9)[0][0], -1);
+    	try {
+    		game.getSubRegion(9);
+    		fail();
+    	} catch (ArrayIndexOutOfBoundsException e) {
+    		assertTrue(true);
+    	}
     }
     
     /**
@@ -176,12 +168,67 @@ public class GameTest extends TestCase {
     	assertTrue(game.isWon());
     }
     
-    /**
-     * Test isAllowed
-     */
-    public void testisAllowed() {
+    private boolean isRowEmpty(int[] row) {
     	
-    	assertTrue(game.isAllowed(1, 1, 3));
-    	assertFalse(game.isAllowed(1, 1, -1));
+    	for (int index = 0; index < row.length; index++) {
+    		if (row[index] == 0)
+    			return true;
+    	}
+    	
+    	return false;
+    }
+    
+    private boolean isColumnEmpty(int[] column) {
+    	
+    	for (int index = 0; index < column.length; index++) {
+    		if (column[index] == 0)
+    			return true;
+    	}
+    	
+    	return false;
+    }
+    
+    private boolean isSetEmpty(int[][] set) {
+    	
+    	for (int row = 0; row < set.length; row++) {
+    		for (int column = 0; column < set.length; column++) {
+    			if (set[row][column] == 0)
+    				return true;
+    		}
+    	}
+    	
+    	return false;
+    }
+    
+    private boolean isInRow(int[] row, int value) {
+    	
+    	for (int index = 0; index < row.length; index++) {
+    		if (row[index] == value)
+    			return true;
+    	}
+    	
+    	return false;
+    }
+    
+    private boolean isInColumn(int[] column, int value) {
+    	
+    	for (int index = 0; index < column.length; index++) {
+    		if (column[index] == value)
+    			return true;
+    	}
+    	
+    	return false;
+    }
+    
+    private boolean isInSet(int[][] set, int value) {
+    	
+    	for (int row = 0; row < set.length; row++) {
+    		for (int column = 0; column < set[row].length; column++) {
+    			if (set[row][column] == value)
+    				return true;
+    		}
+    	}
+    	
+    	return false;
     }
 }
