@@ -23,6 +23,13 @@ class BoardDS {
 		return this;
 	}
 	
+    /**
+     * Gets the current value.
+     *
+     * @param x         the x
+     * @param y         the y
+     * @return          the current value
+     */
 	public int getCurrentValue(int x, int y) throws CannotGenerateException {
 		generateCheck();
 		
@@ -48,6 +55,13 @@ class BoardDS {
 		return this.board[x][y].getSolutionValue();
 	}
 	
+    /**
+     * Sets the solution value.
+     *
+     * @param x         the x
+     * @param y         the y
+     * @param           solutionValue the solution value
+     */
 	public boolean setSolutionValue(int x, int y, int value) {
 		if (isFieldNotOnGrid(x, y))
 			return false;
@@ -59,22 +73,50 @@ class BoardDS {
 		return true;
 	}
 
+    /**
+     * Checks if is field not on grid.
+     *
+     * @param x                 the x
+     * @param y                 the y
+     * @return                  true, if is field not on grid
+     */
 	private boolean isFieldNotOnGrid(int x, int y) {
 		return ((x < 0 || x > getNumberOfRows()) || (y < 0 || y > getNumberOfColumns()));
 	}
 
+    /**
+     * Checks if is illegal value.
+     *
+     * @param value         the value
+     * @return                         true, if is illegal value
+     */
 	private boolean isIllegalValue(int value) {
 		return (value < 0 || value > getSize());
 	}
 
+    /**
+     * Gets the number of columns.
+     *
+     * @return                         the number of columns
+     */
 	public int getNumberOfColumns() {
 		return this.board[0].length;
 	}
 
+    /**
+     * Gets the number of rows.
+     *
+     * @return                         the number of rows
+     */
 	public int getNumberOfRows() {
 		return this.board.length;
 	}
 
+    /**
+     * Gets the size.
+     *
+     * @return                         the size
+     */
 	public int getSize() {
 		return size;
 	}
