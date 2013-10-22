@@ -65,6 +65,11 @@
     </dependency>
     <dependency>
       <groupId>nl.avans</groupId>
+      <artifactId>permutation-generator</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>nl.avans</groupId>
       <artifactId>datastructure</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>

@@ -5,8 +5,8 @@ import nl.avans.generator.Generator;
 import nl.avans.lib.IDatastructure;
 import nl.avans.lib.IGenerator;
 import nl.avans.lib.ISolver;
-
 import nl.avans.nsbfsolver.Solver;
+import nl.avans.permutationgenerator.PermutationGenerator;
 
 /**
  * Main initialization class for a Sudoku game.
@@ -31,9 +31,10 @@ public class Game {
 	 */
 	public Game(int size, int difficulty) {
 		IGenerator generator = new Generator();
+		IGenerator permGenerator = new PermutationGenerator();
 		
 		long timeStart = System.currentTimeMillis();
-		int[][] board = generator.generate(size, difficulty);
+		int[][] board = (size == 9 && difficulty == 2) ? permGenerator.generate(size, difficulty) : generator.generate(size, difficulty);
 		timeSpentGenerating = (System.currentTimeMillis() - timeStart);
 		
 		this.board = new Datastructure(board);
