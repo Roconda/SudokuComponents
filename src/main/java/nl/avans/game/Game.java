@@ -65,6 +65,8 @@ public class Game {
 	public boolean isAllowed(int x, int y, int value) {
 		if(value == 0)
 			return true;
+		if(value < 0 || value > getSize())
+			return false;
 
 		for(int i = 0; i < getSize(); i++)
 		{
@@ -75,11 +77,12 @@ public class Game {
 				if(i != y)
 					return false;
 		}
-		double sqrtSize = Math.sqrt(getSize());
-		for(int i = (x / 3); i < sqrtSize; i++)
-			for(int j = (y / 3); j < sqrtSize; j++)
+		
+		int sqrtSize = (int)Math.sqrt(getSize());
+		for (int i = ((x+1) / sqrtSize) * sqrtSize; i < (((x+1) / sqrtSize) + 1) * sqrtSize; i++)
+			for (int j = ((y+1) / sqrtSize) * sqrtSize; j < (((y+1) / sqrtSize) + 1) * sqrtSize; j++)
 				if(getCurrentValue(i, j) == value)
-					if(i != x && y != j)
+					if(i != x && j != y)
 						return false;
 		
 		return true;
@@ -118,6 +121,20 @@ public class Game {
 		timeSpentSolving = (System.currentTimeMillis() - timeStart);
 		
 		return true;
+	}
+	
+	/**
+	 * Fills in one of the fields
+	 * @return if it was successful
+	 */
+	public boolean getHint() {
+		for(int i = 0; i < getSize(); i++)
+			for(int j = 0; j < getSize(); j++)
+				if(this.board.getCurrentValue(i, j) == 0) {
+					this.board.setCurrentValue(i, j, this.board.getSolutionValue(i, j));
+					return true;
+				}
+		return false;
 	}
 	
 	/**
@@ -254,7 +271,7 @@ public class Game {
 		for(int i = 0; i < getSize(); i++)
 			for(int j = 0; j < getSize(); j++)
 			{
-				//this.board.setSolutionValue(i, j, solvedBoard[i][j]);
+				this.board.setSolutionValue(i, j, solvedBoard[i][j]);
 			}
 	}
 }
